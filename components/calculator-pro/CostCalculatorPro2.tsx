@@ -53,89 +53,7 @@ import {
 } from "lucide-react";
 import { trackCalculatorStart, trackCalculatorComplete, trackWhatsAppClick } from "@/lib/analytics";
 
-// Home Type Presets for Screen 1
-interface HomeTypeOption {
-  id: string;
-  name: string;
-  badge: string;
-  tagline: string;
-  defaultFloors: number;
-  defaultPlotArea: number;
-  defaultParking: number;
-  defaultPackageId: "basic" | "standard" | "premium" | "luxury";
-  icon: React.ElementType;
-}
-
-const HOME_TYPE_OPTIONS: HomeTypeOption[] = [
-  {
-    id: "2bhk",
-    name: "2 BHK Home",
-    badge: "Compact & Starter",
-    tagline: "Ideal for nuclear families or rental floors. Fast construction.",
-    defaultFloors: 1,
-    defaultPlotArea: 1000,
-    defaultParking: 200,
-    defaultPackageId: "standard",
-    icon: Home,
-  },
-  {
-    id: "3bhk",
-    name: "3 BHK Home",
-    badge: "Most Popular in Chennai",
-    tagline: "The golden standard for Chennai family living with optimal space.",
-    defaultFloors: 2,
-    defaultPlotArea: 1200,
-    defaultParking: 200,
-    defaultPackageId: "premium",
-    icon: Home,
-  },
-  {
-    id: "4bhk",
-    name: "4 BHK Residence",
-    badge: "Spacious Multi-Gen",
-    tagline: "Expansive layout for joint families with guest suites & pooja.",
-    defaultFloors: 3,
-    defaultPlotArea: 1500,
-    defaultParking: 400,
-    defaultPackageId: "premium",
-    icon: Building,
-  },
-  {
-    id: "duplex",
-    name: "Duplex Living",
-    badge: "Double-Height Volume",
-    tagline: "Contemporary two-level living with open balconies & high ceilings.",
-    defaultFloors: 2,
-    defaultPlotArea: 1200,
-    defaultParking: 200,
-    defaultPackageId: "premium",
-    icon: Sparkles,
-  },
-  {
-    id: "villa",
-    name: "Independent Villa",
-    badge: "Ultra Luxury",
-    tagline: "Bespoke architectural residence with private portico & garden space.",
-    defaultFloors: 2,
-    defaultPlotArea: 2400,
-    defaultParking: 400,
-    defaultPackageId: "luxury",
-    icon: Crown,
-  },
-  {
-    id: "custom",
-    name: "Not Sure / Help Me Choose",
-    badge: "Guided Setup",
-    tagline: "Start with our recommended 3 BHK standard plan and customize everything.",
-    defaultFloors: 2,
-    defaultPlotArea: 1200,
-    defaultParking: 200,
-    defaultPackageId: "premium",
-    icon: Compass,
-  },
-];
-
-// Plot Presets for Screen 2
+// Plot Presets for Step 1
 const PLOT_PRESETS = [
   { label: "20 × 30", sqft: 600, cents: "1.38", grounds: "0.25 Ground" },
   { label: "30 × 40", sqft: 1200, cents: "2.75", grounds: "0.5 Ground", popular: true },
@@ -145,28 +63,25 @@ const PLOT_PRESETS = [
 ];
 
 export function CostCalculatorPro2() {
-  // Navigation Step: 1 = Home, 2 = Plot, 3 = Plan, 4 = Package, 5 = Extras, 6 = Result
+  // Navigation Step: 1 = Plot, 2 = Plan, 3 = Package, 4 = Extras, 5 = Estimate Result
   const [currentStep, setCurrentStep] = useState<number>(1);
 
-  // 1. Home Type Selection
-  const [selectedHomeType, setSelectedHomeType] = useState<string>("3bhk");
-
-  // 2. Plot State
+  // 1. Plot State
   const [plotArea, setPlotArea] = useState<number>(1200);
   const [isCustomPlot, setIsCustomPlot] = useState<boolean>(false);
 
-  // 3. Plan Configuration
+  // 2. Plan Configuration
   const [floors, setFloors] = useState<number>(2); // Default G+1 (2 Floors)
   const [carParkingArea, setCarParkingArea] = useState<number>(200); // Default 1 car
   const [isAutoBuiltUp, setIsAutoBuiltUp] = useState<boolean>(true);
   const [customBuiltUpPerFloor, setCustomBuiltUpPerFloor] = useState<number>(900);
   const [selectedElevation, setSelectedElevation] = useState<ElevationStyle>(ELEVATION_STYLES[0]); // Contemporary
 
-  // 4. Package Selection
+  // 3. Package Selection
   const [selectedPackage, setSelectedPackage] = useState<ProPackageTier>(PRO_PACKAGES[2]); // Default Premium ₹2,649
   const [isCompareModalOpen, setIsCompareModalOpen] = useState<boolean>(false);
 
-  // 5. Add-ons Selection
+  // 4. Add-ons Selection
   const [selectedAddons, setSelectedAddons] = useState<{
     [id: string]: { enabled: boolean; customUnit?: number };
   }>({
@@ -176,7 +91,7 @@ export function CostCalculatorPro2() {
     main_gate: { enabled: true },
   });
 
-  // 6. Deep Dive & Result Modals
+  // 5. Deep Dive & Result Modals
   const [resultDeepTab, setResultDeepTab] = useState<"overview" | "vastu" | "materials" | "compare" | "faqs">("overview");
   const [showDetailed10Phase, setShowDetailed10Phase] = useState<boolean>(false);
   const [activePhaseIndex, setActivePhaseIndex] = useState<number | null>(null);
@@ -339,17 +254,6 @@ export function CostCalculatorPro2() {
     });
   }, [totalBuiltUpArea, floors, selectedPackage, grandTotal]);
 
-  // Handler for Home Type Selection
-  const handleSelectHomeType = (ht: HomeTypeOption) => {
-    setSelectedHomeType(ht.id);
-    setFloors(ht.defaultFloors);
-    setPlotArea(ht.defaultPlotArea);
-    setCarParkingArea(ht.defaultParking);
-    const pkg = PRO_PACKAGES.find((p) => p.id === ht.defaultPackageId) || PRO_PACKAGES[2];
-    setSelectedPackage(pkg);
-    setCurrentStep(2); // Auto advance to Plot step
-  };
-
   // Add-on Bundle Handlers
   const applyCivilEssentialsBundle = () => {
     setSelectedAddons((prev) => ({
@@ -385,7 +289,7 @@ export function CostCalculatorPro2() {
     const targetPkg = PRO_PACKAGES.find((p) => p.id === budgetOptimization.recommendedPackage) || PRO_PACKAGES[2];
     setSelectedPackage(targetPkg);
     setFloors(budgetOptimization.recommendedFloors);
-    setCurrentStep(6); // Jump straight to result
+    setCurrentStep(5); // Jump straight to result
   };
 
   // WhatsApp Share Message
@@ -466,12 +370,11 @@ I would like to schedule a free site consultation to lock this estimate for my C
   const activePhaseCost = activePhase ? Math.round((baseCost * activePhase.percentShare) / 100) : null;
 
   const stepTitles = [
-    { num: 1, label: "01 HOME" },
-    { num: 2, label: "02 PLOT" },
-    { num: 3, label: "03 PLAN" },
-    { num: 4, label: "04 PACKAGE" },
-    { num: 5, label: "05 EXTRAS" },
-    { num: 6, label: "ESTIMATE" },
+    { num: 1, label: "01 PLOT" },
+    { num: 2, label: "02 PLAN" },
+    { num: 3, label: "03 PACKAGE" },
+    { num: 4, label: "04 EXTRAS" },
+    { num: 5, label: "ESTIMATE" },
   ];
 
   return (
@@ -516,81 +419,13 @@ I would like to schedule a free site consultation to lock this estimate for my C
         {/* LEFT COLUMN: ACTIVE STEP (7 Cols on Desktop) */}
         <div className="lg:col-span-7 space-y-6">
           {/* ========================================================= */}
-          {/* SCREEN 1: YOUR HOME */}
+          {/* STEP 1: YOUR PLOT */}
           {/* ========================================================= */}
           {currentStep === 1 && (
             <div className="rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-8 space-y-6 shadow-luxury-sm animate-in fade-in duration-200">
               <div className="space-y-1.5">
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#EA580C] bg-[#FFF7F3] px-3 py-1 rounded-full border border-[#FFD9C6] inline-block">
-                  STEP 01 · YOUR DREAM HOME
-                </span>
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#183B35]">
-                  First, tell us about your dream home.
-                </h2>
-                <p className="text-sm text-[#52655E]">
-                  Choose a starting point. You can customize plot dimensions, floors, and finishes in the next steps.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                {HOME_TYPE_OPTIONS.map((opt) => {
-                  const Icon = opt.icon;
-                  const isSelected = selectedHomeType === opt.id;
-                  return (
-                    <button
-                      key={opt.id}
-                      type="button"
-                      onClick={() => handleSelectHomeType(opt)}
-                      className={`p-4 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between group min-h-[120px] ${
-                        isSelected
-                          ? "bg-[#FFF7F3] border-2 border-[#EA580C] shadow-sm ring-1 ring-[#EA580C]"
-                          : "bg-white border-[#D9D2C5] hover:bg-[#E9E4D9]"
-                      }`}
-                    >
-                      <div className="space-y-1">
-                        <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#EA580C]">
-                            {opt.badge}
-                          </span>
-                          <Icon className={`w-4 h-4 ${isSelected ? "text-[#EA580C]" : "text-[#8C9C96]"}`} />
-                        </div>
-                        <h3 className="font-display text-lg font-bold text-[#183B35] group-hover:text-[#EA580C] transition-colors">
-                          {opt.name}
-                        </h3>
-                        <p className="text-xs text-[#52655E] leading-relaxed">
-                          {opt.tagline}
-                        </p>
-                      </div>
-                      <div className="flex items-center justify-between pt-2 mt-2 border-t border-[#D9D2C5]/50 text-[11px] font-bold text-[#183B35]">
-                        <span>Select & Proceed</span>
-                        <ChevronRight className="w-3.5 h-3.5 text-[#EA580C] group-hover:translate-x-0.5 transition-transform" />
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-
-              <div className="flex justify-end pt-2">
-                <button
-                  type="button"
-                  onClick={() => setCurrentStep(2)}
-                  className="px-6 py-3.5 rounded-2xl bg-[#183B35] hover:bg-[#0D2420] text-white font-bold text-sm transition-all flex items-center gap-2 cursor-pointer shadow-sm"
-                >
-                  <span>Continue to Your Plot</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ========================================================= */}
-          {/* SCREEN 2: YOUR PLOT */}
-          {/* ========================================================= */}
-          {currentStep === 2 && (
-            <div className="rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-8 space-y-6 shadow-luxury-sm animate-in fade-in duration-200">
-              <div className="space-y-1.5">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#EA580C] bg-[#FFF7F3] px-3 py-1 rounded-full border border-[#FFD9C6] inline-block">
-                  STEP 02 · YOUR PLOT
+                  STEP 01 · YOUR PLOT
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#183B35]">
                   What's your plot size?
@@ -713,18 +548,10 @@ I would like to schedule a free site consultation to lock this estimate for my C
               </div>
 
               {/* Step Navigation Buttons */}
-              <div className="flex items-center justify-between pt-2">
+              <div className="flex justify-end pt-2">
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(1)}
-                  className="px-5 py-3 rounded-2xl border border-[#D9D2C5] bg-white hover:bg-[#E9E4D9] text-[#183B35] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                  <span>Back</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setCurrentStep(3)}
+                  onClick={() => setCurrentStep(2)}
                   className="px-6 py-3.5 rounded-2xl bg-[#183B35] hover:bg-[#0D2420] text-white font-bold text-sm transition-all flex items-center gap-2 cursor-pointer shadow-sm"
                 >
                   <span>Continue to Your Plan</span>
@@ -735,13 +562,13 @@ I would like to schedule a free site consultation to lock this estimate for my C
           )}
 
           {/* ========================================================= */}
-          {/* SCREEN 3: YOUR PLAN */}
+          {/* STEP 2: YOUR PLAN */}
           {/* ========================================================= */}
-          {currentStep === 3 && (
+          {currentStep === 2 && (
             <div className="rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-8 space-y-6 shadow-luxury-sm animate-in fade-in duration-200">
               <div className="space-y-1.5">
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#EA580C] bg-[#FFF7F3] px-3 py-1 rounded-full border border-[#FFD9C6] inline-block">
-                  STEP 03 · YOUR PLAN
+                  STEP 02 · YOUR PLAN
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#183B35]">
                   How do you want to build?
@@ -923,7 +750,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
               <div className="flex items-center justify-between pt-2">
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(2)}
+                  onClick={() => setCurrentStep(1)}
                   className="px-5 py-3 rounded-2xl border border-[#D9D2C5] bg-white hover:bg-[#E9E4D9] text-[#183B35] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -931,7 +758,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(4)}
+                  onClick={() => setCurrentStep(3)}
                   className="px-6 py-3.5 rounded-2xl bg-[#183B35] hover:bg-[#0D2420] text-white font-bold text-sm transition-all flex items-center gap-2 cursor-pointer shadow-sm"
                 >
                   <span>Continue to Packages</span>
@@ -942,13 +769,13 @@ I would like to schedule a free site consultation to lock this estimate for my C
           )}
 
           {/* ========================================================= */}
-          {/* SCREEN 4: YOUR PACKAGE */}
+          {/* STEP 3: YOUR PACKAGE */}
           {/* ========================================================= */}
-          {currentStep === 4 && (
+          {currentStep === 3 && (
             <div className="rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-8 space-y-6 shadow-luxury-sm animate-in fade-in duration-200">
               <div className="space-y-1.5">
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#EA580C] bg-[#FFF7F3] px-3 py-1 rounded-full border border-[#FFD9C6] inline-block">
-                  STEP 04 · YOUR PACKAGE
+                  STEP 03 · YOUR PACKAGE
                 </span>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#183B35]">
@@ -1038,7 +865,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
               <div className="flex items-center justify-between pt-2">
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(3)}
+                  onClick={() => setCurrentStep(2)}
                   className="px-5 py-3 rounded-2xl border border-[#D9D2C5] bg-white hover:bg-[#E9E4D9] text-[#183B35] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -1046,7 +873,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(5)}
+                  onClick={() => setCurrentStep(4)}
                   className="px-6 py-3.5 rounded-2xl bg-[#183B35] hover:bg-[#0D2420] text-white font-bold text-sm transition-all flex items-center gap-2 cursor-pointer shadow-sm"
                 >
                   <span>Continue to Optional Extras</span>
@@ -1057,13 +884,13 @@ I would like to schedule a free site consultation to lock this estimate for my C
           )}
 
           {/* ========================================================= */}
-          {/* SCREEN 5: OPTIONAL EXTRAS */}
+          {/* STEP 4: OPTIONAL EXTRAS */}
           {/* ========================================================= */}
-          {currentStep === 5 && (
+          {currentStep === 4 && (
             <div className="rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-8 space-y-6 shadow-luxury-sm animate-in fade-in duration-200">
               <div className="space-y-1.5">
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#EA580C] bg-[#FFF7F3] px-3 py-1 rounded-full border border-[#FFD9C6] inline-block">
-                  STEP 05 · OPTIONAL EXTRAS
+                  STEP 04 · OPTIONAL EXTRAS
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#183B35]">
                   Want to add anything extra?
@@ -1236,7 +1063,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
               <div className="flex items-center justify-between pt-2">
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(4)}
+                  onClick={() => setCurrentStep(3)}
                   className="px-5 py-3 rounded-2xl border border-[#D9D2C5] bg-white hover:bg-[#E9E4D9] text-[#183B35] font-bold text-xs transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -1244,7 +1071,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(6)}
+                  onClick={() => setCurrentStep(5)}
                   className="px-6 py-3.5 rounded-2xl bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-sm transition-all flex items-center gap-2 cursor-pointer shadow-luxury-md"
                 >
                   <span>View Final Estimate Dashboard</span>
@@ -1255,9 +1082,9 @@ I would like to schedule a free site consultation to lock this estimate for my C
           )}
 
           {/* ========================================================= */}
-          {/* SCREEN 6: RESULT / DASHBOARD */}
+          {/* STEP 5: RESULT / DASHBOARD */}
           {/* ========================================================= */}
-          {currentStep === 6 && (
+          {currentStep === 5 && (
             <div className="space-y-6 animate-in fade-in duration-200">
               {/* Main Hero Result Card */}
               <div className="rounded-3xl bg-gradient-to-br from-[#183B35] to-[#0D2420] text-[#F4F0E8] p-6 sm:p-8 shadow-luxury-lg border border-[#3E5C54] space-y-6">
@@ -1623,10 +1450,10 @@ I would like to schedule a free site consultation to lock this estimate for my C
 
             {/* Action Buttons */}
             <div className="space-y-2 pt-2">
-              {currentStep !== 6 ? (
+              {currentStep !== 5 ? (
                 <button
                   type="button"
-                  onClick={() => setCurrentStep(6)}
+                  onClick={() => setCurrentStep(5)}
                   className="w-full py-3.5 px-4 rounded-2xl bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-sm shadow-luxury-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
                 >
                   <Eye className="w-4 h-4" />
@@ -2018,10 +1845,10 @@ I would like to schedule a free site consultation to lock this estimate for my C
           </span>
         </div>
 
-        {currentStep !== 6 ? (
+        {currentStep !== 5 ? (
           <button
             type="button"
-            onClick={() => setCurrentStep(6)}
+            onClick={() => setCurrentStep(5)}
             className="px-4 py-2.5 rounded-xl bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-xs shadow-sm flex items-center gap-1.5 cursor-pointer active:scale-95"
           >
             <span>View Estimate</span>
