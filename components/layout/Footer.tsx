@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "../ui/Container";
+import { Logo } from "../ui/Logo";
 import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, ArrowUpRight } from "lucide-react";
 
@@ -27,13 +28,8 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
             {/* Column 1: Brand & Ethos (4 cols) */}
             <div className="lg:col-span-4 flex flex-col">
-              <Link href="/" className="inline-block focus-visible:outline-none">
-                <span className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#FBF9F4]">
-                  {siteConfig.shortName}
-                </span>
-                <span className="block text-xs uppercase font-semibold tracking-[0.25em] text-[#8C9C96] mt-1">
-                  The Build Company
-                </span>
+              <Link href="/" className="inline-block focus-visible:outline-none" aria-label={`${siteConfig.name} - Home`}>
+                <Logo variant="dark" size="lg" className="h-11 sm:h-12 hover:opacity-95 transition-opacity" />
               </Link>
 
               <p className="mt-4 font-display text-lg text-[#E9E4D9] italic leading-relaxed">

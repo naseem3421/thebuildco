@@ -53,10 +53,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  experimental: {
-    cpus: 4,
-    workerThreads: false,
-  },
 };
 
 export default nextConfig;

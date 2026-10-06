@@ -6,18 +6,11 @@ import { siteConfig } from "@/config/site";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 import { MobileNav } from "./MobileNav";
-import { trackPhoneClick, trackWhatsAppClick, trackCTAClick } from "@/lib/analytics";
-import { MessageCircle, Phone } from "lucide-react";
+import { Logo } from "../ui/Logo";
+import { trackCTAClick } from "@/lib/analytics";
+import { ChevronDown } from "lucide-react";
 
 export function Header() {
-  const handleWhatsAppClick = () => {
-    trackWhatsAppClick("header");
-  };
-
-  const handlePhoneClick = () => {
-    trackPhoneClick("header");
-  };
-
   const handleCTAClick = () => {
     trackCTAClick({
       cta_label: "Header Get Quote",
@@ -27,45 +20,76 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#F4F0E8]/90 backdrop-blur-md border-b border-[#D9D2C5]/70 transition-all duration-200">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-neutral-200/80 shadow-xs transition-all duration-200">
       <Container size="wide">
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 group focus-visible:outline-none"
+            className="flex items-center group focus-visible:outline-none py-1"
+            aria-label={`${siteConfig.name} - Home`}
           >
-            <div className="flex flex-col">
-              <span className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-[#183B35] group-hover:text-[#B86F50] transition-colors leading-none">
-                {siteConfig.shortName}
-              </span>
-              <span className="text-[9px] sm:text-[10px] uppercase font-semibold tracking-[0.2em] text-[#52655E] mt-0.5">
-                The Build Company
-              </span>
-            </div>
+            <Logo variant="light" size="md" priority className="h-9 sm:h-11 hover:opacity-95 transition-opacity" />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-            {siteConfig.navigation.map((item) => {
-              const isPro =
-                item.href === "/calculator-pro" ||
-                item.href === "/calculator-pro-2" ||
-                item.href === "/calculator-pro-3";
+            {siteConfig.headerNavigation.map((item) => {
+              if (item.children && item.children.length > 0) {
+                return (
+                  <div key={item.label} className="relative group">
+                    <Link
+                      href={item.href}
+                      className="px-3.5 py-2 text-sm font-semibold text-neutral-800 rounded-full hover:text-[#EA580C] hover:bg-neutral-100 transition-all duration-150 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EA580C]"
+                    >
+                      <span>{item.label}</span>
+                      {item.isBadge && (
+                        <span className="px-1.5 py-0.2 text-[10px] font-extrabold tracking-wide text-[#EA580C] bg-[#FFF7F3] border border-[#FFD9C6] rounded-full shadow-xs">
+                          {item.badgeText}
+                        </span>
+                      )}
+                      <ChevronDown className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#EA580C] group-hover:rotate-180 transition-transform duration-200" />
+                    </Link>
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute left-0 top-full pt-2 w-72 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
+                      <div className="bg-white border border-neutral-200/90 rounded-2xl shadow-luxury-md p-2 space-y-1 backdrop-blur-md">
+                        {item.children.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            className="flex flex-col p-2.5 rounded-xl hover:bg-neutral-50 transition-colors group/sub"
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm font-semibold text-neutral-900 group-hover/sub:text-[#EA580C] transition-colors">
+                                {sub.label}
+                              </span>
+                              {sub.badge && (
+                                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-[#EA580C] text-white">
+                                  {sub.badge}
+                                </span>
+                              )}
+                            </div>
+                            {sub.description && (
+                              <span className="text-xs text-neutral-500 mt-0.5 line-clamp-1">
+                                {sub.description}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={
-                    isPro
-                      ? "px-3 py-1.5 text-xs font-extrabold text-[#EA580C] bg-[#FFF7F3] border border-[#FFD9C6] rounded-full shadow-sm hover:bg-[#FFEDE0] hover:border-[#EA580C] transition-all flex items-center gap-1"
-                      : "px-3 py-2 text-sm font-medium text-[#183B35] rounded-full hover:text-[#B86F50] hover:bg-[#E9E4D9]/60 transition-all duration-150"
-                  }
+                  className="px-3.5 py-2 text-sm font-semibold text-neutral-800 rounded-full hover:text-[#EA580C] hover:bg-neutral-100 transition-all duration-150"
                 >
                   {item.label}
-                  {isPro && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#EA580C] animate-pulse" />
-                  )}
                 </Link>
               );
             })}
@@ -73,28 +97,6 @@ export function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={siteConfig.contact.whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleWhatsAppClick}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold text-[#183B35] hover:text-[#1E7E34] hover:bg-[#E9E4D9]/60 transition-colors"
-              title="Chat with our engineering team on WhatsApp"
-            >
-              <MessageCircle className="w-4 h-4 text-[#1E7E34]" />
-              <span>WhatsApp</span>
-            </a>
-
-            <a
-              href={siteConfig.contact.phoneHref}
-              onClick={handlePhoneClick}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold text-[#183B35] hover:text-[#B86F50] hover:bg-[#E9E4D9]/60 transition-colors"
-              title="Call our Chennai office"
-            >
-              <Phone className="w-4 h-4 text-[#B86F50]" />
-              <span>{siteConfig.contact.phoneDisplay}</span>
-            </a>
-
             <Button
               variant="primary"
               size="sm"

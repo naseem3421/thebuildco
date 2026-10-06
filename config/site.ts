@@ -36,6 +36,21 @@ export interface TrustMetricItem {
   highlight?: boolean;
 }
 
+export interface HeaderNavSubItem {
+  label: string;
+  description?: string;
+  href: string;
+  badge?: string;
+}
+
+export interface HeaderNavItem {
+  label: string;
+  href: string;
+  isBadge?: boolean;
+  badgeText?: string;
+  children?: HeaderNavSubItem[];
+}
+
 export interface NavItem {
   label: string;
   href: string;
@@ -767,15 +782,69 @@ export const siteConfig = {
     "Adyar / Besant Nagar",
   ],
 
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Cost Calculator PRO", href: "/calculator-pro" },
-    { label: "Calculator Pro 2", href: "/calculator-pro-2" },
-    { label: "Calculator Pro 3", href: "/calculator-pro-3" },
+  headerNavigation: [
     { label: "Packages", href: "/packages" },
-    { label: "Calculator", href: "/calculator" },
     { label: "Projects", href: "/projects" },
     { label: "Process", href: "/process" },
+    {
+      label: "Cost Calculator",
+      href: "/calculator-pro-3",
+      isBadge: true,
+      badgeText: "PRO",
+      children: [
+        {
+          label: "Calculator Pro 3",
+          description: "Interactive floor-wise estimator with real-time BOQ",
+          href: "/calculator-pro-3",
+          badge: "Latest",
+        },
+        {
+          label: "Calculator Pro 2",
+          description: "Step-by-step guided budget builder",
+          href: "/calculator-pro-2",
+        },
+        {
+          label: "Cost Calculator PRO",
+          description: "10-phase milestone distribution & material analysis",
+          href: "/calculator-pro",
+        },
+        {
+          label: "Quick Calculator",
+          description: "Instant sqft & package rate comparison",
+          href: "/calculator",
+        },
+      ],
+    },
+    {
+      label: "About",
+      href: "/about",
+      children: [
+        {
+          label: "About TBC",
+          description: "Our philosophy, leadership & Chennai standards",
+          href: "/about",
+        },
+        {
+          label: "Client Testimonials",
+          description: "Verified homeowner stories & build experiences",
+          href: "/testimonials",
+        },
+        {
+          label: "Frequently Asked Questions",
+          description: "Clear answers on pricing, approvals & timeline",
+          href: "/faq",
+        },
+      ],
+    },
+    { label: "Contact", href: "/contact" },
+  ] as HeaderNavItem[],
+
+  navigation: [
+    { label: "Home", href: "/" },
+    { label: "Packages", href: "/packages" },
+    { label: "Projects", href: "/projects" },
+    { label: "Process", href: "/process" },
+    { label: "Cost Calculator PRO", href: "/calculator-pro-3" },
     { label: "About", href: "/about" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "FAQ", href: "/faq" },
