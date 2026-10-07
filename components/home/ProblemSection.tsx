@@ -26,11 +26,11 @@ export function ProblemSection() {
           </div>
 
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-[1.15]">
-            Building a ₹2 Crore Home Shouldn't Feel Like Managing 20 Contractors.
+            Building a Premium Home Shouldn't Feel Like Managing 20 Contractors.
           </h2>
 
           <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-            When investing ₹1 Crore to ₹3 Crore in your family home in Chennai, the construction journey should feel organized, professional, and transparent. Yet the conventional approach leaves landowners overwhelmed with friction:
+            When investing in your custom family home in Chennai, the construction journey should feel organized, professional, and transparent. Yet the conventional approach leaves landowners overwhelmed with friction:
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">

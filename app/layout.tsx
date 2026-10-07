@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.shortName} — The Build Company`,
   },
   description:
-    "Turnkey residential construction company in Chennai for landowners planning ₹1–3 Crore homes, luxury villas, and duplex residences. Architectural design, structural engineering, quality control, and handover through one accountable team.",
+    "Turnkey residential construction company in Chennai for landowners planning bespoke homes, luxury villas, and duplex residences. Architectural design, structural engineering, quality control, and handover through one accountable team.",
   keywords: [
     "turnkey house construction company chennai",
     "house construction company chennai",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TBC | Turnkey House Construction Company in Chennai",
     description:
-      "Build your ₹1–3 Crore home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
+      "Build your Chennai home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
     url: "https://thebuildcompany.in",
     siteName: siteConfig.name,
     locale: "en_IN",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TBC | Turnkey House Construction Company in Chennai",
     description:
-      "Build your ₹1–3 Crore home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
+      "Build your Chennai home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
   },
   icons: {
     icon: [

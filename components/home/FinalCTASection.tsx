@@ -26,7 +26,7 @@ export function FinalCTASection() {
             </span>
 
             <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.12] tracking-tight">
-              Planning a ₹1–3 Crore Home in Chennai?
+              Planning a Premium Home in Chennai?
             </h2>
 
             <p className="mt-5 text-base sm:text-lg text-neutral-300 max-w-2xl leading-relaxed">

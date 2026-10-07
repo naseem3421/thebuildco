@@ -14,9 +14,9 @@ export function QualificationSection() {
     },
     {
       icon: Banknote,
-      title: "Your Project Is ₹1–3 Crore",
-      desc: "Our primary residential focus is substantial home construction projects rather than small repair or minor renovation jobs.",
-      tag: "Substantial Scale",
+      title: "Substantial Project Scope",
+      desc: "Our primary residential focus is complete home construction projects rather than minor repair or renovation work.",
+      tag: "Full Home Scale",
     },
     {
       icon: Users2,

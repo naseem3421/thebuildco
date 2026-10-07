@@ -11,8 +11,8 @@ export function TrustStripSection() {
     },
     {
       icon: Banknote,
-      title: "₹1 Cr–₹3 Cr Primary Focus",
-      desc: "Substantial residential homes, premium duplexes & bespoke luxury villas.",
+      title: "Substantial Home Projects",
+      desc: "Tailored for individual residences, premium duplexes & bespoke luxury villas.",
     },
     {
       icon: HardHat,

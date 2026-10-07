@@ -7,12 +7,12 @@ import { HelpCircle, ArrowRight } from "lucide-react";
 export const homepageAeoQuestions = [
   {
     q: "How much does it cost to build a house in Chennai?",
-    a: "In Chennai, turnkey residential construction generally costs between ₹1,899 and ₹2,899+ per sqft. For a standard 2,000 to 3,500 sqft residence, total project cost ranges from ₹45 Lakhs to ₹1 Crore for basic framing up to ₹1 Crore to ₹3 Crore for premium individual houses and luxury villas with high-spec interior finishes.",
+    a: "In Chennai, turnkey residential construction generally costs between ₹1,899 and ₹2,599 per sqft across basic to premium specification tiers. For a standard 2,000 to 3,500 sqft residence, total project cost ranges from ₹38 Lakhs for basic framing up to ₹90 Lakhs and above for premium individual houses and luxury villas with high-spec interior finishes.",
   },
-    {
-      q: "What is the construction cost per square foot in Chennai?",
-      a: "Typical construction costs per sqft in Chennai vary by specification tier: Basic/Standard construction starts around ₹1,899/sqft, Premium residential homes average ₹2,199 to ₹2,499/sqft, and Luxury bespoke villas with imported marble, high-end fenestrations, and home automation range between ₹2,699 and ₹3,200+/sqft.",
-    },
+  {
+    q: "What is the construction cost per square foot in Chennai?",
+    a: "Turnkey residential construction costs per sqft in Chennai with TBC are structured across three transparent packages: Basic at ₹1,899/sqft, Standard at ₹2,199/sqft, and Premium at ₹2,599/sqft. Exact costs depend on architectural complexity, foundation soil conditions, and finish specifications.",
+  },
     {
       q: "How much does it cost to build a 2,000 sqft house in Chennai?",
       a: "Constructing a 2,000 sqft house in Chennai typically requires an investment of ₹38 Lakhs to ₹58 Lakhs depending on the chosen finish tier. A standard specification package averages approximately ₹38–44 Lakhs, while a premium turnkey finish with branded teak doors, vitrified flooring, and modular plumbing averages ₹45–55 Lakhs.",

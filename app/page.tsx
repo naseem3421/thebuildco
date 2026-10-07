@@ -37,7 +37,7 @@ export default function HomePage() {
       <ServiceJsonLd
         name="Turnkey Residential Home Construction in Chennai"
         serviceType="Turnkey Residential House Construction"
-        description="End-to-end turnkey residential construction in Chennai for landowners planning ₹1 Cr–₹3 Cr homes, luxury villas, and duplex residences."
+        description="End-to-end turnkey residential construction in Chennai for landowners planning bespoke homes, luxury villas, and duplex residences."
       />
 
       {/* 02 — Hero Section */}
@@ -52,7 +52,7 @@ export default function HomePage() {
       {/* 05 — Is TBC Right For Your Project? (4 Qualification Criteria) */}
       <QualificationSection />
 
-      {/* 06 — The Problem (Building a ₹2 Crore Home Shouldn't Feel Like Managing 20 Contractors) */}
+      {/* 06 — The Problem (Building a Premium Home Shouldn't Feel Like Managing 20 Contractors) */}
       <ProblemSection />
 
       {/* 07 — One Accountable Team (6 Stages from First Drawing to Final Key) */}

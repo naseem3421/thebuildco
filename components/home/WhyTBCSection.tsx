@@ -52,7 +52,7 @@ export function WhyTBCSection() {
         <SectionHeading
           eyebrow="CORE DIFFERENTIATORS"
           title="Why Homeowners Choose TBC"
-          subtitle="Built around trust, accountability, quality, and rigorous financial discipline for your ₹1–3 Crore investment."
+          subtitle="Built around trust, accountability, quality, and rigorous financial discipline for your residential investment."
         />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

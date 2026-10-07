@@ -10,7 +10,7 @@ import { Sparkles, ShieldCheck, Gem, Layers, Award } from "lucide-react";
 export const metadata: Metadata = {
   title: "Luxury Home Construction in Chennai | Premium Residences by TBC",
   description:
-    "Construct bespoke luxury residences in Chennai with TBC. High-spec architectural homes in ₹2 Cr–₹5 Cr+ range with imported marble, home automation, and precision craftsmanship.",
+    "Construct bespoke luxury residences in Chennai with TBC. High-spec architectural homes with imported marble, home automation, and precision craftsmanship.",
   keywords: [
     "luxury house construction chennai",
     "luxury home builders chennai",
@@ -31,7 +31,7 @@ export default function LuxuryHomeConstructionPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <span className="text-xs uppercase font-extrabold tracking-widest text-[#EA580C] block mb-3">
-                HIGH-SPEC ARCHITECTURAL RESIDENCES • ₹2 CR–₹5 CR+
+                HIGH-SPEC ARCHITECTURAL RESIDENCES • CHENNAI
               </span>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-neutral-900 leading-[1.1]">
                 Luxury Home Construction in Chennai

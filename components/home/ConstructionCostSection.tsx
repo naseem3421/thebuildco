@@ -29,7 +29,7 @@ export function ConstructionCostSection() {
 
           <div className="mt-8 text-base sm:text-lg text-neutral-700 leading-relaxed space-y-4">
             <p>
-              In Chennai, residential house construction typically ranges between <strong>₹1,899/sqft for standard structural packages</strong> to <strong>₹2,899+/sqft for bespoke luxury villa finishes</strong>. For a standard 2,500 sqft to 3,500 sqft family home, the overall construction budget typically falls into the <strong>₹1 Crore to ₹3 Crore range</strong> (excluding land cost).
+              In Chennai, residential house construction typically ranges between <strong>₹1,899/sqft for standard structural packages</strong> to <strong>₹2,599/sqft for premium luxury finishes</strong>. For a standard 2,500 sqft to 3,500 sqft family home, the overall construction budget typically falls into the <strong>₹50 Lakhs to ₹90+ Lakhs range</strong> depending on specifications (excluding land cost).
             </p>
             <p>
               Unlike generic contractor ballparks, the exact construction investment is dictated by specific structural engineering requirements, soil strata, and interior finishes rather than an arbitrary flat rate.

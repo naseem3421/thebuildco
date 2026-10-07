@@ -21,7 +21,7 @@ export function WhatDoesTBCDoSection() {
               <strong>TBC — The Build Company</strong> is a Chennai-based turnkey residential construction company that builds custom individual houses, modern villas, and duplex homes exclusively on land already owned by the client. TBC manages the complete lifecycle from architectural design, CMDA/GCC planning coordination, and structural engineering to material procurement, on-site construction, rigorous quality control, and formal key handover.
             </p>
             <p>
-              The company primarily serves Chennai landowners executing residential construction projects in the <strong>₹1 Crore to ₹3 Crore range</strong> across key corridors including OMR, ECR, Medavakkam, Velachery, Anna Nagar, Porur, and Tambaram. Additionally, TBC partners with property owners on selective <strong>Joint Venture (JV) development projects</strong> subject to location suitability and commercial feasibility.
+              The company primarily serves Chennai landowners executing substantial residential construction projects across key corridors including OMR, ECR, Medavakkam, Velachery, Anna Nagar, Porur, and Tambaram. Additionally, TBC partners with property owners on selective <strong>Joint Venture (JV) development projects</strong> subject to location suitability and commercial feasibility.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export function WhatDoesTBCDoSection() {
             <div className="flex items-start gap-2.5">
               <CheckCircle2 className="w-5 h-5 text-[#EA580C] shrink-0 mt-0.5" />
               <span className="text-sm text-neutral-700">
-                <strong>₹1 Cr–₹3 Cr Scope:</strong> Dedicated to substantial family homes & villas.
+                <strong>Substantial Scale:</strong> Dedicated to individual family homes, villas & duplexes.
               </span>
             </div>
             <div className="flex items-start gap-2.5">

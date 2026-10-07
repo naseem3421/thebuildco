@@ -45,17 +45,17 @@ export function HeroSection() {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] mb-5 tracking-widest uppercase">
               <MapPin className="w-3.5 h-3.5 text-[#EA580C]" />
-              <span>TURNKEY HOME CONSTRUCTION IN CHENNAI</span>
+              <span>PREMIUM TURNKEY HOME CONSTRUCTION IN CHENNAI</span>
             </div>
 
             {/* H1 */}
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 leading-[1.12]">
-              Build Your ₹1–3 Crore Home With One Team Accountable From Design to Handover.
+              Build Your Chennai Home With One Team Accountable From Design to Handover.
             </h1>
 
             {/* Supporting Copy */}
             <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl font-normal">
-              Already own your land in Chennai? TBC provides end-to-end residential construction — architectural planning, structural engineering, procurement, construction, quality control and handover — through one accountable team. Built for Chennai landowners planning premium homes, villas and duplex residences.
+              Already own your land in Chennai? TBC provides premium turnkey construction — from architectural planning and structural engineering to procurement, construction, quality control and handover — through one accountable team.
             </p>
 
             {/* CTA Buttons */}
@@ -83,13 +83,11 @@ export function HeroSection() {
             {/* Trust Line */}
             <div className="mt-8 pt-6 border-t border-neutral-100 w-full">
               <p className="text-xs sm:text-sm font-semibold text-neutral-500 tracking-wide flex flex-wrap items-center gap-2 sm:gap-3">
-                <span className="text-neutral-900 font-bold">₹1 Cr–₹3 Cr Projects</span>
-                <span className="text-neutral-300">•</span>
                 <span className="text-neutral-900 font-bold">Chennai Landowners</span>
                 <span className="text-neutral-300">•</span>
-                <span className="text-neutral-900 font-bold">Turnkey Construction</span>
+                <span className="text-neutral-900 font-bold">Premium Residential Construction</span>
                 <span className="text-neutral-300">•</span>
-                <span className="text-neutral-900 font-bold">Stage-Wise Payments</span>
+                <span className="text-neutral-900 font-bold">Turnkey Execution</span>
               </p>
             </div>
           </div>

@@ -30,7 +30,7 @@ export default function ServicesPage() {
       slug: "individual-house-construction",
       desc: "Custom single and multi-level residential homes engineered for your plot dimensions, Vastu requirements, and family lifestyle.",
       sqft: "1,800 – 4,500 sqft",
-      budget: "₹1 Cr – ₹2.5 Cr",
+      budget: "₹38 Lakhs – ₹1.2 Cr",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
       features: [
         "Tailored 2D architectural & 3D elevation design",
@@ -44,7 +44,7 @@ export default function ServicesPage() {
       slug: "villa-construction",
       desc: "Architecturally distinctive private villas with double-height living spaces, premium finishes, private courtyards, and terrace gardens.",
       sqft: "3,000 – 7,500 sqft",
-      budget: "₹1.5 Cr – ₹3 Cr+",
+      budget: "₹75 Lakhs – ₹2 Cr+",
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
       features: [
         "Expansive living rooms with acoustic thermal glazing",
@@ -58,7 +58,7 @@ export default function ServicesPage() {
       slug: "duplex-house-construction",
       desc: "Contemporary G+1 duplex residences optimized for urban Chennai plots, maximizing natural daylight and cross-ventilation.",
       sqft: "2,200 – 4,500 sqft",
-      budget: "₹1 Cr – ₹2 Cr",
+      budget: "₹48 Lakhs – ₹1.2 Cr",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
       features: [
         "Internal floating staircase & mezzanine design",
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       slug: "luxury-home-construction",
       desc: "High-specification custom residences executed with strict civil engineering rigor, imported sanitaryware, and bespoke craftsmanship.",
       sqft: "3,500 – 8,000 sqft",
-      budget: "₹2 Cr – ₹3 Cr+",
+      budget: "₹90 Lakhs – ₹2.2 Cr+",
       image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
       features: [
         "Architect-grade bespoke joinery & teak wood doors",
@@ -96,7 +96,7 @@ export default function ServicesPage() {
               Residential Construction Services in Chennai
             </h1>
             <p className="mt-5 text-base sm:text-lg text-neutral-600 leading-relaxed">
-              TBC specializes in turnkey construction for landowners planning homes in the ₹1 Crore to ₹3 Crore range. From architectural design to final handover, one team is accountable for your entire build.
+              TBC specializes in premium turnkey residential construction for Chennai landowners. From architectural design to final handover, one team is accountable for your entire build.
             </p>
           </div>
         </Container>
