@@ -17,16 +17,27 @@ export { ImageCard } from "./ui/ImageCard";
 
 // Home Section Components
 export { HeroSection } from "./home/HeroSection";
-export { TrustMetricsSection } from "./home/TrustMetricsSection";
+export { TrustStripSection } from "./home/TrustStripSection";
+export { WhatDoesTBCDoSection } from "./home/WhatDoesTBCDoSection";
+export { QualificationSection } from "./home/QualificationSection";
+export { ProblemSection } from "./home/ProblemSection";
+export { OneAccountableTeamSection } from "./home/OneAccountableTeamSection";
 export { ServicesSection } from "./home/ServicesSection";
-export { EditorialTrustSection } from "./home/EditorialTrustSection";
-export { PackagesSection } from "./home/PackagesSection";
+export { JointVentureHomeSection } from "./home/JointVentureHomeSection";
+export { ConstructionCostSection } from "./home/ConstructionCostSection";
 export { CostCalculatorSection } from "./home/CostCalculatorSection";
+export { MoneyControlSection } from "./home/MoneyControlSection";
 export { ProcessSection } from "./home/ProcessSection";
+export { QualityControlSection } from "./home/QualityControlSection";
 export { ProjectsSection } from "./home/ProjectsSection";
 export { WhyTBCSection } from "./home/WhyTBCSection";
 export { TestimonialsSection } from "./home/TestimonialsSection";
-export { RiskReversalSection } from "./home/RiskReversalSection";
+export { AEOQuestionSection } from "./home/AEOQuestionSection";
 export { FAQSection } from "./home/FAQSection";
 export { FinalCTASection } from "./home/FinalCTASection";
 export { ContactInquirySection } from "./home/ContactInquirySection";
+export { TrustMetricsSection } from "./home/TrustMetricsSection";
+export { EditorialTrustSection } from "./home/EditorialTrustSection";
+export { PackagesSection } from "./home/PackagesSection";
+export { RiskReversalSection } from "./home/RiskReversalSection";
+

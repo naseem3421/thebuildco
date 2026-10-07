@@ -8,12 +8,12 @@ import { Phone, MessageCircle, MapPin, Sparkles, ShieldCheck } from "lucide-reac
 
 export function ContactInquirySection() {
   return (
-    <section id="contact" className="py-16 sm:py-24 scroll-mt-20">
+    <section id="consultation" className="py-16 sm:py-24 scroll-mt-20 bg-white border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
-          eyebrow="Direct Engineering Consultation"
-          title="Schedule Your Free Site Visit"
-          description="Speak directly with our senior structural architect. We inspect your plot, evaluate soil conditions, and prepare a custom floor plan with zero obligation."
+          eyebrow="DIRECT ENGINEERING CONSULTATION"
+          title="Book Your Project Consultation"
+          subtitle="Speak directly with our senior structural engineers. We inspect your plot, evaluate soil conditions, and prepare a custom floor plan with zero obligation."
           align="center"
         />
 
@@ -81,7 +81,7 @@ export function ContactInquirySection() {
             <div className="mt-8 pt-6 border-t border-[#244E46] space-y-2 text-xs text-[#8C9C96]">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#B86F50] shrink-0" />
-                <span>Response within 30 minutes during working hours</span>
+                <span>Prompt response during working hours</span>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#1E7E34] shrink-0" />
@@ -95,7 +95,7 @@ export function ContactInquirySection() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <h4 className="font-display text-2xl font-medium text-[#183B35]">
-                  Request Free Site Survey
+                  Schedule Site Consultation
                 </h4>
                 <Badge variant="terracotta" size="sm">
                   Zero Obligation
@@ -107,8 +107,8 @@ export function ContactInquirySection() {
               </p>
 
               <LeadForm
-                source="contact_page_form"
-                buttonLabel="Get Free Quote & Site Visit"
+                source="homepage_consultation"
+                buttonLabel="Book My Project Consultation"
                 variant="default"
               />
             </div>

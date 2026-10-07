@@ -5,6 +5,7 @@ export interface SectionHeadingProps {
   eyebrow?: string;
   title: string;
   description?: string;
+  subtitle?: string;
   align?: "left" | "center";
   dark?: boolean;
   className?: string;
@@ -14,11 +15,13 @@ export function SectionHeading({
   eyebrow,
   title,
   description,
+  subtitle,
   align = "center",
   dark = false,
   className = "",
 }: SectionHeadingProps) {
   const isCenter = align === "center";
+  const descText = description || subtitle;
 
   return (
     <div
@@ -40,13 +43,13 @@ export function SectionHeading({
         {title}
       </h2>
 
-      {description && (
+      {descText && (
         <p
           className={`mt-4 text-base sm:text-lg leading-relaxed ${
             dark ? "text-[#D9D2C5]" : "text-[#52655E]"
           }`}
         >
-          {description}
+          {descText}
         </p>
       )}
     </div>

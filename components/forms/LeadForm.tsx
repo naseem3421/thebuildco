@@ -18,6 +18,7 @@ export interface LeadFormProps {
   source?: string;
   formType?: FormType;
   buttonLabel?: string;
+  defaultService?: string;
   prefillArea?: string | number;
   prefillPackage?: string;
   prefillFloors?: string | number;

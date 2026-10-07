@@ -34,31 +34,30 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://thebuildcompany.in"),
   title: {
-    default: "TBC | House Construction Company in Chennai | From ₹1,899/sqft",
+    default: "TBC | Turnkey House Construction Company in Chennai",
     template: `%s | ${siteConfig.shortName} — The Build Company`,
   },
   description:
-    "Premier house construction company in Chennai. We construct bespoke independent houses, luxury villas, and duplex homes on customer-owned plots from ₹1,899/sqft with stage-wise payments, 5-year warranty, and free site consultation.",
+    "Turnkey residential construction company in Chennai for landowners planning ₹1–3 Crore homes, luxury villas, and duplex residences. Architectural design, structural engineering, quality control, and handover through one accountable team.",
   keywords: [
-    "house construction company Chennai",
-    "home construction company Chennai",
-    "construction company Chennai",
-    "house builders Chennai",
-    "villa construction Chennai",
-    "individual house construction Chennai",
-    "duplex construction Chennai",
-    "construction cost per sqft Chennai",
-    "house construction cost Chennai",
-    "turnkey construction Chennai",
+    "turnkey house construction company chennai",
+    "house construction company chennai",
+    "residential construction company chennai",
+    "home construction company chennai",
+    "luxury house construction chennai",
+    "villa construction chennai",
+    "duplex construction chennai",
+    "house construction cost chennai",
+    "joint venture construction chennai",
   ],
   authors: [{ name: siteConfig.name }],
   alternates: {
     canonical: "https://thebuildcompany.in",
   },
   openGraph: {
-    title: "TBC | House Construction Company in Chennai | From ₹1,899/sqft",
+    title: "TBC | Turnkey House Construction Company in Chennai",
     description:
-      "Turnkey residential construction on your plot in Chennai. Transparent pricing from ₹1,899/sqft, stage-wise payments, and 5-year warranty.",
+      "Build your ₹1–3 Crore home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
     url: "https://thebuildcompany.in",
     siteName: siteConfig.name,
     locale: "en_IN",
@@ -66,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TBC | House Construction Company in Chennai",
+    title: "TBC | Turnkey House Construction Company in Chennai",
     description:
-      "Turnkey residential construction on your plot in Chennai starting from ₹1,899/sqft with milestone payments.",
+      "Build your ₹1–3 Crore home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
   },
   icons: {
     icon: [

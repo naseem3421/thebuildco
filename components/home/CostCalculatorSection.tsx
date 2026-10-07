@@ -316,7 +316,7 @@ export function CostCalculatorSection() {
                       onClick={() => setShowLeadGate(true)}
                       rightIcon={<ChevronRight className="w-4 h-4" />}
                     >
-                      Want a more detailed estimate?
+                      Get My Detailed Project Estimate
                     </Button>
 
                     <Button

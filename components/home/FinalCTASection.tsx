@@ -1,69 +1,68 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "../ui/Container";
-import { Badge } from "../ui/Badge";
-import { CTAButton } from "../ui/CTAButton";
-import { WhatsAppButton } from "../ui/WhatsAppButton";
-import { PhoneButton } from "../ui/PhoneButton";
-import { LandPlot } from "lucide-react";
+import { CalendarCheck, Calculator, Handshake, ArrowRight } from "lucide-react";
 
 export function FinalCTASection() {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-16 sm:py-24 bg-white">
       <Container size="wide">
-        <div className="relative rounded-3xl overflow-hidden min-h-[460px] sm:min-h-[520px] flex items-center justify-center p-8 sm:p-16 border border-[#244E46] shadow-luxury-lg">
+        <div className="relative rounded-3xl overflow-hidden min-h-[480px] sm:min-h-[520px] flex items-center justify-center p-8 sm:p-16 border border-neutral-800 shadow-luxury-lg bg-[#0B1E1A]">
           {/* Background Architectural Image */}
           <Image
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
             alt="Turnkey luxury residential home in Chennai constructed by TBC"
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover opacity-20"
           />
-
-          {/* Luxury Deep Forest Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0E2420]/95 via-[#0E2420]/90 to-[#183B35]/85 backdrop-blur-[2px]" />
 
           {/* Foreground CTA Content */}
           <div className="relative z-10 max-w-3xl text-center flex flex-col items-center">
-            <Badge variant="sand" className="mb-4">
-              <LandPlot className="w-3.5 h-3.5 text-[#B86F50]" />
-              Chennai Landowner Turnkey Partner
-            </Badge>
-
-            <span className="text-xs sm:text-sm uppercase font-semibold tracking-[0.25em] text-[#B86F50] mb-2 block">
-              Already Own the Land?
+            <span className="text-xs uppercase font-extrabold tracking-widest text-[#EA580C] mb-3 block">
+              TURNKEY CIVIL EXCELLENCE • CHENNAI
             </span>
 
-            <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-normal text-[#FBF9F4] leading-[1.08] tracking-tight">
-              Let&apos;s Build Something Worth Coming Home To.
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.12] tracking-tight">
+              Planning a ₹1–3 Crore Home in Chennai?
             </h2>
 
-            <p className="mt-5 text-sm sm:text-lg text-[#D9D2C5] max-w-xl leading-relaxed">
-              Book a no-obligation site survey with our structural team. Get complete architectural blueprints and itemized sqft pricing for your plot.
+            <p className="mt-5 text-base sm:text-lg text-neutral-300 max-w-2xl leading-relaxed">
+              Tell us about your plot, expected built-up area and project requirements. We'll help you understand the right construction approach, approximate investment and next steps.
             </p>
 
-            {/* 3 Action Buttons */}
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
-              <CTAButton
-                type="primary"
-                size="lg"
-                label="Get Free Quote"
-                className="w-full sm:w-auto"
-              />
-              <WhatsAppButton size="lg" className="w-full sm:w-auto" />
-              <PhoneButton
-                size="lg"
-                variant="secondary"
-                label="Call TBC"
-                showNumber
-                className="w-full sm:w-auto bg-[#FBF9F4] text-[#183B35] hover:bg-[#E9E4D9]"
-              />
+            {/* Primary & Secondary Action Buttons */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto">
+              <a
+                href="#consultation"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#EA580C] text-white font-semibold text-sm hover:bg-[#C2410C] transition-colors shadow-luxury-sm inline-flex items-center justify-center gap-2 group"
+              >
+                <CalendarCheck className="w-4 h-4 text-white" />
+                <span>Book My Project Consultation</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              <Link
+                href="/calculator-pro-3"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-neutral-900 font-semibold text-sm hover:bg-neutral-100 transition-colors inline-flex items-center justify-center gap-2 shadow-xs"
+              >
+                <Calculator className="w-4 h-4 text-[#EA580C]" />
+                <span>Calculate My Construction Budget</span>
+              </Link>
             </div>
 
-            <div className="mt-8 text-xs text-[#8C9C96]">
-              <span>Office: {siteConfig.location.address} • Mon - Sat 9 AM - 7 PM</span>
+            {/* Smaller Secondary CTA for Property Owners */}
+            <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-neutral-400">
+              <Handshake className="w-4 h-4 text-[#EA580C]" />
+              <span>Have Development Land?</span>
+              <Link
+                href="/joint-venture-projects"
+                className="font-bold text-white hover:text-[#EA580C] underline decoration-[#EA580C] underline-offset-4 transition-colors ml-1"
+              >
+                Discuss a Joint Venture Project →
+              </Link>
             </div>
           </div>
         </div>

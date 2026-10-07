@@ -1,73 +1,62 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { trackPhoneClick, trackWhatsAppClick, trackCTAClick } from "@/lib/analytics";
-import { Phone, MessageCircle, FileText } from "lucide-react";
+import { trackWhatsAppClick, trackCTAClick } from "@/lib/analytics";
+import { MessageCircle, CalendarCheck, Calculator } from "lucide-react";
 
 export function StickyMobileCTA() {
-  const handlePhoneClick = () => {
-    trackPhoneClick("sticky_mobile");
-  };
-
   const handleWhatsAppClick = () => {
     trackWhatsAppClick("sticky_mobile");
   };
 
-  const handleQuoteClick = () => {
+  const handleConsultationClick = () => {
     trackCTAClick({
-      cta_label: "Sticky Mobile Get Quote",
+      cta_label: "Sticky Mobile Book Consultation",
       location: "sticky_mobile",
-      destination: "#contact",
+      destination: "#consultation",
     });
   };
 
   return (
     <aside
       aria-label="Quick contact actions"
-      className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-[#F4F0E8]/95 backdrop-blur-lg border-t border-[#D9D2C5] shadow-[0_-4px_20px_rgba(24,59,53,0.12)] px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]"
+      className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white/95 backdrop-blur-lg border-t border-neutral-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]"
     >
-      <div className="grid grid-cols-3 gap-2 max-w-md mx-auto items-center">
-        {/* 1. CALL */}
-        <a
-          href={siteConfig.contact.phoneHref}
-          onClick={handlePhoneClick}
-          aria-label={`Call TBC office at ${siteConfig.contact.phoneDisplay}`}
-          className="flex flex-col items-center justify-center min-h-[46px] rounded-xl bg-[#FBF9F4] text-[#183B35] border border-[#D9D2C5] active:bg-[#E9E4D9] transition-colors"
-        >
-          <Phone className="w-4 h-4 text-[#B86F50]" />
-          <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">
-            Call
-          </span>
-        </a>
-
-        {/* 2. WHATSAPP */}
+      <div className="flex items-center gap-2 max-w-md mx-auto">
+        {/* WhatsApp Icon */}
         <a
           href={siteConfig.contact.whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
           aria-label="Chat on WhatsApp with TBC engineering team"
-          className="flex flex-col items-center justify-center min-h-[46px] rounded-xl bg-[#1E7E34] text-white shadow-luxury-sm active:bg-[#155D27] transition-colors"
+          className="flex items-center justify-center w-11 h-11 rounded-xl bg-[#25D366] text-white shadow-xs shrink-0 active:scale-95 transition-transform"
         >
-          <MessageCircle className="w-4 h-4 text-white" />
-          <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">
-            WhatsApp
-          </span>
+          <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
         </a>
 
-        {/* 3. GET QUOTE */}
+        {/* Primary CTA: Book Project Consultation */}
         <a
-          href="#contact"
-          onClick={handleQuoteClick}
-          aria-label="Get Free Construction Quote"
-          className="flex flex-col items-center justify-center min-h-[46px] rounded-xl bg-[#B86F50] text-[#FBF9F4] shadow-luxury-sm active:bg-[#9D5C42] transition-colors"
+          href="#consultation"
+          onClick={handleConsultationClick}
+          aria-label="Book Project Consultation"
+          className="flex-1 flex items-center justify-center gap-1.5 h-11 px-3 rounded-xl bg-[#EA580C] text-white font-semibold text-xs sm:text-sm shadow-luxury-sm active:bg-[#C2410C] transition-colors"
         >
-          <FileText className="w-4 h-4 text-[#FBF9F4]" />
-          <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">
-            Get Quote
-          </span>
+          <CalendarCheck className="w-4 h-4 shrink-0" />
+          <span className="truncate">Book Project Consultation</span>
         </a>
+
+        {/* Secondary CTA: Calculate Cost */}
+        <Link
+          href="/calculator-pro-3"
+          aria-label="Calculate Construction Cost"
+          className="flex items-center justify-center gap-1.5 h-11 px-3 rounded-xl bg-neutral-900 text-white font-semibold text-xs sm:text-sm shadow-xs shrink-0 active:bg-neutral-800 transition-colors"
+        >
+          <Calculator className="w-4 h-4 shrink-0 text-[#EA580C]" />
+          <span className="whitespace-nowrap">Calculate Cost</span>
+        </Link>
       </div>
     </aside>
   );

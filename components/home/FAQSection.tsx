@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
-import { ChevronDown, MessageCircle } from "lucide-react";
+import { ChevronDown, MessageCircle, ArrowRight } from "lucide-react";
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -14,13 +15,12 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 scroll-mt-20">
+    <section id="faq" className="py-16 sm:py-24 bg-white border-b border-neutral-200">
       <Container size="narrow">
         <SectionHeading
-          eyebrow="Landowner Clarity"
+          eyebrow="LANDOWNER CLARITY"
           title="Frequently Asked Questions"
-          description="Straightforward answers to the most common questions about building on your plot in Chennai."
-          align="center"
+          subtitle="Clear, transparent answers to help you navigate building on your plot in Chennai."
         />
 
         <div className="mt-12 space-y-4">
@@ -32,7 +32,7 @@ export function FAQSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-[#FBF9F4] border border-[#D9D2C5] overflow-hidden transition-all duration-200 shadow-luxury-sm"
+                className="rounded-3xl bg-[#FAF8F5] border border-neutral-200/90 overflow-hidden transition-all duration-200 shadow-xs"
               >
                 <button
                   id={buttonId}
@@ -42,13 +42,13 @@ export function FAQSection() {
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                 >
-                  <span className="font-display text-lg sm:text-xl font-medium text-[#183B35]">
+                  <span className="font-display text-lg sm:text-xl font-medium text-neutral-900">
                     {faq.question}
                   </span>
                   <div
                     aria-hidden="true"
-                    className={`w-8 h-8 rounded-full bg-[#F4F0E8] border border-[#D9D2C5] flex items-center justify-center shrink-0 text-[#183B35] transition-transform duration-200 ${
-                      isOpen ? "rotate-180 bg-[#B86F50] text-white border-[#B86F50]" : ""
+                    className={`w-8 h-8 rounded-full bg-white border border-neutral-200 flex items-center justify-center shrink-0 text-neutral-800 transition-transform duration-200 ${
+                      isOpen ? "rotate-180 bg-[#EA580C] text-white border-[#EA580C]" : ""
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -60,7 +60,7 @@ export function FAQSection() {
                     id={panelId}
                     role="region"
                     aria-labelledby={buttonId}
-                    className="px-6 pb-6 text-xs sm:text-sm text-[#52655E] leading-relaxed border-t border-[#D9D2C5]/50 pt-4 animate-in fade-in duration-200"
+                    className="px-6 pb-6 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-200/60 pt-4"
                   >
                     {faq.answer}
                   </div>
@@ -70,18 +70,15 @@ export function FAQSection() {
           })}
         </div>
 
-        {/* Quick Help Callout */}
-        <div className="mt-10 text-center text-xs text-[#52655E]">
-          <span>Have a unique plot size or specific architectural query? </span>
-          <a
-            href={siteConfig.contact.whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-[#1E7E34] hover:underline ml-1"
+        {/* Deeper FAQ link */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#EA580C] hover:text-[#C2410C]"
           >
-            <MessageCircle className="w-3.5 h-3.5" />
-            <span>Ask our engineers on WhatsApp</span>
-          </a>
+            <span>View All Detailed Technical FAQs</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </Container>
     </section>

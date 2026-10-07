@@ -1,64 +1,103 @@
 import React from "react";
 import {
   HeroSection,
-  TrustMetricsSection,
+  TrustStripSection,
+  WhatDoesTBCDoSection,
+  QualificationSection,
+  ProblemSection,
+  OneAccountableTeamSection,
   ServicesSection,
-  EditorialTrustSection,
-  PackagesSection,
+  JointVentureHomeSection,
+  ConstructionCostSection,
   CostCalculatorSection,
+  MoneyControlSection,
   ProcessSection,
+  QualityControlSection,
   ProjectsSection,
   WhyTBCSection,
   TestimonialsSection,
-  RiskReversalSection,
+  AEOQuestionSection,
   FAQSection,
   ContactInquirySection,
   FinalCTASection,
 } from "@/components";
+import { homepageAeoQuestions } from "@/components/home/AEOQuestionSection";
+import { FAQJsonLd, ServiceJsonLd } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
+  const faqSchemaData = homepageAeoQuestions.map((item) => ({
+    question: item.q,
+    answer: item.a,
+  }));
+
   return (
     <div className="flex flex-col">
-      {/* 2. Hero Section */}
+      {/* Structured Data for Search & AI Engines */}
+      <FAQJsonLd faqs={faqSchemaData} />
+      <ServiceJsonLd
+        name="Turnkey Residential Home Construction in Chennai"
+        serviceType="Turnkey Residential House Construction"
+        description="End-to-end turnkey residential construction in Chennai for landowners planning ₹1 Cr–₹3 Cr homes, luxury villas, and duplex residences."
+      />
+
+      {/* 02 — Hero Section */}
       <HeroSection />
 
-      {/* 3. Trust Metrics */}
-      <TrustMetricsSection />
+      {/* 03 — Trust Strip */}
+      <TrustStripSection />
 
-      {/* 4. Construction Services */}
+      {/* 04 — What Does TBC Do? (AEO/AIO Direct Entity Overview) */}
+      <WhatDoesTBCDoSection />
+
+      {/* 05 — Is TBC Right For Your Project? (4 Qualification Criteria) */}
+      <QualificationSection />
+
+      {/* 06 — The Problem (Building a ₹2 Crore Home Shouldn't Feel Like Managing 20 Contractors) */}
+      <ProblemSection />
+
+      {/* 07 — One Accountable Team (6 Stages from First Drawing to Final Key) */}
+      <OneAccountableTeamSection />
+
+      {/* 08 — Residential Services (Individual House, Villa, Duplex, Luxury Home) */}
       <ServicesSection />
 
-      {/* 5. Editorial "Construction You Can Trust" */}
-      <EditorialTrustSection />
+      {/* 09 — Joint Venture Projects (Secondary Business Offering) */}
+      <JointVentureHomeSection />
 
-      {/* 6. Packages Preview */}
-      <PackagesSection />
+      {/* 10 — Construction Cost in Chennai (Direct Answer & Cost Drivers) */}
+      <ConstructionCostSection />
 
-      {/* 7. Cost Calculator Preview */}
+      {/* 11 — Cost Calculator (Interactive Estimation Engine & Project Qualification) */}
       <CostCalculatorSection />
 
-      {/* 8. Process (8 Steps) */}
+      {/* 12 — Investment & Payment Transparency (Know Where Your Money Goes & Milestone Payments) */}
+      <MoneyControlSection />
+
+      {/* 13 — 8-Stage Construction Process */}
       <ProcessSection />
 
-      {/* 9. Featured Projects (4 Chennai Projects) */}
+      {/* 14 — Quality Control (Engineering Rigor & Critical Stage Inspections) */}
+      <QualityControlSection />
+
+      {/* 15 — Selected Projects (Real Case Studies on Client-Owned Land) */}
       <ProjectsSection />
 
-      {/* 10. Why TBC */}
+      {/* 16 — Why TBC (6 Core Differentiators) */}
       <WhyTBCSection />
 
-      {/* 11. Testimonials */}
+      {/* 17 — Client Testimonials (Genuine Homeowner Experiences) */}
       <TestimonialsSection />
 
-      {/* 12. Risk Reversal */}
-      <RiskReversalSection />
+      {/* 18 — AEO Question Section (16 Factual Q&As for Chennai Landowners) */}
+      <AEOQuestionSection />
 
-      {/* 13. FAQ Preview */}
+      {/* 19 — FAQ (Interactive Accordion) */}
       <FAQSection />
 
-      {/* 14. Free Site Consultation Lead Capture */}
+      {/* Consultation Booking & Site Survey Form */}
       <ContactInquirySection />
 
-      {/* 15. Final CTA */}
+      {/* 20 — Final CTA */}
       <FinalCTASection />
     </div>
   );
