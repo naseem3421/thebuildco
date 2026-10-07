@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
 import {
@@ -52,7 +53,8 @@ export function OneAccountableTeamSection() {
   ];
 
   return (
-    <section id="one-team" className="py-16 sm:py-24 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="process" className="py-16 sm:py-24 bg-[#FAF8F5] border-b border-neutral-200">
+      <span id="one-team" className="sr-only" aria-hidden="true" />
       <Container size="wide">
         <SectionHeading
           eyebrow="END-TO-END ACCOUNTABILITY"
@@ -94,6 +96,16 @@ export function OneAccountableTeamSection() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/process"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-neutral-300 text-neutral-900 font-bold text-sm hover:border-[#EA580C] hover:text-[#EA580C] shadow-xs transition-all group"
+          >
+            <span>Explore Our Full 8-Stage Methodology & Milestones</span>
+            <ArrowRight className="w-4 h-4 text-[#EA580C] transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </Container>
     </section>

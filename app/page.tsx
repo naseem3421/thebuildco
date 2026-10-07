@@ -1,7 +1,6 @@
 import React from "react";
 import {
   HeroSection,
-  TrustStripSection,
   WhatDoesTBCDoSection,
   QualificationSection,
   ProblemSection,
@@ -11,17 +10,15 @@ import {
   ConstructionCostSection,
   CostCalculatorSection,
   MoneyControlSection,
-  ProcessSection,
   QualityControlSection,
   ProjectsSection,
   WhyTBCSection,
   TestimonialsSection,
   AEOQuestionSection,
-  FAQSection,
   ContactInquirySection,
   FinalCTASection,
 } from "@/components";
-import { homepageAeoQuestions } from "@/components/home/AEOQuestionSection";
+import { homepageAeoQuestions } from "@/config/aeoQuestions";
 import { FAQJsonLd, ServiceJsonLd } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
@@ -40,64 +37,55 @@ export default function HomePage() {
         description="End-to-end turnkey residential construction in Chennai for landowners planning bespoke homes, luxury villas, and duplex residences."
       />
 
-      {/* 02 — Hero Section */}
+      {/* 01 — Hero Section */}
       <HeroSection />
 
-      {/* 03 — Trust Strip */}
-      <TrustStripSection />
-
-      {/* 04 — What Does TBC Do? (AEO/AIO Direct Entity Overview) */}
+      {/* 02 — What Does TBC Do? (AEO/AIO Direct Entity Overview) */}
       <WhatDoesTBCDoSection />
 
-      {/* 05 — Is TBC Right For Your Project? (4 Qualification Criteria) */}
+      {/* 03 — Is TBC Right For Your Project? (4 Qualification Criteria) */}
       <QualificationSection />
 
-      {/* 06 — The Problem (Building a Premium Home Shouldn't Feel Like Managing 20 Contractors) */}
+      {/* 04 — The Problem (Building a Premium Home Shouldn't Feel Like Managing 20 Contractors) */}
       <ProblemSection />
 
-      {/* 07 — One Accountable Team (6 Stages from First Drawing to Final Key) */}
+      {/* 05 — One Accountable Team & Process (6 Stages from First Drawing to Final Key) */}
       <OneAccountableTeamSection />
 
-      {/* 08 — Residential Services (Individual House, Villa, Duplex, Luxury Home) */}
+      {/* 06 — Residential Services (Individual House, Villa, Duplex, Luxury Home) */}
       <ServicesSection />
 
-      {/* 09 — Joint Venture Projects (Secondary Business Offering) */}
+      {/* 07 — Joint Venture Projects (Selective Landowner Partnerships) */}
       <JointVentureHomeSection />
 
-      {/* 10 — Construction Cost in Chennai (Direct Answer & Cost Drivers) */}
+      {/* 08 — Construction Cost in Chennai (Direct Answer & Cost Drivers) */}
       <ConstructionCostSection />
 
-      {/* 11 — Cost Calculator (Interactive Estimation Engine & Project Qualification) */}
+      {/* 09 — Cost Calculator (Interactive Estimation Engine & Project Qualification) */}
       <CostCalculatorSection />
 
-      {/* 12 — Investment & Payment Transparency (Know Where Your Money Goes & Milestone Payments) */}
+      {/* 10 — Investment & Payment Transparency (Know Where Your Money Goes & Milestone Payments) */}
       <MoneyControlSection />
 
-      {/* 13 — 8-Stage Construction Process */}
-      <ProcessSection />
-
-      {/* 14 — Quality Control (Engineering Rigor & Critical Stage Inspections) */}
+      {/* 11 — Quality Control (Engineering Rigor & Critical Stage Inspections) */}
       <QualityControlSection />
 
-      {/* 15 — Selected Projects (Real Case Studies on Client-Owned Land) */}
+      {/* 12 — Selected Projects (Real Case Studies on Client-Owned Land) */}
       <ProjectsSection />
 
-      {/* 16 — Why TBC (6 Core Differentiators) */}
+      {/* 13 — Why TBC (6 Core Differentiators) */}
       <WhyTBCSection />
 
-      {/* 17 — Client Testimonials (Genuine Homeowner Experiences) */}
+      {/* 14 — Client Testimonials (Genuine Homeowner Experiences) */}
       <TestimonialsSection />
 
-      {/* 18 — AEO Question Section (16 Factual Q&As for Chennai Landowners) */}
+      {/* 15 — Landowner Knowledge Base & FAQ (18 Factual Q&As with Interactive Accordion) */}
       <AEOQuestionSection />
 
-      {/* 19 — FAQ (Interactive Accordion) */}
-      <FAQSection />
-
-      {/* Consultation Booking & Site Survey Form */}
+      {/* 16 — Consultation Booking & Site Survey Form */}
       <ContactInquirySection />
 
-      {/* 20 — Final CTA */}
+      {/* 17 — Final CTA */}
       <FinalCTASection />
     </div>
   );
