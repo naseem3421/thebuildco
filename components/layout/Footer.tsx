@@ -183,25 +183,25 @@ export function Footer() {
       </div>
 
       {/* Legal, Model Notice & Copyright */}
-      <div className="py-8 bg-neutral-50 border-t border-neutral-200 text-xs text-neutral-500">
+      <div className="py-8 bg-[#0B1E1A] text-xs text-[#8C9C96] border-t border-[#183B35]">
         <Container size="wide">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-center md:text-left leading-relaxed max-w-2xl">
-              <span className="font-semibold text-neutral-800">Business Notice: </span>
+              <span className="font-semibold text-[#D9D2C5]">Business Notice: </span>
               {siteConfig.legal.disclaimer}
             </p>
 
             <div className="flex items-center gap-6 shrink-0">
-              <Link href="#privacy" className="hover:text-neutral-900 transition-colors">
+              <Link href="#privacy" className="hover:text-[#FBF9F4] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#terms" className="hover:text-neutral-900 transition-colors">
+              <Link href="#terms" className="hover:text-[#FBF9F4] transition-colors">
                 Terms of Service
               </Link>
             </div>
           </div>
 
-          <div className="mt-4 pt-4 border-t border-neutral-200 text-center md:text-left flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-neutral-500">
+          <div className="mt-4 pt-4 border-t border-[#183B35]/60 text-center md:text-left flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#8C9C96]">
             <span>{siteConfig.legal.copyright}</span>
             <span>Handcrafted for excellence in Chennai, Tamil Nadu</span>
           </div>
