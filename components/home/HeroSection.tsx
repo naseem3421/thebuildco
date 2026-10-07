@@ -112,17 +112,17 @@ export function HeroSection() {
               <div className="absolute bottom-4 inset-x-4 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/60 shadow-luxury-md">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[11px] font-extrabold tracking-wider uppercase text-[#EA580C]">
-                    FEATURED RESIDENCE • MEDAVAKKAM
+                    GREENFIELD RESIDENCE • MEDAVAKKAM
                   </span>
                   <span className="text-[11px] font-bold text-neutral-500">
-                    3,200 SQFT
+                    2,850 SQFT
                   </span>
                 </div>
                 <h4 className="text-sm sm:text-base font-bold text-neutral-900 leading-snug">
-                  Contemporary G+2 Villa on Client-Owned Land
+                  Contemporary Individual House on Client-Owned Land
                 </h4>
                 <p className="mt-1 text-xs text-neutral-600">
-                  Architectural design, structural execution, Italian marble, and handover by TBC.
+                  Architectural design, structural execution, vitrified flooring, and handover by TBC.
                 </p>
               </div>
             </div>
