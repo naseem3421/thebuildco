@@ -35,7 +35,7 @@ export function CostCalculatorSection() {
 
   const currentPkg =
     siteConfig.packages.find((p) => p.id === selectedPackage) ||
-    siteConfig.packages[1];
+    siteConfig.packages[0];
 
   const currentFloorMultiplier =
     siteConfig.calculatorConfig.floorMultipliers.find((f) => f.floors === floors)
@@ -106,16 +106,32 @@ export function CostCalculatorSection() {
   };
 
   return (
-    <section id="calculator" className="py-16 sm:py-24 bg-[#E9E4D9]/40 border-y border-[#D9D2C5]/80 scroll-mt-20">
+    <section id="calculator" className="py-14 sm:py-20 bg-[#FAF8F5] border-y border-neutral-200 scroll-mt-20">
       <Container size="wide">
-        <SectionHeading
-          eyebrow="Interactive Estimation Engine"
-          title="Instant Construction Cost Calculator"
-          description="Select your built-up area, desired finish tier, and number of floors to calculate an indicative turnkey budget for your plot in Chennai."
-          align="center"
-        />
+        <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-3">
+            Indicative Packages From {siteConfig.pricing.formattedStartingPrice}
+          </div>
 
-        <div className="mt-12 max-w-5xl mx-auto rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-10 shadow-luxury-md">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 leading-tight">
+            What Could Your Home Cost?
+          </h2>
+
+          <p className="mt-3 text-sm sm:text-base text-neutral-600 leading-relaxed">
+            Get an indicative construction budget based on built-up area, specification and number of floors.
+          </p>
+
+          <div className="mt-3">
+            <a
+              href="/construction-cost-chennai"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-[#EA580C] hover:underline"
+            >
+              <span>Explore Detailed Construction Cost Breakdown & Factors →</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-6 sm:p-10 shadow-luxury-md">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Left Column: Interactive Inputs (7 cols) */}
             <div className="lg:col-span-7 space-y-6">
@@ -177,7 +193,7 @@ export function CostCalculatorSection() {
                 <label className="text-xs font-semibold text-[#183B35] uppercase tracking-wider block mb-2.5">
                   Finish & Specification Package
                 </label>
-                <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {siteConfig.packages.map((pkg) => {
                     const isSelected = selectedPackage === pkg.id;
                     return (

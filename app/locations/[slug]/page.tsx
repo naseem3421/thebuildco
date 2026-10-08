@@ -202,7 +202,7 @@ export default async function LocalityDetailPage({
                 <span className="font-semibold text-[#183B35] block mb-1">
                   Pricing Plans Available in {locality.name}:
                 </span>
-                <p>Basic (₹1,899/sqft) • Standard (₹2,199/sqft) • Premium (₹2,599/sqft)</p>
+                <p>Standard (₹2,199/sqft) • Premium (₹2,599/sqft)</p>
               </div>
 
               <Button

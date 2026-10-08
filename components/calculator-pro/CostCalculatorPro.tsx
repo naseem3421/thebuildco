@@ -28,7 +28,7 @@ export function CostCalculatorPro() {
   const [builtUpPerFloor, setBuiltUpPerFloor] = useState<number>(1500);
   const [floors, setFloors] = useState<number>(1);
   const [carParkingArea, setCarParkingArea] = useState<number>(0);
-  const [selectedPackage, setSelectedPackage] = useState<ProPackageTier>(PRO_PACKAGES[0]); // Basic ₹1,999 default or Premium
+  const [selectedPackage, setSelectedPackage] = useState<ProPackageTier>(PRO_PACKAGES[0]); // Standard default
   const [selectedAddons, setSelectedAddons] = useState<SelectedAddonState>({});
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [hasTrackedStart, setHasTrackedStart] = useState(false);

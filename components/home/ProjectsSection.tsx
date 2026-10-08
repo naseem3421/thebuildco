@@ -4,20 +4,24 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
-import { MapPin, Maximize2, ArrowRight, CheckCircle2 } from "lucide-react";
+import { MapPin, Maximize2, ArrowRight } from "lucide-react";
 
 export function ProjectsSection() {
+  // 3 strongest projects: Individual House, Villa, Duplex
+  const selectedProjects = siteConfig.projects.slice(0, 3);
+
   return (
-    <section id="projects" className="py-16 sm:py-24 bg-white border-b border-neutral-200">
+    <section id="projects" className="py-14 sm:py-20 bg-white border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
-          eyebrow="REAL CHENNAI CASE STUDIES"
-          title="Selected Residential Projects"
-          subtitle="Delivered exclusively on client-owned residential plots across Chennai's premier residential corridors."
+          eyebrow="SELECTED CASE STUDIES"
+          title="Selected Projects"
+          subtitle="Engineered and delivered exclusively on client-owned residential plots across Chennai."
+          align="center"
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {siteConfig.projects.map((project) => (
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {selectedProjects.map((project) => (
             <div
               key={project.id}
               className="group rounded-3xl overflow-hidden bg-white border border-neutral-200/90 shadow-xs hover:shadow-luxury-md hover:border-[#EA580C]/40 transition-all flex flex-col justify-between"
@@ -28,17 +32,17 @@ export function ProjectsSection() {
                   src={project.imageUrl}
                   alt={`${project.title} - ${project.type} in ${project.location} by TBC`}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Overlaid Badges */}
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-white text-neutral-900 shadow-xs">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-white text-neutral-900 shadow-xs">
                     {project.type}
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#EA580C] text-white shadow-xs">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-[#EA580C] text-white shadow-xs">
                     {project.tag}
                   </span>
                 </div>
@@ -52,42 +56,42 @@ export function ProjectsSection() {
                     <span>{project.area}</span>
                   </div>
 
-                  <h3 className="font-display text-2xl sm:text-3xl font-semibold text-white">
+                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-white">
                     {project.title}
                   </h3>
                 </div>
               </div>
 
-              {/* Case Study Metadata */}
-              <div className="p-6 bg-[#FAF8F5] border-t border-neutral-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              {/* Case Study Scope & CTA */}
+              <div className="p-5 bg-[#FAF8F5] border-t border-neutral-100 flex items-center justify-between gap-4">
                 <div>
-                  <span className="text-[11px] uppercase font-bold tracking-wider text-neutral-500 block">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-neutral-500 block">
                     Execution Scope
                   </span>
-                  <span className="text-sm font-bold text-neutral-900">
-                    Turnkey Architectural & Civil Construction
+                  <span className="text-xs font-bold text-neutral-900">
+                    Turnkey Design & Civil Build
                   </span>
                 </div>
 
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-100 border border-neutral-200 text-xs font-bold text-neutral-900 transition-colors inline-flex items-center gap-1.5 shadow-xs"
+                  className="px-4 py-2 rounded-full bg-white hover:bg-neutral-100 border border-neutral-200 text-xs font-bold text-neutral-900 transition-colors inline-flex items-center gap-1.5 shadow-xs shrink-0"
                 >
                   <span>View Project</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#EA580C]" />
+                  <ArrowRight className="w-3 h-3 text-[#EA580C]" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-neutral-900 text-white font-semibold text-sm hover:bg-neutral-800 transition-colors shadow-luxury-sm"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-neutral-900 text-white font-semibold text-xs sm:text-sm hover:bg-neutral-800 transition-colors shadow-luxury-sm group"
           >
-            <span>See Our Completed Projects</span>
-            <ArrowRight className="w-4 h-4 text-[#EA580C]" />
+            <span>View All Completed Projects</span>
+            <ArrowRight className="w-4 h-4 text-[#EA580C] group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
       </Container>

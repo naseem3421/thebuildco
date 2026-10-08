@@ -78,7 +78,7 @@ export function CostCalculatorPro2() {
   const [selectedElevation, setSelectedElevation] = useState<ElevationStyle>(ELEVATION_STYLES[0]); // Contemporary
 
   // 3. Package Selection
-  const [selectedPackage, setSelectedPackage] = useState<ProPackageTier>(PRO_PACKAGES[2]); // Default Premium ₹2,649
+  const [selectedPackage, setSelectedPackage] = useState<ProPackageTier>(PRO_PACKAGES[1]); // Default Premium ₹2,649
   const [isCompareModalOpen, setIsCompareModalOpen] = useState<boolean>(false);
 
   // 4. Add-ons Selection
@@ -129,7 +129,7 @@ export function CostCalculatorPro2() {
   const carParkingCost = carParkingArea * selectedPackage.ratePerSqft;
   const baseCost = baseLivingCost + carParkingCost;
 
-  // Addons cost calculation (with Basic tier overrides preserved)
+  // Addons cost calculation
   const addonsCost = useMemo(() => {
     return PRO_ADDONS.reduce((sum, addon) => {
       const state = selectedAddons[addon.id];
@@ -138,16 +138,10 @@ export function CostCalculatorPro2() {
       if (addon.type === "fixed") return sum + addon.rate;
 
       const unitCount = state.customUnit !== undefined ? state.customUnit : addon.defaultUnit || 1;
-      let unitRate = addon.rate;
-      if (selectedPackage.id === "basic") {
-        if (addon.id === "overhead_tank") unitRate = 40;
-        if (addon.id === "compound_wall") unitRate = 2300;
-        if (addon.id === "underground_sump") unitRate = 30;
-        if (addon.id === "septic_tank") unitRate = 28;
-      }
+      const unitRate = addon.rate;
       return sum + unitCount * unitRate;
     }, 0);
-  }, [selectedAddons, selectedPackage]);
+  }, [selectedAddons]);
 
   const grandTotal = baseCost + addonsCost;
   const baseDurationMonths = 10 + (floors - 1) * 4;
@@ -286,7 +280,7 @@ export function CostCalculatorPro2() {
 
   // Apply Budget Optimization
   const handleApplyBudgetOptimization = () => {
-    const targetPkg = PRO_PACKAGES.find((p) => p.id === budgetOptimization.recommendedPackage) || PRO_PACKAGES[2];
+    const targetPkg = PRO_PACKAGES.find((p) => p.id === budgetOptimization.recommendedPackage) || PRO_PACKAGES[1];
     setSelectedPackage(targetPkg);
     setFloors(budgetOptimization.recommendedFloors);
     setCurrentStep(5); // Jump straight to result

@@ -1,70 +1,59 @@
 import React from "react";
 import Link from "next/link";
 import { Container } from "../ui/Container";
-import { SectionHeading } from "../ui/SectionHeading";
-import { LandPlot, Banknote, Users2, Eye, ArrowRight } from "lucide-react";
+import { LandPlot, Home, Users2, ArrowRight } from "lucide-react";
 
 export function QualificationSection() {
-  const cards = [
+  const points = [
     {
       icon: LandPlot,
       title: "You Already Own the Land",
-      desc: "TBC builds on client-owned land and does not operate as a land-selling or property-brokerage business.",
-      tag: "Plot Owners Only",
+      desc: "TBC constructs on client-owned residential plots.",
     },
     {
-      icon: Banknote,
-      title: "Substantial Project Scope",
-      desc: "Our primary residential focus is complete home construction projects rather than minor repair or renovation work.",
-      tag: "Full Home Scale",
+      icon: Home,
+      title: "You're Building a Complete Home",
+      desc: "Focused on substantial individual houses, villas and duplex homes rather than small repair jobs.",
     },
     {
       icon: Users2,
       title: "You Want One Accountable Team",
-      desc: "Design, structural engineering, construction, site supervision, and handover are coordinated through one construction partner.",
-      tag: "Single Accountability",
-    },
-    {
-      icon: Eye,
-      title: "You Want Visibility Over Your Investment",
-      desc: "Costs, material specifications, milestones, and execution stages should be clearly understood before construction progresses.",
-      tag: "Full Transparency",
+      desc: "Design, engineering, procurement, construction, quality control and handover coordinated through one construction partner.",
     },
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="qualification" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
-        <SectionHeading
-          eyebrow="PROJECT QUALIFICATION"
-          title="Is TBC the Right Construction Partner for Your Project?"
-          subtitle="We specialize in custom residential homes for landowners who value accountability, professional execution, and cost discipline."
-        />
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-3">
+            PROJECT FIT & CRITERIA
+          </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cards.map((card, idx) => {
-            const Icon = card.icon;
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-neutral-900 leading-tight">
+            Built for Chennai Landowners
+          </h2>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {points.map((pt, idx) => {
+            const Icon = pt.icon;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-7 border border-neutral-200/90 shadow-xs hover:shadow-luxury-md hover:border-[#EA580C]/40 transition-all flex flex-col justify-between"
+                className="bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-xs hover:border-[#EA580C]/40 hover:shadow-luxury-sm transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#FFF7ED] border border-[#FFEDD5] flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#EA580C]" />
-                    </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-neutral-500 bg-neutral-100 px-2.5 py-1 rounded-full">
-                      {card.tag}
-                    </span>
+                  <div className="w-12 h-12 rounded-2xl bg-[#FFF7ED] border border-[#FFEDD5] flex items-center justify-center mb-5 text-[#EA580C]">
+                    <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-lg font-bold text-neutral-900 leading-snug mb-3">
-                    {card.title}
+                  <h3 className="text-lg font-bold text-neutral-900 mb-2 leading-snug">
+                    {pt.title}
                   </h3>
 
-                  <p className="text-sm text-neutral-600 leading-relaxed">
-                    {card.desc}
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                    {pt.desc}
                   </p>
                 </div>
 
@@ -76,14 +65,14 @@ export function QualificationSection() {
           })}
         </div>
 
-        <div className="mt-12 text-center">
-          <a
-            href="#process"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-neutral-900 text-white font-semibold text-sm hover:bg-neutral-800 transition-colors shadow-luxury-sm"
+        <div className="mt-10 text-center">
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#EA580C] hover:text-[#C2410C] transition-colors group"
           >
-            <span>See How Our Process Works</span>
-            <ArrowRight className="w-4 h-4 text-[#EA580C]" />
-          </a>
+            <span>See If TBC Is Right For Your Project</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </Container>
     </section>

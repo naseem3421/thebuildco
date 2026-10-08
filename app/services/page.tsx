@@ -30,7 +30,7 @@ export default function ServicesPage() {
       slug: "individual-house-construction",
       desc: "Custom single and multi-level residential homes engineered for your plot dimensions, Vastu requirements, and family lifestyle.",
       sqft: "1,800 – 4,500 sqft",
-      budget: "₹38 Lakhs – ₹1.2 Cr",
+      budget: "₹40 Lakhs – ₹1.2 Cr",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
       features: [
         "Tailored 2D architectural & 3D elevation design",

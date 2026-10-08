@@ -7,17 +7,17 @@ export interface AEOQuestionItem {
 export const homepageAeoQuestions: AEOQuestionItem[] = [
   {
     q: "How much does it cost to build a house in Chennai?",
-    a: "In Chennai, turnkey residential construction generally costs between ₹1,899 and ₹2,599 per sqft across basic to premium specification tiers. For a standard 2,000 to 3,500 sqft residence, total project cost ranges from ₹38 Lakhs for basic framing up to ₹90 Lakhs and above for premium individual houses and luxury villas with high-spec interior finishes.",
+    a: "In Chennai, turnkey residential construction starts from ₹2,199/sqft for Standard specifications and ₹2,599/sqft for Premium specifications. For a standard 2,000 to 3,500 sqft residence, total project cost ranges from ₹44 Lakhs for standard turnkey construction up to ₹90 Lakhs and above for premium luxury villas with bespoke interior finishes.",
     category: "Cost & Pricing",
   },
   {
     q: "What is the construction cost per square foot in Chennai?",
-    a: "Turnkey residential construction costs per sqft in Chennai with TBC are structured across three transparent packages: Basic at ₹1,899/sqft, Standard at ₹2,199/sqft, and Premium at ₹2,599/sqft. Exact costs depend on architectural complexity, foundation soil conditions, and finish specifications.",
+    a: "Turnkey residential construction costs per sqft in Chennai with TBC are structured across two transparent packages: Standard at ₹2,199/sqft and Premium at ₹2,599/sqft. Exact costs depend on architectural complexity, foundation soil conditions, and finish specifications.",
     category: "Cost & Pricing",
   },
   {
     q: "How much does it cost to build a 2,000 sqft house in Chennai?",
-    a: "Constructing a 2,000 sqft house in Chennai typically requires an investment of ₹38 Lakhs to ₹58 Lakhs depending on the chosen finish tier. A standard specification package averages approximately ₹38–44 Lakhs, while a premium turnkey finish with branded teak doors, vitrified flooring, and modular plumbing averages ₹45–55 Lakhs.",
+    a: "Constructing a 2,000 sqft house in Chennai typically requires an investment of ₹44 Lakhs to ₹52 Lakhs depending on the chosen finish tier. Our Standard turnkey package averages approximately ₹43.9 Lakhs, while a Premium turnkey finish with branded teak doors, 4x2 vitrified flooring, and premium fittings averages ₹51.9 Lakhs.",
     category: "Cost & Pricing",
   },
   {

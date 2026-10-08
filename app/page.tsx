@@ -1,13 +1,10 @@
 import React from "react";
 import {
   HeroSection,
-  WhatDoesTBCDoSection,
   QualificationSection,
   ProblemSection,
   OneAccountableTeamSection,
   ServicesSection,
-  JointVentureHomeSection,
-  ConstructionCostSection,
   CostCalculatorSection,
   MoneyControlSection,
   QualityControlSection,
@@ -15,14 +12,14 @@ import {
   WhyTBCSection,
   TestimonialsSection,
   AEOQuestionSection,
-  ContactInquirySection,
+  JointVentureHomeSection,
   FinalCTASection,
 } from "@/components";
-import { homepageAeoQuestions } from "@/config/aeoQuestions";
+import { homepage8Questions } from "@/config/homepageFaq";
 import { FAQJsonLd, ServiceJsonLd } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
-  const faqSchemaData = homepageAeoQuestions.map((item) => ({
+  const faqSchemaData = homepage8Questions.map((item) => ({
     question: item.q,
     answer: item.a,
   }));
@@ -34,58 +31,49 @@ export default function HomePage() {
       <ServiceJsonLd
         name="Turnkey Residential Home Construction in Chennai"
         serviceType="Turnkey Residential House Construction"
-        description="End-to-end turnkey residential construction in Chennai for landowners planning bespoke homes, luxury villas, and duplex residences."
+        description="End-to-end turnkey residential construction in Chennai for landowners planning bespoke homes, luxury villas, and duplex residences on client-owned land."
       />
 
-      {/* 01 — Hero Section */}
+      {/* SECTION 01 — HERO */}
       <HeroSection />
 
-      {/* 02 — What Does TBC Do? (AEO/AIO Direct Entity Overview) */}
-      <WhatDoesTBCDoSection />
-
-      {/* 03 — Is TBC Right For Your Project? (4 Qualification Criteria) */}
+      {/* SECTION 02 — QUICK PROJECT QUALIFICATION */}
       <QualificationSection />
 
-      {/* 04 — The Problem (Building a Premium Home Shouldn't Feel Like Managing 20 Contractors) */}
+      {/* SECTION 03 — THE PROBLEM / TBC SOLUTION */}
       <ProblemSection />
 
-      {/* 05 — One Accountable Team & Process (6 Stages from First Drawing to Final Key) */}
+      {/* SECTION 04 — TBC PROCESS SUMMARY */}
       <OneAccountableTeamSection />
 
-      {/* 06 — Residential Services (Individual House, Villa, Duplex, Luxury Home) */}
+      {/* SECTION 05 — RESIDENTIAL CONSTRUCTION SERVICES */}
       <ServicesSection />
 
-      {/* 07 — Joint Venture Projects (Selective Landowner Partnerships) */}
-      <JointVentureHomeSection />
-
-      {/* 08 — Construction Cost in Chennai (Direct Answer & Cost Drivers) */}
-      <ConstructionCostSection />
-
-      {/* 09 — Cost Calculator (Interactive Estimation Engine & Project Qualification) */}
+      {/* SECTION 06 — CONSTRUCTION COST CALCULATOR */}
       <CostCalculatorSection />
 
-      {/* 10 — Investment & Payment Transparency (Know Where Your Money Goes & Milestone Payments) */}
+      {/* SECTION 07 — INVESTMENT TRANSPARENCY */}
       <MoneyControlSection />
 
-      {/* 11 — Quality Control (Engineering Rigor & Critical Stage Inspections) */}
+      {/* SECTION 08 — ENGINEERING & QUALITY */}
       <QualityControlSection />
 
-      {/* 12 — Selected Projects (Real Case Studies on Client-Owned Land) */}
+      {/* SECTION 09 — SELECTED PROJECTS */}
       <ProjectsSection />
 
-      {/* 13 — Why TBC (6 Core Differentiators) */}
+      {/* SECTION 10 — WHY TBC */}
       <WhyTBCSection />
 
-      {/* 14 — Client Testimonials (Genuine Homeowner Experiences) */}
+      {/* SECTION 11 — TESTIMONIALS */}
       <TestimonialsSection />
 
-      {/* 15 — Landowner Knowledge Base & FAQ (18 Factual Q&As with Interactive Accordion) */}
+      {/* SECTION 12 — FAQ */}
       <AEOQuestionSection />
 
-      {/* 16 — Consultation Booking & Site Survey Form */}
-      <ContactInquirySection />
+      {/* SECTION 13 — JOINT VENTURE */}
+      <JointVentureHomeSection />
 
-      {/* 17 — Final CTA */}
+      {/* SECTION 14 — FINAL CTA & CONSULTATION */}
       <FinalCTASection />
     </div>
   );

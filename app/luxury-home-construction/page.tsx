@@ -80,7 +80,7 @@ export default function LuxuryHomeConstructionPage() {
               <Gem className="w-6 h-6 text-[#EA580C] mb-4" />
               <h3 className="text-base font-bold text-neutral-900 mb-2">Artisanal Finishes & Stones</h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Seamless book-matched Statuario or Botticino Italian marble flooring, acoustic acoustic-insulated double-glazed slimline aluminium fenestrations, and teak finishes.
+                Seamless book-matched Statuario or Botticino Italian marble flooring, acoustic-insulated double-glazed slimline aluminium fenestrations, and teak finishes.
               </p>
             </div>
             <div className="p-6 bg-white rounded-2xl border border-neutral-200/90 shadow-xs">

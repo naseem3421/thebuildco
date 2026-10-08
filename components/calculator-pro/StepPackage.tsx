@@ -36,8 +36,8 @@ export function StepPackage({
         </div>
       </div>
 
-      {/* Package Tier Selection Cards (4 tiers) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Package Tier Selection Cards (3 tiers) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {PRO_PACKAGES.map((pkg) => {
           const isSelected = selectedPackage.id === pkg.id;
           return (

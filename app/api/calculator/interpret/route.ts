@@ -125,7 +125,7 @@ function parseRequirementsHeuristic(prompt: string): AIInterpretationResult {
   } else if (p.includes("premium") || p.includes("best quality") || p.includes("teak")) {
     pkg = "premium";
   } else if (p.includes("budget") || p.includes("basic") || p.includes("cheap") || p.includes("low cost")) {
-    pkg = "basic";
+    pkg = "standard";
   } else if (p.includes("standard") || p.includes("rental") || p.includes("medium")) {
     pkg = "standard";
   }

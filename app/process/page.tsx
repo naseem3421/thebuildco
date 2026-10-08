@@ -66,7 +66,68 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      {/* 2. Detailed 8 Steps Timeline */}
+      {/* 2. Traditional Contractor Problems vs TBC Turnkey Method */}
+      <section className="bg-white py-16 sm:py-20 border-y border-neutral-200">
+        <Container size="wide">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-xs font-bold text-red-600 uppercase tracking-wider mb-4">
+              THE UNSTRUCTURED CONTRACTOR REALITY
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-neutral-900 leading-tight">
+              Why Traditional Home Construction in Chennai Often Breaks Down
+            </h2>
+            <p className="mt-4 text-base text-neutral-600 leading-relaxed">
+              When landowners hire independent masons, labor contractors, and freelance designers separately, projects routinely suffer from fragmented coordination, cost overruns, and material ambiguity:
+            </p>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              {[
+                "Chasing independent contractors, sub-contractors, and masons for daily updates",
+                "Coordinating blame games between freelance architects and local structural engineers",
+                "Managing tedious material purchases, deliveries, cement storage, and theft risks",
+                "Negotiating every slight drawing change with sudden contractor surprise bills",
+                "Unclear bill of quantities (BOQ) with hidden charges that inflate the final budget",
+                "Unexpected additional costs surfacing halfway through the roof slab casting",
+                "Poor, sporadic communication and excuses over labour shortages or monsoons",
+                "Extended construction delays stretching a 10-month plan into 24 exhausting months",
+                "Quality uncertainty — wondering if steel rebar and cement grades meet specs",
+                "Having to physically visit the dusty site constantly while juggling family and career",
+              ].map((pain, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-start gap-3 p-4 rounded-2xl bg-neutral-50 border border-neutral-200/80"
+                >
+                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-red-600 font-bold text-xs">✕</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-700 leading-snug font-medium">
+                    {pain}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 p-6 rounded-2xl bg-[#0B1E1A] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#EA580C] block mb-1">
+                  THE TBC TURNKEY DIFFERENCE
+                </span>
+                <p className="text-sm text-neutral-200 font-medium">
+                  One accountable team, fixed specifications, stage-wise payments, and daily civil engineer supervision.
+                </p>
+              </div>
+              <a
+                href="#stages"
+                className="shrink-0 px-6 py-2.5 rounded-full bg-[#EA580C] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#C2410C] transition-colors"
+              >
+                See 8-Stage Roadmap ↓
+              </a>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 3. Detailed 8 Steps Timeline */}
       <section id="stages" className="scroll-mt-24">
         <Container size="wide">
           <SectionHeading

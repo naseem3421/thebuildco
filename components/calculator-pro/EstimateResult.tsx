@@ -900,7 +900,6 @@ I used your online calculator and would like to schedule a free site survey to l
                 {PRO_COMPARISON_MATRIX.slice(0, 10).map((row, idx) => (
                   <tr key={idx} className="hover:bg-[#FBF9F4]">
                     <td className="py-2 px-4 font-semibold text-[#52655E]">{row.feature}</td>
-                    <td className="py-2 px-3 text-center">{String(row.basic)}</td>
                     <td className="py-2 px-3 text-center">{String(row.standard)}</td>
                     <td className="py-2 px-3 text-center">{String(row.premium)}</td>
                     <td className="py-2 px-3 text-center">{String(row.luxury)}</td>

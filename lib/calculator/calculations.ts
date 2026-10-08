@@ -108,7 +108,7 @@ export function calculateEstimate(inputs: CalculatorInputs): CalculationResult {
 
   // 1. Package & Elevation Resolution
   const selectedPackage =
-    PRO_PACKAGES.find((p) => p.id === packageId) || PRO_PACKAGES[2]; // Default to Premium ₹2,649
+    PRO_PACKAGES.find((p) => p.id === packageId) || PRO_PACKAGES[1]; // Default to Premium ₹2,649
   const selectedElevation =
     ELEVATION_STYLES.find((e) => e.id === elevationStyleId) || ELEVATION_STYLES[0];
   const currentSoilProfile =

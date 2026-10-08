@@ -74,7 +74,7 @@ export default function LocationsDirectoryPage() {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-[#D9D2C5]/70 flex items-center justify-between text-xs font-semibold text-[#183B35]">
-                  <span>From ₹1,899/sqft</span>
+                  <span>From ₹2,199/sqft</span>
                   <span className="text-[#B86F50] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                     View Area Details <ArrowRight className="w-3.5 h-3.5" />
                   </span>

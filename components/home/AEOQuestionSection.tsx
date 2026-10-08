@@ -4,99 +4,61 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
-import { HelpCircle, ChevronDown, ArrowRight, MessageSquareQuote } from "lucide-react";
-import { homepageAeoQuestions, AEOQuestionItem } from "@/config/aeoQuestions";
-
-export { homepageAeoQuestions };
-export type { AEOQuestionItem };
-
-const categories = [
-  "All",
-  "Cost & Pricing",
-  "Scope & Process",
-  "Engineering & Quality",
-  "Planning & Approvals",
-  "Joint Ventures",
-];
+import { HelpCircle, ChevronDown, ArrowRight } from "lucide-react";
+import { homepage8Questions } from "@/config/homepageFaq";
 
 export function AEOQuestionSection() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [openIndices, setOpenIndices] = useState<number[]>([0, 1]); // first two open by default
-
-  const filteredQuestions =
-    selectedCategory === "All"
-      ? homepageAeoQuestions
-      : homepageAeoQuestions.filter((item) => item.category === selectedCategory);
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // first question open by default
 
   const toggleQuestion = (index: number) => {
-    setOpenIndices((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#FAF8F5] border-b border-neutral-200">
-      <span id="aeo-answers" className="sr-only" aria-hidden="true" />
+    <section id="faq" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
-          eyebrow="LANDOWNER KNOWLEDGE BASE & FAQ"
+          eyebrow="FREQUENTLY ASKED QUESTIONS"
           title="Questions Chennai Landowners Ask Before Building"
-          subtitle="Direct, factual answers on residential construction costs, engineering standards, timelines, contracts, and joint ventures in Chennai."
+          subtitle="Clear, direct answers on residential construction costs, engineering standards, timelines, and contracts."
+          align="center"
         />
 
-        {/* Category Filter Pills */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                selectedCategory === cat
-                  ? "bg-[#EA580C] text-white shadow-xs"
-                  : "bg-white text-neutral-600 hover:bg-neutral-100 border border-neutral-200"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* FAQ Accordion Grid */}
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {filteredQuestions.map((item, idx) => {
-            const isOpen = openIndices.includes(idx);
-            const buttonId = `faq-accordion-btn-${idx}`;
-            const panelId = `faq-accordion-panel-${idx}`;
+        {/* 8 High-Intent FAQs in 2-Column Grid */}
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-5xl mx-auto">
+          {homepage8Questions.map((item, idx) => {
+            const isOpen = openIndex === idx;
+            const buttonId = `faq-btn-${idx}`;
+            const panelId = `faq-panel-${idx}`;
 
             return (
               <div
                 key={idx}
-                className="rounded-3xl bg-white border border-neutral-200/90 overflow-hidden shadow-xs hover:border-[#EA580C]/40 transition-colors"
+                className="rounded-2xl bg-white border border-neutral-200/90 overflow-hidden shadow-xs hover:border-[#EA580C]/40 transition-colors"
               >
                 <button
                   id={buttonId}
                   type="button"
                   onClick={() => toggleQuestion(idx)}
-                  className="w-full p-6 text-left flex items-start justify-between gap-4 cursor-pointer focus-visible:outline-none"
+                  className="w-full p-5 text-left flex items-start justify-between gap-3 cursor-pointer focus-visible:outline-none"
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-lg bg-[#FFF7ED] flex items-center justify-center shrink-0 mt-0.5 text-[#EA580C]">
-                      <HelpCircle className="w-4 h-4" />
+                  <div className="flex items-start gap-2.5">
+                    <div className="w-6 h-6 rounded-lg bg-[#FFF7ED] flex items-center justify-center shrink-0 mt-0.5 text-[#EA580C]">
+                      <HelpCircle className="w-3.5 h-3.5" />
                     </div>
-                    <span className="font-bold text-neutral-900 text-sm sm:text-base leading-snug">
+                    <span className="font-bold text-neutral-900 text-sm leading-snug">
                       {item.q}
                     </span>
                   </div>
                   <div
                     aria-hidden="true"
-                    className={`w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 text-neutral-600 transition-transform duration-200 ${
+                    className={`w-6 h-6 rounded-full bg-neutral-100 flex items-center justify-center shrink-0 text-neutral-600 transition-transform duration-200 ${
                       isOpen ? "rotate-180 bg-[#EA580C] text-white" : ""
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-3.5 h-3.5" />
                   </div>
                 </button>
 
@@ -105,23 +67,9 @@ export function AEOQuestionSection() {
                     id={panelId}
                     role="region"
                     aria-labelledby={buttonId}
-                    className="px-6 pb-6 pt-1 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100"
+                    className="px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100"
                   >
                     <p>{item.a}</p>
-                    <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-400">
-                      {item.category && (
-                        <span className="font-semibold text-neutral-500 uppercase tracking-wider text-[10px]">
-                          {item.category}
-                        </span>
-                      )}
-                      <a
-                        href="#consultation"
-                        className="text-xs font-semibold text-[#EA580C] hover:text-[#C2410C] inline-flex items-center gap-1"
-                      >
-                        <span>Discuss This Question</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </a>
-                    </div>
                   </div>
                 )}
               </div>
@@ -129,22 +77,15 @@ export function AEOQuestionSection() {
           })}
         </div>
 
-        {/* Links to Full Technical FAQ & Consultation */}
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+        {/* CTA to Full FAQ Library */}
+        <div className="mt-10 text-center">
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-neutral-300 text-neutral-900 font-bold text-xs uppercase tracking-wider hover:border-[#EA580C] hover:text-[#EA580C] shadow-xs transition-all"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-neutral-300 text-neutral-900 font-semibold text-xs sm:text-sm hover:border-[#EA580C] hover:text-[#EA580C] shadow-xs transition-all group"
           >
-            <span>View All Detailed Technical FAQs</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <span>View All Construction FAQs</span>
+            <ArrowRight className="w-4 h-4 text-[#EA580C] transition-transform group-hover:translate-x-1" />
           </Link>
-          <a
-            href="#consultation"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#EA580C] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#C2410C] shadow-xs transition-all"
-          >
-            <MessageSquareQuote className="w-3.5 h-3.5" />
-            <span>Have a Specific Question? Ask an Engineer</span>
-          </a>
         </div>
       </Container>
     </section>

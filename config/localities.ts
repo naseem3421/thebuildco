@@ -29,8 +29,8 @@ export const localitiesConfig: Record<string, LocalityData> = {
     name: "Chennai",
     shortName: "Chennai",
     zone: "Greater Chennai Metropolitan",
-    metaTitle: "House Construction Company in Chennai | From ₹1,899/sqft | TBC",
-    metaDescription: "Looking for the best house construction company in Chennai? TBC builds premium individual houses, villas & duplexes on your own plot from ₹1,899/sqft.",
+    metaTitle: "House Construction Company in Chennai | From ₹2,199/sqft | TBC",
+    metaDescription: "Looking for the best house construction company in Chennai? TBC builds premium individual houses, villas & duplexes on your own plot from ₹2,199/sqft.",
     heroTagline: "Turnkey Residential & Commercial Construction Across Greater Chennai",
     overview:
       "TBC is Chennai's premier bespoke turnkey building contractor. Whether your plot is in Central Chennai, along the IT corridors of OMR, or in growing suburban belts, we bring professional civil engineering, 150+ point quality audits, and stage-wise milestone escrow to your project.",
@@ -43,7 +43,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     localFaqs: [
       {
         question: "How much does house construction cost in Chennai per sqft?",
-        answer: "Turnkey residential construction by TBC in Chennai starts at ₹1,899/sqft for the Basic package, ₹2,199/sqft for Standard, and ₹2,599/sqft for Premium, covering architectural drawings, RCC structure, and complete luxury finishes.",
+        answer: "Turnkey residential construction by TBC in Chennai starts at ₹2,199/sqft for Standard and ₹2,599/sqft for Premium, covering architectural drawings, RCC structure, and complete luxury finishes.",
       },
       {
         question: "Do you handle CMDA and Greater Chennai Corporation plan approvals?",
@@ -57,7 +57,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Medavakkam",
     zone: "South Chennai",
     metaTitle: "House Construction Company in Medavakkam, Chennai | TBC",
-    metaDescription: "Expert house builders in Medavakkam, Chennai. Custom 3BHK/4BHK individual houses & duplex homes constructed on your land starting at ₹1,899/sqft.",
+    metaDescription: "Expert house builders in Medavakkam, Chennai. Custom 3BHK/4BHK individual houses & duplex homes constructed on your land starting at ₹2,199/sqft.",
     heroTagline: "Bespoke Independent Houses & Duplexes in Medavakkam",
     overview:
       "Medavakkam has rapidly emerged as one of South Chennai's most sought-after residential hubs. With excellent connectivity to OMR, Velachery, and Tambaram, we help landowners in Medavakkam build modern, multi-story duplexes and contemporary residences optimized for plot frontage.",
@@ -107,7 +107,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Velachery",
     zone: "South-Central Chennai",
     metaTitle: "House Construction Company in Velachery, Chennai | TBC",
-    metaDescription: "Turnkey home builders in Velachery. Maximize small and medium plots with space-efficient multi-level construction from ₹1,899/sqft.",
+    metaDescription: "Turnkey home builders in Velachery. Maximize small and medium plots with space-efficient multi-level construction from ₹2,199/sqft.",
     heroTagline: "High-Efficiency Turnkey Residential Construction in Velachery",
     overview:
       "Velachery is a dense, high-demand residential neighborhood where maximizing every square foot of land is crucial. TBC specializes in smart vertical space optimization, stilt parking configurations, and premium multi-level residences.",
@@ -130,7 +130,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Tambaram",
     zone: "South-West Gateway",
     metaTitle: "House Construction Company in Tambaram, Chennai | TBC",
-    metaDescription: "Reliable house building contractors in Tambaram (East & West). Turnkey construction on your plot from ₹1,899/sqft with stage-wise payments.",
+    metaDescription: "Reliable house building contractors in Tambaram (East & West). Turnkey construction on your plot from ₹2,199/sqft with stage-wise payments.",
     heroTagline: "Quality Turnkey Home Construction in Tambaram",
     overview:
       "Tambaram is a flourishing residential zone known for larger individual plots and family-oriented communities. TBC constructs spacious independent houses, multi-generational duplexes, and rental apartments with Vastu compliance.",
@@ -153,7 +153,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Pallikaranai",
     zone: "South Chennai Growth Belt",
     metaTitle: "House Construction Company in Pallikaranai, Chennai | TBC",
-    metaDescription: "Specialized civil engineering and house construction in Pallikaranai. Engineered raft foundations, stage-wise payments, starting ₹1,899/sqft.",
+    metaDescription: "Specialized civil engineering and house construction in Pallikaranai. Engineered raft foundations, stage-wise payments, starting ₹2,199/sqft.",
     heroTagline: "Engineered Foundation & Turnkey Home Construction in Pallikaranai",
     overview:
       "Pallikaranai requires specialized civil engineering due to unique geotechnical characteristics. TBC delivers robust structural engineering with specialized raft and pile foundations tailored specifically for Pallikaranai plots.",
@@ -176,7 +176,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Perungudi",
     zone: "OMR Commercial & Tech Hub",
     metaTitle: "House Construction Company in Perungudi, Chennai | TBC",
-    metaDescription: "Build modern contemporary residences in Perungudi, OMR Chennai. Turnkey house builders with transparent sqft pricing from ₹1,899/sqft.",
+    metaDescription: "Build modern contemporary residences in Perungudi, OMR Chennai. Turnkey house builders with transparent sqft pricing from ₹2,199/sqft.",
     heroTagline: "Contemporary Residential Construction in Perungudi",
     overview:
       "Perungudi bridges the commercial energy of OMR with established residential enclaves. TBC crafts contemporary, energy-efficient homes that combine privacy with modern aesthetic finishes.",
@@ -199,7 +199,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Thoraipakkam",
     zone: "OMR IT Zone",
     metaTitle: "House Construction Company in Thoraipakkam, Chennai | TBC",
-    metaDescription: "Turnkey home builders in Thoraipakkam, OMR Chennai. Luxury specifications, stage payments, 5-year warranty starting at ₹1,899/sqft.",
+    metaDescription: "Turnkey home builders in Thoraipakkam, OMR Chennai. Luxury specifications, stage payments, 5-year warranty starting at ₹2,199/sqft.",
     heroTagline: "Bespoke Home Builders Along the OMR Express Corridor",
     overview:
       "Thoraipakkam is a prime residential enclave along OMR, ideal for modern villas and spacious family duplexes. TBC brings precision architectural craftsmanship to landowners seeking hassle-free turnkey execution.",
@@ -221,7 +221,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     name: "OMR",
     shortName: "OMR",
     zone: "Old Mahabalipuram Road IT Corridor",
-    metaTitle: "House Construction Company on OMR, Chennai | From ₹1,899/sqft | TBC",
+    metaTitle: "House Construction Company on OMR, Chennai | From ₹2,199/sqft | TBC",
     metaDescription: "Premier house builders along OMR Chennai. Turnkey construction of villas, duplex homes & individual houses on your land with 5-year warranty.",
     heroTagline: "Architectural Excellence Across the Entire OMR Tech Corridor",
     overview:
@@ -245,7 +245,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Porur",
     zone: "West Chennai Growth Corridor",
     metaTitle: "House Construction Company in Porur, Chennai | TBC",
-    metaDescription: "Trusted house construction contractors in Porur, Chennai. Turnkey individual house and villa building from ₹1,899/sqft with stage payments.",
+    metaDescription: "Trusted house construction contractors in Porur, Chennai. Turnkey individual house and villa building from ₹2,199/sqft with stage payments.",
     heroTagline: "Turnkey Residential & Commercial Construction in Porur",
     overview:
       "Porur is West Chennai's key commercial and residential hub, well-connected to Guindy, DLF IT Park, and the Poonamallee belt. TBC builds custom family homes and commercial structures with fast turnaround and transparent billing.",
@@ -268,7 +268,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Chromepet",
     zone: "GST Road Corridor",
     metaTitle: "House Construction Company in Chromepet, Chennai | TBC",
-    metaDescription: "Expert house builders in Chromepet, Chennai. Custom individual homes and duplexes on your plot from ₹1,899/sqft with 5-year warranty.",
+    metaDescription: "Expert house builders in Chromepet, Chennai. Custom individual homes and duplexes on your plot from ₹2,199/sqft with 5-year warranty.",
     heroTagline: "High Standard Turnkey Home Building in Chromepet",
     overview:
       "Chromepet is a thriving, established residential enclave along the GST corridor. TBC helps families modernize their ancestral plots or construct brand-new multi-story duplexes with quality-tested materials.",
@@ -291,7 +291,7 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "ECR",
     zone: "East Coast Road Scenic & Luxury Belt",
     metaTitle: "Luxury Villa & House Construction on ECR, Chennai | TBC",
-    metaDescription: "Premier villa construction contractors on ECR, Chennai. Bespoke coastal luxury residences with saline-resistant materials from ₹1,899/sqft.",
+    metaDescription: "Premier villa construction contractors on ECR, Chennai. Bespoke coastal luxury residences with saline-resistant materials from ₹2,199/sqft.",
     heroTagline: "Coastal Luxury Architecture & Villa Construction on ECR",
     overview:
       "East Coast Road (ECR) is Chennai's prestigious beachside corridor. TBC specializes in high-end tropical modern villas, cantilevered architectural pavilions, and coastal-grade structural engineering designed to withstand marine environmental conditions.",
@@ -314,20 +314,20 @@ export const localitiesConfig: Record<string, LocalityData> = {
     shortName: "Avadi",
     zone: "North-West Chennai Corridor",
     metaTitle: "House Construction Company in Avadi, Chennai | TBC",
-    metaDescription: "Turnkey house construction in Avadi, Chennai. Custom independent houses and duplexes built on your plot from ₹1,899/sqft with stage payments.",
+    metaDescription: "Turnkey house construction in Avadi, Chennai. Custom independent houses and duplexes built on your plot from ₹2,199/sqft with stage payments.",
     heroTagline: "Turnkey House Construction & Civil Engineering in Avadi",
     overview:
       "Avadi is a major growth center in North-West Chennai with spacious residential layouts. TBC provides turnkey civil construction for families building individual residences with transparent sqft pricing and zero hidden clauses.",
     geotechnicalNotes:
       "Avadi features predominantly red gravelly soil with moderate bearing capacity. We optimize footing dimensions to reduce structural excavation overhead while maintaining safety factors.",
-    popularTypologies: ["Spacious Single Family Homes", "Individual G+1 Duplexes", "Budget-Conscious Turnkey Units"],
+    popularTypologies: ["Spacious Single Family Homes", "Individual G+1 Duplexes", "Modern Contemporary Residences"],
     keyStreetsOrAreas: ["HVF Road", "Kavarapalayam", "Pattabiram", "Poonamallee-Avadi Road", "Mitnamallee"],
     nearbyProjectSlug: "greenfield-residence",
     nearbyProjectTitle: "Chennai Residence Showcase",
     localFaqs: [
       {
         question: "What packages are available for plots in Avadi?",
-        answer: "All three of our turnkey packages (Basic ₹1,899/sqft, Standard ₹2,199/sqft, and Premium ₹2,599/sqft) are available with full material delivery and dedicated site supervisors in Avadi.",
+        answer: "Both of our turnkey packages (Standard ₹2,199/sqft and Premium ₹2,599/sqft) are available with full material delivery and dedicated site supervisors in Avadi.",
       },
     ],
   },

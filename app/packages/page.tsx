@@ -12,13 +12,13 @@ import { Check, Sparkles, ShieldCheck, MessageCircle, ArrowRight } from "lucide-
 export const metadata: Metadata = {
   title: "Construction Packages & Pricing",
   description:
-    "Explore transparent sqft construction packages for Chennai landowners. Compare Basic (₹1,899/sqft), Standard (₹2,199/sqft), and Premium (₹2,599/sqft) specifications.",
+    "Explore transparent sqft construction packages for Chennai landowners. Compare Standard (₹2,199/sqft) and Premium (₹2,599/sqft) specifications.",
 };
 
 export default function PackagesPage() {
   return (
     <div className="py-12 sm:py-20 flex flex-col gap-16 sm:gap-24">
-      <TrackPackageView packageName="All Packages" pricePerSqft={1899} />
+      <TrackPackageView packageName="All Packages" pricePerSqft={2199} />
       {/* 1. Page Hero */}
       <section>
         <Container size="wide">
@@ -55,8 +55,8 @@ export default function PackagesPage() {
             </div>
           </div>
 
-          {/* 3 Package Cards */}
-          <div className="mt-14 sm:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          {/* 2 Package Cards */}
+          <div className="mt-14 sm:mt-20 grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto gap-8 items-stretch">
             {siteConfig.packages.map((pkg) => (
               <div
                 key={pkg.id}
@@ -140,19 +140,16 @@ export default function PackagesPage() {
           />
 
           <div className="mt-12 overflow-x-auto rounded-3xl border border-[#D9D2C5] bg-[#FBF9F4] shadow-luxury-md">
-            <table className="w-full text-left border-collapse min-w-[700px]">
+            <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
                 <tr className="border-b border-[#D9D2C5] bg-[#183B35] text-[#F4F0E8]">
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/4">
+                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/3">
                     Category
                   </th>
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/4">
-                    Basic (₹1,899/sqft)
-                  </th>
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/4 bg-[#244E46]">
+                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/3 bg-[#244E46]">
                     Standard (₹2,199/sqft) ★
                   </th>
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/4">
+                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/3">
                     Premium (₹2,599/sqft)
                   </th>
                 </tr>
@@ -165,9 +162,6 @@ export default function PackagesPage() {
                   >
                     <td className="p-4 sm:p-6 font-semibold text-[#183B35] align-top">
                       {row.category}
-                    </td>
-                    <td className="p-4 sm:p-6 text-[#52655E] align-top leading-relaxed">
-                      {row.basic}
                     </td>
                     <td className="p-4 sm:p-6 text-[#183B35] font-medium bg-[#E9E4D9]/30 align-top leading-relaxed">
                       {row.standard}

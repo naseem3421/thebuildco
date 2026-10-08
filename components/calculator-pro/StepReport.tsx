@@ -70,13 +70,7 @@ export function StepReport({
     if (addon.type === "fixed") return sum + addon.rate;
 
     const unitCount = state.customUnit !== undefined ? state.customUnit : addon.defaultUnit || 1;
-    let unitRate = addon.rate;
-    if (selectedPackage.id === "basic") {
-      if (addon.id === "overhead_tank") unitRate = 40;
-      if (addon.id === "compound_wall") unitRate = 2300;
-      if (addon.id === "underground_sump") unitRate = 30;
-      if (addon.id === "septic_tank") unitRate = 28;
-    }
+    const unitRate = addon.rate;
     return sum + unitCount * unitRate;
   }, 0);
 

@@ -1,86 +1,75 @@
 import React from "react";
+import Link from "next/link";
 import { Container } from "../ui/Container";
 import { SectionHeading } from "../ui/SectionHeading";
-import {
-  ShieldCheck,
-  CheckCircle2,
-  HardHat,
-  Droplets,
-  Layers,
-  Sparkles,
-  ClipboardList,
-} from "lucide-react";
+import { HardHat, Layers, ClipboardList, ShieldCheck, ArrowRight } from "lucide-react";
 
 export function QualityControlSection() {
-  const qcCategories = [
+  const qcCards = [
     {
       icon: HardHat,
       title: "Structural Engineering & Soil Analysis",
-      desc: "Site-specific soil bearing capacity (SBC) testing dictates foundation depth and column sizing. Certified structural blueprints designed to resist seismic and Chennai coastal load conditions.",
+      desc: "Plot borehole testing and certified structural drawings designed for seismic and coastal load factors.",
     },
     {
       icon: Layers,
-      title: "Material Verification & Batch Audits",
-      desc: "Strict adherence to specified primary brands — UltraTech/Coromandel 53-grade cement, Fe 550D high-yield TMT steel with test mill certificates, and river/M-sand sieve analysis.",
+      title: "Material Verification",
+      desc: "Certified Fe 550D TMT steel with test mill certs and fresh Grade-53 cement from primary manufacturers.",
     },
     {
       icon: ClipboardList,
       title: "Critical-Stage Inspections",
-      desc: "Pre-concreting shuttering alignment, steel cover block verification, rebar spacing checks, and concrete slump cone testing before every roof slab pour.",
-    },
-    {
-      icon: Droplets,
-      title: "Pressure & Waterproofing Testing",
-      desc: "Pneumatic pressure testing of concealed CPVC/UPVC water lines for 24 hours. Multi-coat elastomeric waterproofing with mandatory 72-hour ponding tests on roof terraces and sunken slabs.",
-    },
-    {
-      icon: Sparkles,
-      title: "Electrical, MEP & Finish Audits",
-      desc: "Concealed conduit integrity tests, earth resistance checks, tile lippage verification under laser levels, door plumbness, and uniform coat thickness paint audits.",
+      desc: "Pre-pour shuttering checks, rebar cover block verification, and concrete slump cube strength tests.",
     },
     {
       icon: ShieldCheck,
-      title: "Final Handover & Snag Clearance",
-      desc: "Comprehensive room-by-room technical inspection before final possession. All fittings, hardware, pressure pumps, and electrical breakers checked in the presence of the homeowner.",
+      title: "Final Quality Audit",
+      desc: "72-hour waterproofing ponding, MEP pressure tests, laser alignment, and 5-year structural warranty.",
     },
   ];
 
   return (
-    <section id="quality" className="py-16 sm:py-24 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="quality" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
           eyebrow="ENGINEERING RIGOR"
-          title="Construction Quality You Can Actually Understand."
-          subtitle="Real, verifiable civil engineering audits executed on your site rather than vague marketing promises."
+          title="Engineering-Led Construction."
+          subtitle="Measurable civil engineering checks executed on-site by dedicated engineers rather than vague promises."
+          align="center"
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {qcCategories.map((item, idx) => {
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {qcCards.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-7 border border-neutral-200/90 shadow-xs hover:border-[#EA580C]/40 hover:shadow-luxury-md transition-all flex flex-col justify-between"
+                className="bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-xs hover:border-[#EA580C]/40 hover:shadow-luxury-sm transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FFF7ED] border border-[#FFEDD5] flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6 text-[#EA580C]" />
+                  <div className="w-11 h-11 rounded-2xl bg-[#FFF7ED] border border-[#FFEDD5] flex items-center justify-center mb-5 text-[#EA580C]">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-neutral-900 mb-2 leading-snug">
+                  <h3 className="text-base font-bold text-neutral-900 mb-2 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
-
-                <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center gap-2 text-xs font-semibold text-neutral-500">
-                  <CheckCircle2 className="w-4 h-4 text-[#EA580C]" />
-                  <span>On-site civil engineer verified</span>
-                </div>
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/quality-standards"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-neutral-300 text-neutral-900 font-semibold text-xs sm:text-sm hover:border-[#EA580C] hover:text-[#EA580C] shadow-xs transition-all group"
+          >
+            <span>Explore Our Full Construction Quality Standards</span>
+            <ArrowRight className="w-4 h-4 text-[#EA580C] transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </Container>
     </section>

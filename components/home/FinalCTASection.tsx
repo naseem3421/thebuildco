@@ -1,68 +1,168 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "../ui/Container";
-import { CalendarCheck, Calculator, Handshake, ArrowRight } from "lucide-react";
+import { LeadForm } from "../forms/LeadForm";
+import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
+import {
+  Phone,
+  MessageCircle,
+  MapPin,
+  CalendarCheck,
+  Calculator,
+  Handshake,
+  ShieldCheck,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 
 export function FinalCTASection() {
+  const handlePhoneClick = () => {
+    trackPhoneClick("contact");
+  };
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick("cta_section");
+  };
+
   return (
-    <section className="py-16 sm:py-24 bg-white">
+    <section id="consultation" className="py-16 sm:py-24 bg-white scroll-mt-20">
       <Container size="wide">
-        <div className="relative rounded-3xl overflow-hidden min-h-[480px] sm:min-h-[520px] flex items-center justify-center p-8 sm:p-16 border border-neutral-800 shadow-luxury-lg bg-[#0B1E1A]">
-          {/* Background Architectural Image */}
-          <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
-            alt="Turnkey luxury residential home in Chennai constructed by TBC"
-            fill
-            sizes="100vw"
-            className="object-cover opacity-20"
-          />
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-4">
+              START YOUR PROJECT
+            </div>
 
-          {/* Foreground CTA Content */}
-          <div className="relative z-10 max-w-3xl text-center flex flex-col items-center">
-            <span className="text-xs uppercase font-extrabold tracking-widest text-[#EA580C] mb-3 block">
-              TURNKEY CIVIL EXCELLENCE • CHENNAI
-            </span>
-
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.12] tracking-tight">
+            <h2 className="font-display text-3xl sm:text-5xl font-semibold text-neutral-900 leading-[1.15] tracking-tight">
               Planning a Premium Home in Chennai?
             </h2>
 
-            <p className="mt-5 text-base sm:text-lg text-neutral-300 max-w-2xl leading-relaxed">
-              Tell us about your plot, expected built-up area and project requirements. We'll help you understand the right construction approach, approximate investment and next steps.
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed">
+              Tell us about your plot, expected built-up area and project requirements. Our team will help you understand the right construction approach, approximate investment and next steps.
             </p>
+          </div>
 
-            {/* Primary & Secondary Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto">
-              <a
-                href="#consultation"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#EA580C] text-white font-semibold text-sm hover:bg-[#C2410C] transition-colors shadow-luxury-sm inline-flex items-center justify-center gap-2 group"
-              >
-                <CalendarCheck className="w-4 h-4 text-white" />
-                <span>Book My Project Consultation</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-              </a>
+          {/* 2-Column Conversion Card: Left Details, Right Form */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Left Column: Direct Office & Engineer Access (5 cols) */}
+            <div className="lg:col-span-5 rounded-3xl bg-[#0E2420] text-[#F4F0E8] p-8 sm:p-10 flex flex-col justify-between border border-[#183B35] shadow-luxury-md">
+              <div>
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#B86F50] block mb-2">
+                  DIRECT ACCESS TO CIVIL ENGINEERS
+                </span>
 
-              <Link
-                href="/calculator-pro-3"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-neutral-900 font-semibold text-sm hover:bg-neutral-100 transition-colors inline-flex items-center justify-center gap-2 shadow-xs"
-              >
-                <Calculator className="w-4 h-4 text-[#EA580C]" />
-                <span>Calculate My Construction Budget</span>
-              </Link>
+                <h3 className="font-display text-2xl font-medium text-[#FBF9F4]">
+                  Speak With Our Engineering Team
+                </h3>
+
+                <p className="mt-2 text-xs sm:text-sm text-[#8C9C96] leading-relaxed">
+                  We review your plot location, soil conditions, road approach, and create custom 2D layouts with zero obligation.
+                </p>
+
+                <div className="mt-8 space-y-4 text-sm text-[#D9D2C5]">
+                  <div className="flex items-start gap-3.5">
+                    <div className="w-8 h-8 rounded-xl bg-[#183B35] flex items-center justify-center shrink-0">
+                      <MapPin className="w-4 h-4 text-[#B86F50]" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider text-[#8C9C96] block">Location</span>
+                      <span className="font-medium text-[#FBF9F4] text-xs sm:text-sm">{siteConfig.location.address}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3.5">
+                    <div className="w-8 h-8 rounded-xl bg-[#183B35] flex items-center justify-center shrink-0">
+                      <Phone className="w-4 h-4 text-[#B86F50]" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider text-[#8C9C96] block">Direct Phone</span>
+                      <a
+                        href={siteConfig.contact.phoneHref}
+                        onClick={handlePhoneClick}
+                        className="font-medium text-[#FBF9F4] hover:text-[#B86F50] transition-colors text-xs sm:text-sm"
+                      >
+                        {siteConfig.contact.phoneDisplay}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3.5">
+                    <div className="w-8 h-8 rounded-xl bg-[#183B35] flex items-center justify-center shrink-0">
+                      <MessageCircle className="w-4 h-4 text-[#1E7E34]" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wider text-[#8C9C96] block">Instant Chat</span>
+                      <a
+                        href={siteConfig.contact.whatsappHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={handleWhatsAppClick}
+                        className="font-medium text-[#FBF9F4] hover:text-[#1E7E34] transition-colors text-xs sm:text-sm"
+                      >
+                        Chat on WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-[#244E46] space-y-2 text-xs text-[#8C9C96]">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-[#1E7E34] shrink-0" />
+                  <span>5-Year Written Structural Warranty Guaranteed</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#B86F50] shrink-0" />
+                  <span>Client-Owned Plots Only • Zero Land Brokerage</span>
+                </div>
+              </div>
             </div>
 
-            {/* Smaller Secondary CTA for Property Owners */}
-            <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-neutral-400">
-              <Handshake className="w-4 h-4 text-[#EA580C]" />
-              <span>Have Development Land?</span>
-              <Link
-                href="/joint-venture-projects"
-                className="font-bold text-white hover:text-[#EA580C] underline decoration-[#EA580C] underline-offset-4 transition-colors ml-1"
-              >
-                Discuss a Joint Venture Project →
-              </Link>
+            {/* Right Column: Lead Capture Form (7 cols) */}
+            <div className="lg:col-span-7 rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-8 sm:p-10 shadow-luxury-md flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="font-display text-xl sm:text-2xl font-medium text-[#183B35]">
+                    Book My Project Consultation
+                  </h4>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#B86F50] bg-[#FFF7ED] border border-[#FFEDD5] px-2.5 py-1 rounded-full">
+                    Zero Obligation
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-[#52655E] mb-6 leading-relaxed">
+                  Enter your plot location and approximate requirements. We will coordinate a technical site survey and custom layout discussion.
+                </p>
+
+                <LeadForm
+                  source="homepage_final_cta"
+                  buttonLabel="Book My Project Consultation"
+                  variant="default"
+                />
+              </div>
+
+              {/* Secondary Actions & Links */}
+              <div className="mt-6 pt-5 border-t border-[#D9D2C5] flex flex-wrap items-center justify-between gap-3 text-xs">
+                <Link
+                  href="/calculator-pro-3"
+                  className="font-semibold text-neutral-800 hover:text-[#EA580C] inline-flex items-center gap-1.5 transition-colors"
+                >
+                  <Calculator className="w-4 h-4 text-[#EA580C]" />
+                  <span>Calculate My Construction Budget →</span>
+                </Link>
+
+                <Link
+                  href="/joint-venture"
+                  className="text-neutral-500 hover:text-[#EA580C] inline-flex items-center gap-1 transition-colors"
+                >
+                  <Handshake className="w-3.5 h-3.5 text-[#EA580C]" />
+                  <span>Have Development Land? Explore JV →</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

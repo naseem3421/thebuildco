@@ -41,7 +41,7 @@ export function OrganizationJsonLd() {
         closes: "19:00",
       },
     ],
-    priceRange: "₹1,899/sqft - ₹2,599/sqft",
+    priceRange: "₹2,199/sqft - ₹2,599/sqft",
     areaServed: siteConfig.serviceAreas.map((area) => ({
       "@type": "City",
       name: `${area}, Chennai`,

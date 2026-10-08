@@ -15,7 +15,6 @@ export interface PackageTier {
 
 export interface SpecificationCategory {
   category: string;
-  basic: string;
   standard: string;
   premium: string;
 }
@@ -153,9 +152,9 @@ export const siteConfig = {
   },
 
   pricing: {
-    startingPrice: "₹1,899",
+    startingPrice: "₹2,199",
     startingPriceUnit: "/sqft",
-    formattedStartingPrice: "₹1,899/sqft",
+    formattedStartingPrice: "₹2,199/sqft",
   },
 
   experience: "15+ Years",
@@ -210,22 +209,6 @@ export const siteConfig = {
 
   packages: [
     {
-      id: "basic",
-      name: "Basic",
-      pricePerSqft: 1899,
-      formattedPrice: "₹1,899/sqft",
-      tagline: "High standard essentials for solid, budget-conscious construction.",
-      features: [
-        "Standard Structural Design (Fe 550 Steel & Grade 53/43 Cement)",
-        "Premium Red Bricks / Solid Concrete Blocks",
-        "Vitrified Tiles (2x2 ft premium flooring)",
-        "Standard Teak Wood Main Door & Flush Internal Doors",
-        "UPVC Windows with Bug Mesh",
-        "Stage-wise Milestone Quality Audits",
-        "5-Year Structural Warranty",
-      ],
-    },
-    {
       id: "standard",
       name: "Standard",
       pricePerSqft: 2199,
@@ -263,73 +246,61 @@ export const siteConfig = {
   packageComparisonMatrix: [
     {
       category: "Structure & RCC",
-      basic: "Fe 550 Steel (Tata/Jindal), Coromandel / Dalmia Grade 53 Cement, M20 Grade Concrete",
       standard: "Fe 550D Seismic Resilient Steel, Grade 53 Ultratech/Coromandel, M25 Design Mix Concrete with Waterproofing",
       premium: "Fe 550D Corrosion Resistant Steel, Ultratech Super Grade 53, M25/M30 Design Mix with Crystalline Admixtures",
     },
     {
       category: "Flooring",
-      basic: "2x2 ft Double Charged Vitrified Tiles (₹55/sqft budget)",
       standard: "4x2 ft Glazed Vitrified Tiles (₹90/sqft budget) / Wooden Laminate in Master Bedroom",
       premium: "Italian Marble / Large Porcelain Slabs (₹220/sqft budget) + Solid Engineered Hardwood",
     },
     {
       category: "Main & Internal Doors",
-      basic: "Standard Teak Wood Main Frame & Shutter; Flush Internal Doors with Enamel Paint",
       standard: "First-Quality Teak Main Door with Brass Hardware; Molded Veneer Internal Doors",
       premium: "Handcrafted 8-Foot Teak Main Door with Biometric Smart Lock; Full Flush Teak Veneer Doors",
     },
     {
       category: "Windows & Glazing",
-      basic: "Standard 2-Track UPVC Sliding Windows with Bug Mesh (Fenesta/Kommerling profile)",
       standard: "Heavy 3-Track UPVC / Thermal Break Aluminum Windows with Toughened Glass",
       premium: "Acoustic Double-Glazed Argon-Filled European Slimline Aluminum Glass Systems",
     },
     {
       category: "Electrical & Smart Prep",
-      basic: "Finolex / Anchor Concealed Copper Wiring; Anchor Roma Modular Switches",
       standard: "Havells / Polycab FRLS Fire-Resistant Wiring; Legrand Arteor / Schneider Modular Switches",
       premium: "Complete Smart Automation Conduit Prep, Legrand / Lutron Switches, EV Charging Provision in Garage",
     },
     {
       category: "Plumbing & Drainage",
-      basic: "Ashirvad / Supreme CPVC & PVC Concealed Pipes, Standard Overhead Tank (1,000L)",
       standard: "Ashirvad FlowGuard CPVC Pipes, Dual Water Supply (Ground/Corporation), 2,000L Overhead Tank",
       premium: "Pressurized Water System, Soundproof Soil Waste Drainage Pipes, Automated Water Level Sensors",
     },
     {
       category: "Kitchen",
-      basic: "Polished Black Granite Countertop (20mm), SS Sink (Nirali), 2ft Dado Tiles",
       standard: "Premium Quartz / Granite Countertop, Double Bowl SS Sink with Pull-out Faucet, 4ft Dado Tiles",
       premium: "Designer Quartz Countertop, Island Counter Provision, Franke/Grohe Granite Composite Sink",
     },
     {
       category: "Bathrooms & Sanitary",
-      basic: "Parryware / Hindware EWC & Wash Basins, Standard Wall Mixer",
       standard: "Jaquar / Kohler Wall-Hung EWC with Concealed Cistern, Single Lever Diverter",
       premium: "Grohe / Kohler Digital Thermostatic Diverters, Frameless Toughened Glass Shower Partitions",
     },
     {
       category: "Painting & Finishes",
-      basic: "2 Coats Asian Paints Tractor Emulsion (Interior), Ace Exterior Finish",
       standard: "2 Coats Asian Paints Royale Luxury Emulsion (Interior), Apex WeatherProof Exterior",
       premium: "Asian Paints Royale Aspira (Interior) with Wall Textures, Apex Ultima Protek with 10-Yr Guarantee",
     },
     {
       category: "Architectural & Elevation",
-      basic: "2D Functional Floor Plans, Standard 3D Elevation Rendering",
       standard: "Bespoke 3D Elevation with Louver / CNC Detailing, Structural Drawings, Vastu Alignment",
       premium: "Full Architectural Package: 3D Walkthrough Video, Landscape Layout, Lighting & False Ceiling Plans",
     },
     {
       category: "Project Supervision",
-      basic: "Weekly Site Civil Engineer Audits, Stage Milestone Verification",
       standard: "Full-Time Dedicated Site Supervisor, Weekly Video Reports on WhatsApp, Lab Cube Tests",
       premium: "Dedicated Senior Project Architect, Daily Digital Logbook, Third-Party Structural Quality Audit",
     },
     {
       category: "Warranty & Support",
-      basic: "5-Year Structural Warranty",
       standard: "5-Year Comprehensive Structural & Waterproofing Warranty + 1-Year Free Maintenance",
       premium: "5-Year Full Turnkey Warranty + 10-Year Structural Assurance + Lifetime Civil Advisory",
     },
@@ -392,7 +363,7 @@ export const siteConfig = {
       highlight: false,
     },
     {
-      value: "₹1,899+",
+      value: "₹2,199+",
       label: "Starting / sqft",
       subtext: "Transparent upfront pricing",
       highlight: true,
@@ -709,8 +680,8 @@ export const siteConfig = {
   faqs: [
     {
       category: "Pricing & Costing",
-      question: "What is included in the ₹1,899/sqft starting price?",
-      answer: "The ₹1,899/sqft package includes turnkey construction: architectural planning, structural engineering, RCC foundation, brickwork, vitrified tile flooring, standard teak doors, UPVC windows, plumbing, electricals, interior & exterior painting, and 5-year structural warranty.",
+      question: "What is included in the ₹2,199/sqft starting price?",
+      answer: "The ₹2,199/sqft Standard package includes turnkey construction: architectural planning, seismic-resilient Fe 550D RCC frame, red bricks, large format glazed vitrified tile flooring, first quality teak main door, UPVC windows, Kohler/Jaquar sanitaryware, Havells/Legrand wiring, interior & exterior painting, and 5-year comprehensive warranty.",
     },
     {
       category: "Pricing & Costing",
@@ -783,7 +754,37 @@ export const siteConfig = {
   ],
 
   headerNavigation: [
-    { label: "Packages", href: "/packages" },
+    {
+      label: "Services",
+      href: "/services",
+      children: [
+        {
+          label: "Individual House Construction",
+          description: "Custom family residences on client-owned plots",
+          href: "/services/individual-house-construction",
+        },
+        {
+          label: "Villa Construction",
+          description: "Turnkey luxury villas with bespoke architecture",
+          href: "/services/villa-construction",
+        },
+        {
+          label: "Duplex House Construction",
+          description: "Optimized two-story multi-generational homes",
+          href: "/services/duplex-house-construction",
+        },
+        {
+          label: "Luxury Home Construction",
+          description: "High-spec residences with architectural craftsmanship",
+          href: "/services/luxury-home-construction",
+        },
+        {
+          label: "All Services Overview",
+          description: "Compare residential construction types",
+          href: "/services",
+        },
+      ],
+    },
     { label: "Projects", href: "/projects" },
     { label: "Process", href: "/process" },
     {
@@ -799,6 +800,11 @@ export const siteConfig = {
           badge: "Latest",
         },
         {
+          label: "Construction Cost in Chennai",
+          description: "2026 cost guide, sqft rates & examples",
+          href: "/construction-cost-chennai",
+        },
+        {
           label: "Calculator Pro 2",
           description: "Step-by-step guided budget builder",
           href: "/calculator-pro-2",
@@ -809,9 +815,9 @@ export const siteConfig = {
           href: "/calculator-pro",
         },
         {
-          label: "Quick Calculator",
-          description: "Instant sqft & package rate comparison",
-          href: "/calculator",
+          label: "Packages Comparison",
+          description: "Basic, Standard and Premium specifications",
+          href: "/packages",
         },
       ],
     },
@@ -825,6 +831,16 @@ export const siteConfig = {
           href: "/about",
         },
         {
+          label: "Quality Standards",
+          description: "150+ point civil engineering QA/QC audits",
+          href: "/quality-standards",
+        },
+        {
+          label: "Joint Venture",
+          description: "Selective partnership opportunities for landowners",
+          href: "/joint-venture",
+        },
+        {
           label: "Client Testimonials",
           description: "Verified homeowner stories & build experiences",
           href: "/testimonials",
@@ -836,15 +852,17 @@ export const siteConfig = {
         },
       ],
     },
-    { label: "Contact", href: "/contact" },
   ] as HeaderNavItem[],
 
   navigation: [
     { label: "Home", href: "/" },
-    { label: "Packages", href: "/packages" },
+    { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
     { label: "Process", href: "/process" },
     { label: "Cost Calculator PRO", href: "/calculator-pro-3" },
+    { label: "Construction Cost Guide", href: "/construction-cost-chennai" },
+    { label: "Quality Standards", href: "/quality-standards" },
+    { label: "Joint Venture", href: "/joint-venture" },
     { label: "About", href: "/about" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "FAQ", href: "/faq" },
@@ -852,7 +870,7 @@ export const siteConfig = {
   ] as NavItem[],
 
   ctaDefaults: {
-    primary: "Get Free Quote",
+    primary: "Book Consultation",
     secondary: "Chat on WhatsApp",
     third: "Book Free Site Visit",
     phone: "Call Now",

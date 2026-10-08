@@ -99,7 +99,7 @@ export function PackageComparisonModal({
               {PRO_COMPARISON_MATRIX.map((row, idx) => (
                 <tr key={idx} className="hover:bg-[#FBF9F4]">
                   <td className="py-2 px-3.5 font-semibold text-[#52655E]">{row.feature}</td>
-                  {(["basic", "standard", "premium", "luxury"] as const).map((colKey) => {
+                  {(["standard", "premium", "luxury"] as const).map((colKey) => {
                     const val = row[colKey];
                     return (
                       <td key={colKey} className="py-2 px-3 text-center">

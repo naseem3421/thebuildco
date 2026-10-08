@@ -54,49 +54,6 @@ export interface ProMatrixRow {
 
 export const PRO_PACKAGES: ProPackageTier[] = [
   {
-    id: "basic",
-    name: "Basic",
-    badge: "Budget-Friendly",
-    ratePerSqft: 1999,
-    tagline: "Essential structural durability with standard ISI certified materials.",
-    durationRange: "10 – 14 months",
-    accentColor: "#0284C7", // Sky blue
-    specs: {
-      structure: [
-        { label: "Steel", value: "Any ISI Brand" },
-        { label: "Cement", value: "Zuari / Chettinad" },
-        { label: "RCC Mix", value: "M20 Grade" },
-        { label: "Basement", value: "Upto 3 ft" },
-        { label: "Ceiling Height", value: "9.5 ft standard" },
-        { label: "Soil Testing", value: "Standard visual inspection" },
-      ],
-      finishes: [
-        { label: "Living/Dining Tiles", value: "₹50/sqft vitrified" },
-        { label: "Bedroom Tiles", value: "Ceramic basic" },
-        { label: "Interior Paint", value: "Asian Tractor Emulsion" },
-        { label: "Exterior Paint", value: "White Cement based paint" },
-        { label: "Waterproofing", value: "Standard terrace coating" },
-        { label: "3D Elevation", value: "Basic 2D elevation" },
-      ],
-      fittings: [
-        { label: "Main Door", value: "Basic Flush Door" },
-        { label: "Windows", value: "MS Grills with aluminium sliding" },
-        { label: "Staircase", value: "MS basic railing" },
-        { label: "Electrical Wiring", value: "Orbit FR copper wires" },
-        { label: "Switches", value: "Anchor Roma modular" },
-        { label: "CP & Sanitary", value: "Parryware Basic / Standard chrome" },
-      ],
-    },
-    whatsIncluded: [
-      "Standard RCC Frame",
-      "ISI TMT Steel",
-      "Red Clay Bricks / Solid Blocks",
-      "Anchor Roma Switches",
-      "Ceramic Tile Flooring",
-      "Tractor Emulsion Paint",
-    ],
-  },
-  {
     id: "standard",
     name: "Standard",
     badge: "Most Balanced",
@@ -531,17 +488,17 @@ export const PRO_FAQS = [
   {
     question: "How much does it cost to build a house in Chennai in 2026?",
     answer:
-      "House construction in Chennai in 2026 typically costs between ₹1,999/sqft (Basic package) and ₹2,999/sqft (Luxury finish). For an average 2,400 sqft G+1 independent house, the turnkey civil construction budget ranges from ₹48 Lakhs to ₹72 Lakhs, depending on soil type, foundation depth, and material specifications.",
+      "House construction in Chennai in 2026 typically costs between ₹2,199/sqft (Standard package) and ₹2,599/sqft (Premium finish). For an average 2,400 sqft G+1 independent house, the turnkey civil construction budget ranges from ₹52.8 Lakhs to ₹62.4 Lakhs, depending on soil type, foundation depth, and material specifications.",
   },
   {
     question: "What is the construction cost per sq.ft in Chennai in 2026?",
     answer:
-      "The baseline unit rate in Chennai starts at ₹1,999/sqft for standard RCC framed structures with ISI materials. The Standard package is ₹2,299/sqft, the most popular Premium package is ₹2,649/sqft (with branded Ramco/Dalmia cement, iSteel, teak doors, and Legrand switches), and luxury bespoke construction reaches ₹2,999/sqft.",
+      "The baseline unit rate in Chennai starts at ₹2,199/sqft for standard RCC framed structures with branded materials. The most popular Premium package is ₹2,599/sqft (with branded Ramco/Dalmia cement, iSteel, teak doors, and Legrand switches), with bespoke luxury options available.",
   },
   {
     question: "What is the cost of a G+1 house in Chennai?",
     answer:
-      "For a typical plot size of 1,200 sqft with a 1,000 sqft built-up area per floor (total 2,000 sqft built-up area across G+1), the construction cost ranges from ₹40 Lakhs (Basic) to ₹53 Lakhs (Premium), with the ground floor carrying approximately 20% foundation and plinth share.",
+      "For a typical plot size of 1,200 sqft with a 1,000 sqft built-up area per floor (total 2,000 sqft built-up area across G+1), the construction cost ranges from ₹44 Lakhs (Standard) to ₹52 Lakhs (Premium), with the ground floor carrying approximately 20% foundation and plinth share.",
   },
   {
     question: "Does the calculator include plan approval and government charges?",
@@ -551,12 +508,12 @@ export const PRO_FAQS = [
   {
     question: "How long does house construction take in Chennai?",
     answer:
-      "An individual ground-floor home takes roughly 10–12 months. A G+1 duplex typically requires 14–16 months. Each additional floor adds approximately 4 months to allow for structural concrete curing (21-day slab curing cycle), brickwork setting, and multi-stage plastering.",
+      "An individual ground-floor home takes roughly 10–12 months. A G+1 duplex typically requires 12–14 months. Each additional floor adds approximately 3–4 months to allow for structural concrete curing (21-day slab curing cycle), brickwork setting, and multi-stage plastering.",
   },
   {
-    question: "What is the difference between Basic and Premium packages?",
+    question: "What is the difference between Standard and Premium packages?",
     answer:
-      "The Basic package (₹1,999/sqft) provides essential ISI certified materials with ceramic flooring and tractor emulsion. The Premium package (₹2,649/sqft) upgrades to iSteel Fe550D reinforcement, Ramco/Dalmia 53-grade cement, 10 ft ceiling height, 4x2 GVT vitrified tiles, first-grade teak wood main doors, 3-track UPVC windows with mosquito mesh, and Legrand modular switches.",
+      "The Standard package (₹2,199/sqft) provides high-grade materials with vitrified flooring, UPVC windows, and branded finishes. The Premium package (₹2,599/sqft) upgrades to iSteel Fe550D reinforcement, Ramco/Dalmia 53-grade cement, 10 ft ceiling height, 4x2 GVT vitrified tiles, first-grade teak wood main doors, 3-track UPVC windows with mosquito mesh, and Legrand modular switches.",
   },
   {
     question: "Can TBC construct my house after using this calculator?",

@@ -72,16 +72,46 @@ export function Footer() {
                 Services & Packages
               </h3>
               <ul className="space-y-2.5">
-                {siteConfig.services.map((service) => (
-                  <li key={service.id}>
-                    <Link
-                      href="/packages"
-                      className="text-sm text-neutral-600 hover:text-[#EA580C] transition-colors"
-                    >
-                      {service.title} Construction
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    href="/services/individual-house-construction"
+                    className="text-sm text-neutral-600 hover:text-[#EA580C] transition-colors"
+                  >
+                    Individual House Construction
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/villa-construction"
+                    className="text-sm text-neutral-600 hover:text-[#EA580C] transition-colors"
+                  >
+                    Villa Construction
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/duplex-house-construction"
+                    className="text-sm text-neutral-600 hover:text-[#EA580C] transition-colors"
+                  >
+                    Duplex House Construction
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/luxury-home-construction"
+                    className="text-sm text-neutral-600 hover:text-[#EA580C] transition-colors"
+                  >
+                    Luxury Home Construction
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/joint-venture"
+                    className="text-sm text-neutral-600 hover:text-[#EA580C] transition-colors"
+                  >
+                    Joint Venture Development
+                  </Link>
+                </li>
               </ul>
 
               <div className="mt-5 pt-4 border-t border-neutral-200/80">
