@@ -14,7 +14,7 @@ export function FAQDirectory() {
     "Payments & Financials",
     "Timeline & Delivery",
     "Engineering & Materials",
-    "Warranty & Aftercare",
+    "Quality Assurance & Handover",
     "Approvals & Permissions",
     "Site Visits & Land",
   ];
@@ -111,7 +111,7 @@ export function FAQDirectory() {
           </div>
         </div>
         <a
-          href={getWhatsAppUrl("Hi TBC, I have a question regarding construction on my plot in Chennai.")}
+          href={getWhatsAppUrl("Hi The Build Company, I have a question regarding construction on my plot in Chennai.")}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#1E7E34] text-white text-xs font-semibold shadow-luxury-sm hover:bg-[#155D27] transition-colors shrink-0"

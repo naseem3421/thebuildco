@@ -84,8 +84,8 @@ export function ContactInquirySection() {
                 <span>Prompt response during working hours</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#1E7E34] shrink-0" />
-                <span>5-Year Structural Construction Warranty Guaranteed</span>
+                <ShieldCheck className="w-4 h-4 text-[#86EFAC] shrink-0" />
+                <span>Pre-Handover Snag Audit & Certified Clearance</span>
               </div>
             </div>
           </div>

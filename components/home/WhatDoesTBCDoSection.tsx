@@ -13,15 +13,15 @@ export function WhatDoesTBCDoSection() {
           </div>
 
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-neutral-900 leading-tight">
-            What Does TBC — The Build Company Do?
+            What Does The Build Company Do?
           </h2>
 
           <div className="mt-6 text-base sm:text-lg text-neutral-700 leading-relaxed space-y-4">
             <p>
-              <strong>TBC — The Build Company</strong> is a Chennai-based turnkey residential construction company that builds custom individual houses, modern villas, and duplex homes exclusively on land already owned by the client. TBC manages the complete lifecycle from architectural design, CMDA/GCC planning coordination, and structural engineering to material procurement, on-site construction, rigorous quality control, and formal key handover.
+              <strong>The Build Company</strong> is a Chennai-based turnkey residential construction company that builds custom individual houses, modern villas, and duplex homes exclusively on land already owned by the client. The Build Company manages the complete lifecycle from architectural design, CMDA/GCC planning coordination, and structural engineering to material procurement, on-site construction, rigorous quality control, and formal key handover.
             </p>
             <p>
-              The company primarily serves Chennai landowners executing substantial residential construction projects across key corridors including OMR, ECR, Medavakkam, Velachery, Anna Nagar, Porur, and Tambaram. Additionally, TBC partners with property owners on selective <strong>Joint Venture (JV) development projects</strong> subject to location suitability and commercial feasibility.
+              The company primarily serves Chennai landowners executing substantial residential construction projects across key corridors including OMR, ECR, Medavakkam, Velachery, Anna Nagar, Porur, and Tambaram. Additionally, The Build Company partners with property owners on selective <strong>Joint Venture (JV) development projects</strong> subject to location suitability and commercial feasibility.
             </p>
           </div>
 

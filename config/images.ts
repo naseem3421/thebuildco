@@ -19,7 +19,7 @@ export const imageSlots: Record<string, ImageSlot> = {
     id: "hero-main",
     category: "hero",
     title: "Contemporary Architectural Residence in Chennai",
-    alt: "Modern luxury villa exterior designed and constructed by TBC in Chennai",
+    alt: "Modern luxury villa exterior designed and constructed by The Build Company in Chennai",
     placeholderUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
     aspectRatio: "16/9",
     caption: "Bespoke residential project in ECR, Chennai",
@@ -59,12 +59,12 @@ export const imageSlots: Record<string, ImageSlot> = {
     placeholderUrl: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80",
     aspectRatio: "4/3",
   },
-  serviceRenovation: {
-    id: "service-renovation",
+  serviceCommercial: {
+    id: "service-commercial",
     category: "service",
-    title: "Turnkey Structural Renovation",
-    alt: "Interior and exterior architectural renovation with high-end materials",
-    placeholderUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
+    title: "Commercial & Mixed-Use Construction",
+    alt: "Commercial building and warehouse construction in Chennai",
+    placeholderUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
     aspectRatio: "4/3",
   },
   processSiteInspection: {

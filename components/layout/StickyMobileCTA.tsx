@@ -31,7 +31,7 @@ export function StickyMobileCTA() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
-          aria-label="Chat on WhatsApp with TBC engineering team"
+          aria-label="Chat on WhatsApp with The Build Company engineering team"
           className="flex items-center justify-center w-11 h-11 rounded-xl bg-[#25D366] text-white shadow-xs shrink-0 active:scale-95 transition-transform"
         >
           <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
@@ -50,7 +50,7 @@ export function StickyMobileCTA() {
 
         {/* Secondary CTA: Calculate Cost */}
         <Link
-          href="/calculator-pro-3"
+          href="/calculator-pro-2"
           aria-label="Calculate Construction Cost"
           className="flex items-center justify-center gap-1.5 h-11 px-3 rounded-xl bg-neutral-900 text-white font-semibold text-xs sm:text-sm shadow-xs shrink-0 active:bg-neutral-800 transition-colors"
         >

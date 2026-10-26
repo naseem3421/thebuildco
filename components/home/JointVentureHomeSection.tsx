@@ -5,7 +5,7 @@ import { Handshake, ArrowRight } from "lucide-react";
 
 export function JointVentureHomeSection() {
   return (
-    <section id="joint-venture" className="py-10 sm:py-12 bg-white border-b border-neutral-200">
+    <section id="joint-venture" className="py-7 sm:py-9 bg-white border-b border-neutral-200">
       <Container size="wide">
         <div className="rounded-3xl p-6 sm:p-8 bg-[#FAF8F5] border border-neutral-200/90 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 max-w-5xl mx-auto">
           <div className="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
@@ -20,7 +20,7 @@ export function JointVentureHomeSection() {
                 Have Development Land?
               </h3>
               <p className="mt-1 text-xs sm:text-sm text-neutral-600 max-w-xl">
-                TBC also evaluates selected Joint Venture development opportunities with Chennai landowners.
+                The Build Company also evaluates selected Joint Venture development opportunities with Chennai landowners.
               </p>
             </div>
           </div>

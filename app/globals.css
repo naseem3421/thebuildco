@@ -91,3 +91,47 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #B86F50;
 }
+
+/* Infinite Slider Animation (Left to Right in a Loop) */
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-left-to-right {
+  display: flex;
+  width: max-content;
+  animation: slideLeftToRight 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-slide-left-to-right:hover {
+  animation-play-state: paused;
+}
+
+/* Infinite Slider Animation (Right to Left in a Loop) */
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-right-to-left {
+  display: flex;
+  width: max-content;
+  animation: slideRightToLeft 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-slide-right-to-left:hover {
+  animation-play-state: paused;
+}
+
+

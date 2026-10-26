@@ -15,7 +15,7 @@ export function AEOQuestionSection() {
   };
 
   return (
-    <section id="faq" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="faq" className="py-10 sm:py-14 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
           eyebrow="FREQUENTLY ASKED QUESTIONS"
@@ -25,7 +25,7 @@ export function AEOQuestionSection() {
         />
 
         {/* 8 High-Intent FAQs in 2-Column Grid */}
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-5xl mx-auto">
+        <div className="mt-7 grid grid-cols-1 lg:grid-cols-2 gap-3.5 max-w-5xl mx-auto">
           {homepage8Questions.map((item, idx) => {
             const isOpen = openIndex === idx;
             const buttonId = `faq-btn-${idx}`;

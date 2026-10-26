@@ -6,19 +6,20 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { LeadForm } from "@/components/forms/LeadForm";
+import { ExperienceCentreSection } from "@/components";
 import { TrackPackageView } from "@/components/analytics/TrackPackageView";
 import { Check, Sparkles, ShieldCheck, MessageCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Construction Packages & Pricing",
   description:
-    "Explore transparent sqft construction packages for Chennai landowners. Compare Standard (₹2,199/sqft) and Premium (₹2,599/sqft) specifications.",
+    "Explore transparent sqft construction packages for Chennai landowners. Compare Basic (₹2,399/sqft), Standard (₹2,699/sqft) and Premium (₹3,099/sqft) specifications (excl. GST).",
 };
 
 export default function PackagesPage() {
   return (
     <div className="py-12 sm:py-20 flex flex-col gap-16 sm:gap-24">
-      <TrackPackageView packageName="All Packages" pricePerSqft={2199} />
+      <TrackPackageView packageName="All Packages" pricePerSqft={2399} />
       {/* 1. Page Hero */}
       <section>
         <Container size="wide">
@@ -55,8 +56,8 @@ export default function PackagesPage() {
             </div>
           </div>
 
-          {/* 2 Package Cards */}
-          <div className="mt-14 sm:mt-20 grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto gap-8 items-stretch">
+          {/* 3 Package Cards */}
+          <div className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-8 items-stretch">
             {siteConfig.packages.map((pkg) => (
               <div
                 key={pkg.id}
@@ -140,17 +141,20 @@ export default function PackagesPage() {
           />
 
           <div className="mt-12 overflow-x-auto rounded-3xl border border-[#D9D2C5] bg-[#FBF9F4] shadow-luxury-md">
-            <table className="w-full text-left border-collapse min-w-[600px]">
+            <table className="w-full text-left border-collapse min-w-[750px]">
               <thead>
                 <tr className="border-b border-[#D9D2C5] bg-[#183B35] text-[#F4F0E8]">
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/3">
+                  <th className="p-4 sm:p-5 text-xs font-bold uppercase tracking-wider w-1/4">
                     Category
                   </th>
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/3 bg-[#244E46]">
-                    Standard (₹2,199/sqft) ★
+                  <th className="p-4 sm:p-5 text-xs font-bold uppercase tracking-wider w-1/4">
+                    Basic (₹2,399/sqft)
                   </th>
-                  <th className="p-4 sm:p-6 text-xs font-bold uppercase tracking-wider w-1/3">
-                    Premium (₹2,599/sqft)
+                  <th className="p-4 sm:p-5 text-xs font-bold uppercase tracking-wider w-1/4 bg-[#244E46]">
+                    Standard (₹2,699/sqft) ★
+                  </th>
+                  <th className="p-4 sm:p-5 text-xs font-bold uppercase tracking-wider w-1/4">
+                    Premium (₹3,099/sqft)
                   </th>
                 </tr>
               </thead>
@@ -160,13 +164,16 @@ export default function PackagesPage() {
                     key={idx}
                     className={idx % 2 === 0 ? "bg-[#FBF9F4]" : "bg-[#F4F0E8]/40"}
                   >
-                    <td className="p-4 sm:p-6 font-semibold text-[#183B35] align-top">
+                    <td className="p-4 sm:p-5 font-semibold text-[#183B35] align-top">
                       {row.category}
                     </td>
-                    <td className="p-4 sm:p-6 text-[#183B35] font-medium bg-[#E9E4D9]/30 align-top leading-relaxed">
+                    <td className="p-4 sm:p-5 text-[#52655E] align-top leading-relaxed">
+                      {row.basic}
+                    </td>
+                    <td className="p-4 sm:p-5 text-[#183B35] font-medium bg-[#E9E4D9]/30 align-top leading-relaxed">
                       {row.standard}
                     </td>
-                    <td className="p-4 sm:p-6 text-[#52655E] align-top leading-relaxed">
+                    <td className="p-4 sm:p-5 text-[#52655E] align-top leading-relaxed">
                       {row.premium}
                     </td>
                   </tr>
@@ -177,13 +184,16 @@ export default function PackagesPage() {
         </Container>
       </section>
 
+      {/* 2.5 Experience Centre Material Samples & Walkthrough */}
+      <ExperienceCentreSection />
+
       {/* 3. Lead Form Conversion Section */}
       <section id="get-estimate" className="scroll-mt-24">
         <Container size="narrow">
           <div className="rounded-3xl bg-[#FBF9F4] border border-[#D9D2C5] p-8 sm:p-12 shadow-luxury-md text-center">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E9E4D9] text-xs font-semibold text-[#183B35] mb-4">
               <ShieldCheck className="w-3.5 h-3.5 text-[#B86F50]" />
-              Locked Sqft Contract with 5-Year Warranty
+              Locked Sqft Contract with Certified Snag-Free Handover
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl font-normal text-[#183B35]">

@@ -9,7 +9,7 @@ import { Quote, Star, CheckCircle2, ShieldCheck } from "lucide-react";
 export const metadata: Metadata = {
   title: "Client Testimonials & Experiences",
   description:
-    "Read real experiences and reviews from landowners across Chennai who built their dream homes with TBC's transparent construction system.",
+    "Read real experiences and reviews from landowners across Chennai who built their dream homes with The Build Company's transparent construction system.",
 };
 
 export default function TestimonialsPage() {

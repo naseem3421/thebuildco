@@ -1,5 +1,5 @@
 /**
- * Stage-wise Payment Schedule Configuration for TBC Construction
+ * Stage-wise Payment Schedule Configuration for The Build Company Construction
  * Chennai 2026 Milestone Schedule
  */
 
@@ -81,7 +81,7 @@ export const PAYMENT_STAGES: PaymentStage[] = [
       "2 coats interior emulsion + 2 coats weatherproof exterior",
       "150-point engineering quality snag audit",
       "Post-construction deep chemical cleaning",
-      "5-Year Structural Warranty Certificate handover",
+      "Certified Snag-Free Handover & As-Built Blueprints",
     ],
   },
 ];

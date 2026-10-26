@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Construction Process & Stage Payments",
   description:
-    "Learn about TBC's structured 8-stage turnkey construction workflow and milestone payment escrow designed to protect Chennai landowners.",
+    "Learn about The Build Company's structured 8-stage turnkey construction workflow and milestone payment escrow designed to protect Chennai landowners.",
 };
 
 export default function ProcessPage() {
@@ -28,7 +28,7 @@ export default function ProcessPage() {
     { stage: "First Floor Roof Slab", pct: "15%", desc: "First floor structural columns and slab pour with certified concrete cube tests." },
     { stage: "Brickwork & Concealed Piping", pct: "15%", desc: "Red brick / solid block masonry, electrical conduit chasing, and plumbing lines." },
     { stage: "Plastering & Flooring", pct: "10%", desc: "Internal/external cement plastering, waterproofing, and vitrified/marble tile laying." },
-    { stage: "Finishing & Handover", pct: "10%", desc: "Painting, door/window joinery, sanitary fittings, deep cleaning, and warranty handover." },
+    { stage: "Finishing & Handover", pct: "10%", desc: "Painting, door/window joinery, sanitary fittings, deep cleaning, and certified snag-free key handover." },
   ];
 
   return (
@@ -66,7 +66,7 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      {/* 2. Traditional Contractor Problems vs TBC Turnkey Method */}
+      {/* 2. Traditional Contractor Problems vs The Build Company Turnkey Method */}
       <section className="bg-white py-16 sm:py-20 border-y border-neutral-200">
         <Container size="wide">
           <div className="max-w-4xl mx-auto">
@@ -110,7 +110,7 @@ export default function ProcessPage() {
             <div className="mt-8 p-6 rounded-2xl bg-[#0B1E1A] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#EA580C] block mb-1">
-                  THE TBC TURNKEY DIFFERENCE
+                  THE BUILD COMPANY TURNKEY DIFFERENCE
                 </span>
                 <p className="text-sm text-neutral-200 font-medium">
                   One accountable team, fixed specifications, stage-wise payments, and daily civil engineer supervision.

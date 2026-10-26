@@ -28,15 +28,15 @@ export function EditorialTrustSection() {
     },
     {
       icon: <HardHat className="w-5 h-5 text-[#B86F50]" />,
-      title: "Full-Time Civil Engineers On-Site",
+      title: "Dedicated Site Supervisor for Each Site",
       description:
         "Dedicated site supervisors verify curing times, slump tests, and steel tie spacing on every single floor slab.",
     },
     {
       icon: <ShieldCheck className="w-5 h-5 text-[#B86F50]" />,
-      title: "5-Year Construction Warranty",
+      title: "Pre-Handover Snag Audit & Certified Clearance",
       description:
-        "Comprehensive structural assurance backed by prompt service support and annual post-handover preventative audits.",
+        "Comprehensive 150-point civil inspection, 72-hour waterproofing ponding tests, and certified snag clearance before final possession.",
     },
   ];
 
@@ -59,7 +59,7 @@ export function EditorialTrustSection() {
             </p>
 
             <p className="mt-6 text-sm sm:text-base text-[#52655E] leading-relaxed">
-              Building on your plot should be an exciting life milestone, not a stressful battle with contractors. At TBC, we combine engineering rigor, clear stage-wise payments, and architectural craftsmanship to deliver homes that stand for generations.
+              Building on your plot should be an exciting life milestone, not a stressful battle with contractors. At The Build Company, we combine engineering rigor, clear stage-wise payments, and architectural craftsmanship to deliver homes that stand for generations.
             </p>
 
             {/* Structured Trust Grid */}
@@ -91,7 +91,7 @@ export function EditorialTrustSection() {
             <div className="relative aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] rounded-3xl overflow-hidden border border-[#D9D2C5] shadow-luxury-md">
               <Image
                 src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
-                alt="Architectural detailing and structural craftsmanship by TBC in Chennai"
+                alt="Architectural detailing and structural craftsmanship by The Build Company in Chennai"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

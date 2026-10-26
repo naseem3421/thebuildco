@@ -8,9 +8,9 @@ import { LeadForm } from "@/components/forms/LeadForm";
 import { CheckCircle2, Home, Layers, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Duplex House Construction in Chennai | G+1 Turnkey Homes by TBC",
+  title: "Duplex House Construction in Chennai | G+1 Turnkey Homes by The Build Company",
   description:
-    "Construct modern duplex homes in Chennai with TBC. G+1 and G+2 duplex residences engineered for multi-generational families on client-owned plots.",
+    "Construct modern duplex homes in Chennai with The Build Company. G+1 and G+2 duplex residences engineered for multi-generational families on client-owned plots.",
   keywords: [
     "duplex house construction chennai",
     "g+1 house construction chennai",
@@ -37,7 +37,7 @@ export default function DuplexHouseConstructionPage() {
                 Duplex House Construction in Chennai
               </h1>
               <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                Maximize comfort, privacy, and vertical elegance on your residential plot. TBC designs and constructs G+1 and G+2 duplex homes tailored for joint families, privacy-first lifestyle zoning, and future-proof structural longevity across Chennai.
+                Maximize comfort, privacy, and vertical elegance on your residential plot. The Build Company designs and constructs G+1 and G+2 duplex homes tailored for joint families, privacy-first lifestyle zoning, and future-proof structural longevity across Chennai.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
@@ -47,7 +47,7 @@ export default function DuplexHouseConstructionPage() {
                   Book My Project Consultation
                 </a>
                 <Link
-                  href="/calculator-pro-3"
+                  href="/calculator-pro-2"
                   className="px-6 py-3.5 rounded-full border border-neutral-300 text-neutral-800 font-semibold text-sm hover:bg-neutral-100 transition-colors"
                 >
                   Calculate My Construction Budget
@@ -57,7 +57,7 @@ export default function DuplexHouseConstructionPage() {
             <div className="lg:col-span-5 relative h-96 w-full rounded-3xl overflow-hidden shadow-luxury-md">
               <Image
                 src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
-                alt="Duplex house construction in Chennai by TBC"
+                alt="Duplex house construction in Chennai by The Build Company"
                 fill
                 className="object-cover"
                 priority

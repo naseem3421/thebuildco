@@ -48,21 +48,21 @@ export function OneAccountableTeamSection() {
       step: "06",
       icon: KeyRound,
       title: "Handover",
-      oneLiner: "Deep cleaning, snag clearance, and 5-year structural warranty certificate.",
+      oneLiner: "Deep cleaning, snag audit clearance, and certified key handover.",
     },
   ];
 
   return (
-    <section id="process" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="process" className="py-10 sm:py-14 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
-          eyebrow="TBC PROCESS SUMMARY"
+          eyebrow="THE BUILD COMPANY PROCESS SUMMARY"
           title="From First Drawing to Final Key."
           subtitle="Every critical phase of your residential build is coordinated and executed through one accountable team."
           align="center"
         />
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {stages.map((stg, idx) => {
             const Icon = stg.icon;
             return (

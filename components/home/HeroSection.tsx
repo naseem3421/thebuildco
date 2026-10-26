@@ -34,16 +34,16 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative pt-8 pb-16 sm:pt-14 sm:pb-24 bg-white border-b border-neutral-200 overflow-hidden">
+    <section className="relative pt-6 pb-10 sm:pt-8 sm:pb-14 bg-white border-b border-neutral-200 overflow-hidden">
       {/* Subtle architectural background grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] [background-size:28px_28px] opacity-70 pointer-events-none" />
 
       <Container size="wide" className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Column: Core Positioning Copy */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] mb-5 tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] mb-4 tracking-widest uppercase">
               <MapPin className="w-3.5 h-3.5 text-[#EA580C]" />
               <span>PREMIUM TURNKEY HOME CONSTRUCTION IN CHENNAI</span>
             </div>
@@ -54,12 +54,12 @@ export function HeroSection() {
             </h1>
 
             {/* Supporting Copy */}
-            <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl font-normal">
-              Already own your land in Chennai? TBC provides premium turnkey construction — from architectural planning and structural engineering to procurement, construction, quality control and handover — through one accountable team.
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl font-normal">
+              Already own your land in Chennai? The Build Company provides premium turnkey construction — from architectural planning and structural engineering to procurement, construction, quality control and handover — through one accountable team.
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <div className="mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <a
                 href="#consultation"
                 onClick={handleConsultationClick}
@@ -76,7 +76,7 @@ export function HeroSection() {
                 className="w-full sm:w-auto px-7 py-4 rounded-full bg-white border border-neutral-300 text-neutral-800 font-semibold text-sm hover:bg-neutral-50 transition-colors inline-flex items-center justify-center gap-2"
               >
                 <Calculator className="w-4 h-4 text-[#EA580C]" />
-                <span>Calculate My Construction Budget</span>
+                <span>Calculate My Cost</span>
               </a>
             </div>
 
@@ -98,7 +98,7 @@ export function HeroSection() {
               <div className="relative h-[360px] sm:h-[460px] w-full">
                 <Image
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
-                  alt="Modern turnkey residential construction in Chennai by TBC"
+                  alt="Modern turnkey residential construction in Chennai by The Build Company"
                   fill
                   priority
                   className="object-cover"
@@ -120,7 +120,7 @@ export function HeroSection() {
                   Contemporary Individual House on Client-Owned Land
                 </h4>
                 <p className="mt-1 text-xs text-neutral-600">
-                  Architectural design, structural execution, vitrified flooring, and handover by TBC.
+                  Architectural design, structural execution, vitrified flooring, and handover by The Build Company.
                 </p>
               </div>
             </div>

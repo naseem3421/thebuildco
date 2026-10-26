@@ -28,7 +28,7 @@ export function TrustMetricsSection() {
                     Guaranteed Standard
                   </span>
                   <div
-                    className={`font-display text-4xl sm:text-5xl font-semibold tracking-tight mt-2 ${
+                    className={`font-sans text-3xl sm:text-4xl font-bold tracking-tight mt-2 ${
                       isHighlighted ? "text-[#FFFFFF]" : "text-[#183B35]"
                     }`}
                   >

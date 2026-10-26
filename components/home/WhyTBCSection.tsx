@@ -39,22 +39,22 @@ export function WhyTBCSection() {
     },
     {
       icon: ShieldCheck,
-      title: "Warranty Support",
-      desc: "Written post-handover structural warranty support.",
+      title: "Snag-Free Handover",
+      desc: "Rigorous civil QA inspection and certified pre-handover snag clearance.",
     },
   ];
 
   return (
-    <section id="why-tbc" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="why-the-build-company" className="py-10 sm:py-14 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
           eyebrow="CORE DIFFERENTIATORS"
-          title="Why Homeowners Choose TBC"
+          title="Why Homeowners Choose The Build Company"
           subtitle="Built around trust, single-source accountability, and rigorous execution standards for your residential investment."
           align="center"
         />
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {differentiators.map((diff, idx) => {
             const Icon = diff.icon;
             return (

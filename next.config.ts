@@ -45,6 +45,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/calculator-pro",
+        destination: "/calculator-pro-2",
+        permanent: true,
+      },
+      {
+        source: "/calculator-pro-3",
+        destination: "/calculator-pro-2",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

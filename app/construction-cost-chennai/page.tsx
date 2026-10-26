@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "House Construction Cost in Chennai (2026 Guide) | Per Sqft Rates & Cost Breakdown",
   description:
-    "Comprehensive guide to residential house construction costs in Chennai. Starting from ₹2,199/sqft to ₹2,599/sqft. Detailed cost breakdowns for 2,000, 2,500, 3,000 & 3,500 sqft homes on client-owned land.",
+    "Comprehensive guide to residential house construction costs in Chennai. Starting from ₹2,399/sqft to ₹3,099/sqft (excl. GST). Detailed cost breakdowns for 2,000, 2,500, 3,000 & 3,500 sqft homes on client-owned land.",
   keywords: [
     "house construction cost in chennai",
     "construction cost per sqft chennai",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: "https://thebuildcompany.in/construction-cost-chennai",
   },
   openGraph: {
-    title: "House Construction Cost in Chennai | TBC Guide & Calculator",
+    title: "House Construction Cost in Chennai | The Build Company Guide & Calculator",
     description:
       "Transparent sqft pricing for residential construction in Chennai. Discover exact cost drivers, package comparisons, and floor-wise investment breakdowns.",
     url: "https://thebuildcompany.in/construction-cost-chennai",
@@ -111,15 +111,15 @@ export default function ConstructionCostChennaiPage() {
   const costFaqs = [
     {
       q: "What is the average cost per sqft for residential construction in Chennai?",
-      a: "In Chennai, turnkey residential construction starts from ₹2,199/sqft for standard architectural finishes and ₹2,599/sqft for luxury specifications. These rates include civil construction, electrical, plumbing, painting, premium flooring, and turnkey handover on client-owned land.",
+      a: "In Chennai, turnkey residential construction starts from ₹2,399/sqft (excl. GST) for Basic, ₹2,699/sqft for Standard, and ₹3,099/sqft for Premium specifications. These rates include architectural drawings, civil construction, electrical, plumbing, painting, premium flooring, and turnkey handover on client-owned land.",
     },
     {
-      q: "Does TBC's price per square foot include government approvals?",
-      a: "TBC's in-house architectural team prepares the architectural floor plans, structural stability certificates, and liaison documentation required for CMDA or Greater Chennai Corporation (GCC) building permit approvals. Statutory municipal fees are paid directly based on government receipts.",
+      q: "Does The Build Company's price per square foot include government approvals?",
+      a: "Our in-house architectural team prepares the architectural floor plans, structural stability certificates, and liaison documentation required for CMDA or Greater Chennai Corporation (GCC) building permit approvals. Statutory municipal fees are paid directly based on government receipts.",
     },
     {
       q: "Are there unexpected cost overruns or price escalations?",
-      a: "No. TBC provides a comprehensive Bill of Quantities (BOQ) with locked-in sqft rates. Once the contract is signed, raw material fluctuations in steel or cement are absorbed by TBC unless you request an architectural scope change.",
+      a: "No. The Build Company provides a comprehensive Bill of Quantities (BOQ) with locked-in sqft rates. Once the contract is signed, material price fluctuations up to 10% during the contract period are absorbed by us, protecting your project from market surges.",
     },
     {
       q: "How does the payment schedule work across construction milestones?",
@@ -157,28 +157,28 @@ export default function ConstructionCostChennaiPage() {
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
               <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200">
                 <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 block">
-                  Starting Rate (Standard)
+                  Starting Rate (Basic)
                 </span>
                 <span className="font-display text-2xl font-bold text-[#EA580C] mt-1 block">
-                  ₹2,199 / sqft
+                  ₹2,399 / sqft
                 </span>
-                <span className="text-[11px] text-neutral-500">Turnkey Standard Package</span>
+                <span className="text-[11px] text-neutral-500">Turnkey Basic Package (excl. GST)</span>
               </div>
 
               <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200">
                 <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 block">
-                  Luxury Specification (Premium)
+                  Popular Specification (Standard)
                 </span>
                 <span className="font-display text-2xl font-bold text-neutral-900 mt-1 block">
-                  ₹2,599 / sqft
+                  ₹2,699 / sqft
                 </span>
-                <span className="text-[11px] text-neutral-500">Turnkey Premium Package</span>
+                <span className="text-[11px] text-neutral-500">Turnkey Standard Package</span>
               </div>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/calculator-pro-3"
+                href="/calculator-pro-2"
                 className="px-7 py-3.5 rounded-full bg-[#EA580C] text-white font-semibold text-sm hover:bg-[#C2410C] transition-colors shadow-luxury-sm inline-flex items-center gap-2"
               >
                 <Calculator className="w-4 h-4" />
@@ -238,11 +238,11 @@ export default function ConstructionCostChennaiPage() {
 
                   <div className="space-y-3 pt-4 border-t border-neutral-100 text-xs">
                     <div className="flex items-center justify-between">
-                      <span className="text-neutral-500">Standard (₹2,199):</span>
+                      <span className="text-neutral-500">Standard (₹2,699):</span>
                       <span className="font-bold text-[#EA580C]">{item.standardCost}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-neutral-500">Premium (₹2,599):</span>
+                      <span className="text-neutral-500">Premium (₹3,099):</span>
                       <span className="font-bold text-neutral-800">{item.premiumCost}</span>
                     </div>
                   </div>
@@ -250,7 +250,7 @@ export default function ConstructionCostChennaiPage() {
 
                 <div className="mt-8 pt-4 border-t border-neutral-100">
                   <Link
-                    href={`/calculator-pro-3?area=${item.size.replace(/[^0-9]/g, "")}`}
+                    href={`/calculator-pro-2?area=${item.size.replace(/[^0-9]/g, "")}`}
                     className="w-full py-2.5 rounded-xl bg-neutral-50 hover:bg-[#FFF7ED] border border-neutral-200 hover:border-[#FFEDD5] text-[#EA580C] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
                   >
                     <span>Customize This Size</span>
@@ -326,7 +326,7 @@ export default function ConstructionCostChennaiPage() {
         <Container size="wide">
           <SectionHeading
             eyebrow="SPECIFICATION TRANSPARENCY"
-            title="Compare TBC Construction Packages"
+            title="Compare The Build Company Construction Packages"
             subtitle="Transparent specifications, verified primary brands, and zero hidden brand ambiguity."
             align="center"
           />
@@ -336,10 +336,11 @@ export default function ConstructionCostChennaiPage() {
               <thead>
                 <tr className="bg-[#FAF8F5] border-b border-neutral-200 text-neutral-900">
                   <th className="p-4 sm:p-5 font-bold">Category</th>
+                  <th className="p-4 sm:p-5 font-bold">Basic (₹2,399/sqft)</th>
                   <th className="p-4 sm:p-5 font-bold text-[#EA580C] bg-[#FFF7ED]/50">
-                    Standard (₹2,199/sqft) ★
+                    Standard (₹2,699/sqft) ★
                   </th>
-                  <th className="p-4 sm:p-5 font-bold">Premium (₹2,599/sqft)</th>
+                  <th className="p-4 sm:p-5 font-bold">Premium (₹3,099/sqft)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-100 text-neutral-600">
@@ -347,6 +348,9 @@ export default function ConstructionCostChennaiPage() {
                   <tr key={idx} className="hover:bg-neutral-50/60">
                     <td className="p-4 sm:p-5 font-semibold text-neutral-900 whitespace-nowrap">
                       {row.category}
+                    </td>
+                    <td className="p-4 sm:p-5 text-neutral-600">
+                      {row.basic}
                     </td>
                     <td className="p-4 sm:p-5 text-neutral-800 bg-[#FFF7ED]/20 font-medium">
                       {row.standard}

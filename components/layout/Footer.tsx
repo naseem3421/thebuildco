@@ -23,7 +23,7 @@ export function Footer() {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-orange-100/30 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Footer Content */}
-      <div className="pt-16 pb-12 sm:pt-20 sm:pb-16 border-b border-neutral-200/80">
+      <div className="pt-10 pb-8 sm:pt-14 sm:pb-12 border-b border-neutral-200/80">
         <Container size="wide">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
             {/* Column 1: Brand & Ethos (4 cols) */}
@@ -42,7 +42,7 @@ export function Footer() {
 
               <div className="mt-6 flex items-center gap-2 text-xs text-neutral-700 bg-neutral-50 border border-neutral-200 px-3.5 py-2 rounded-xl w-fit">
                 <ShieldCheck className="w-4 h-4 text-[#EA580C] shrink-0" />
-                <span>{siteConfig.warranty} • {siteConfig.paymentStructure}</span>
+                <span>{siteConfig.supervision} • {siteConfig.paymentStructure}</span>
               </div>
             </div>
 

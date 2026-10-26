@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About TBC — The Build Company Chennai",
+  title: "About The Build Company Chennai",
   description:
-    "Learn about TBC, Chennai's dedicated turnkey construction contractor specializing in building custom homes and villas on client-owned land.",
+    "Learn about The Build Company, Chennai's dedicated turnkey construction contractor specializing in building custom homes and villas on client-owned land.",
 };
 
 export default function AboutPage() {
@@ -28,11 +28,11 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E9E4D9] border border-[#D9D2C5] text-xs font-semibold text-[#183B35] mb-6 shadow-luxury-sm">
               <LandPlot className="w-4 h-4 text-[#B86F50]" />
-              <span>We Construct Exclusively On Your Own Land in Chennai</span>
+              <span>25+ Years Legacy · 100+ Residential Projects in Chennai</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-6xl font-medium text-[#183B35] leading-tight">
-              Craftsmanship, Clarity & Confidence
+              Building Trust. Creating Lasting Value.
             </h1>
 
             <p className="mt-5 text-base sm:text-xl text-[#52655E] leading-relaxed">
@@ -41,18 +41,28 @@ export default function AboutPage() {
           </div>
 
           {/* Hero Narrative 2-Column Split */}
-          <div className="mt-14 sm:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 space-y-5 text-sm sm:text-base text-[#52655E] leading-relaxed">
+          <div className="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-6 space-y-4 text-sm sm:text-base text-[#52655E] leading-relaxed">
               <h2 className="font-display text-3xl font-medium text-[#183B35]">
-                Who We Are
+                Our Legacy & Leadership
               </h2>
               {story.paragraphs.map((p, pidx) => (
                 <p key={pidx}>{p}</p>
               ))}
 
-              <div className="pt-4 flex flex-wrap items-center gap-3">
+              <div className="p-5 rounded-2xl bg-[#FBF9F4] border border-[#D9D2C5] text-xs sm:text-sm text-[#183B35]">
+                <strong className="block text-sm font-bold text-[#183B35] mb-1">
+                  Our Commitment
+                </strong>
+                {story.commitment}
+                <span className="block mt-2 font-bold text-[#EA580C]">
+                  {story.tagline}
+                </span>
+              </div>
+
+              <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Button variant="primary" size="md" href="/contact">
-                  Meet Our Architects
+                  Meet Our Leadership
                 </Button>
                 <Button
                   variant="whatsapp"
@@ -68,18 +78,18 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#D9D2C5] shadow-luxury-md">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-                alt="Contemporary architecture built by TBC in Chennai"
+                alt="Contemporary luxury home delivered in Chennai by The Build Company"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2420]/75 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2420]/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white text-xs">
                 <span className="font-display text-xl text-[#FBF9F4] block mb-1">
-                  50+ Turnkey Residences Handed Over
+                  100+ Residential Projects Delivered
                 </span>
                 <span className="text-[#D9D2C5]">
-                  Across OMR, ECR, Anna Nagar, Medavakkam, and Tambaram
+                  Over 25 years of family construction mastery in Chennai (RDS Builders legacy since 1999)
                 </span>
               </div>
             </div>
@@ -92,7 +102,7 @@ export default function AboutPage() {
         <Container size="wide">
           <SectionHeading
             eyebrow="Our Principles"
-            title="The 4 Pillars of TBC Construction"
+            title="The 4 Pillars of The Build Company Construction"
             description="How our civil engineering discipline translates into stress-free building for landowners."
             align="center"
           />

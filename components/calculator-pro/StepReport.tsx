@@ -767,7 +767,7 @@ export function StepReport({
             Why homeowners across Chennai trust these numbers
           </h2>
           <p className="text-sm text-[#52655E] mt-3 leading-relaxed">
-            Most construction calculators are written by software teams who have never watched a slab crack because soil was not tested, or watched a budget blow because staircase finishing was left out of the quote. These rates are what Chennai contractors are charging in 2026, checked against live procurement for <strong>Ramco and Dalmia cement, iSteel and TATA Tiscon, Finolex wiring and Parryware</strong> fittings, and labour from Anna Nagar to Perungudi. TBC has priced and delivered hundreds of bespoke homes in the city. That is the dataset behind this calculator — not a national spreadsheet.
+            Most construction calculators are written by software teams who have never watched a slab crack because soil was not tested, or watched a budget blow because staircase finishing was left out of the quote. These rates are what Chennai contractors are charging in 2026, checked against live procurement for <strong>Ramco and Dalmia cement, iSteel and TATA Tiscon, Finolex wiring and Parryware</strong> fittings, and labour from Anna Nagar to Perungudi. The Build Company has priced and delivered hundreds of bespoke homes in the city. That is the dataset behind this calculator — not a national spreadsheet.
           </p>
         </div>
 

@@ -8,9 +8,9 @@ import { LeadForm } from "@/components/forms/LeadForm";
 import { CheckCircle2, ShieldCheck, Sparkles, Building, Layers, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Turnkey Villa Construction in Chennai | Luxury Villas by TBC",
+  title: "Turnkey Villa Construction in Chennai | Luxury Villas by The Build Company",
   description:
-    "Design and construct bespoke luxury villas in Chennai with TBC. Architectural excellence, Italian marble, double-height ceilings, and full turnkey supervision.",
+    "Design and construct bespoke luxury villas in Chennai with The Build Company. Architectural excellence, Italian marble, double-height ceilings, and full turnkey supervision.",
   keywords: [
     "villa construction chennai",
     "luxury villa construction chennai",
@@ -36,7 +36,7 @@ export default function VillaConstructionPage() {
                 Turnkey Villa Construction in Chennai
               </h1>
               <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                Elevate your family living with a bespoke luxury villa built on your plot across ECR, OMR, Anna Nagar, or prime Chennai localities. TBC executes architecturally stunning villas with double-height atriums, cantilevered pergolas, and world-class finishes.
+                Elevate your family living with a bespoke luxury villa built on your plot across ECR, OMR, Anna Nagar, or prime Chennai localities. The Build Company executes architecturally stunning villas with double-height atriums, cantilevered pergolas, and world-class finishes.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
@@ -46,7 +46,7 @@ export default function VillaConstructionPage() {
                   Book My Project Consultation
                 </a>
                 <Link
-                  href="/calculator-pro-3"
+                  href="/calculator-pro-2"
                   className="px-6 py-3.5 rounded-full border border-neutral-300 text-neutral-800 font-semibold text-sm hover:bg-neutral-100 transition-colors"
                 >
                   Calculate My Construction Budget
@@ -56,7 +56,7 @@ export default function VillaConstructionPage() {
             <div className="lg:col-span-5 relative h-96 w-full rounded-3xl overflow-hidden shadow-luxury-md">
               <Image
                 src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"
-                alt="Luxury villa construction in Chennai by TBC"
+                alt="Luxury villa construction in Chennai by The Build Company"
                 fill
                 className="object-cover"
                 priority
@@ -70,7 +70,7 @@ export default function VillaConstructionPage() {
         <Container size="wide">
           <SectionHeading
             eyebrow="ARCHITECTURAL PRESTIGE"
-            title="Premium Villa Features by TBC"
+            title="Premium Villa Features by The Build Company"
             subtitle="Designed for discerning Chennai homeowners planning ₹1.5 Cr–₹3 Cr+ residences."
           />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -90,9 +90,9 @@ export default function VillaConstructionPage() {
             </div>
             <div className="p-6 bg-white rounded-2xl border border-neutral-200/90 shadow-xs">
               <ShieldCheck className="w-6 h-6 text-[#EA580C] mb-4" />
-              <h3 className="text-base font-bold text-neutral-900 mb-2">5-Year Structural Warranty</h3>
+              <h3 className="text-base font-bold text-neutral-900 mb-2">Rigorous Civil QA & Snag Clearance</h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Every villa is engineered with Fe 550D rebar and M25/M30 grade concrete, backed by written warranties and proactive maintenance checks.
+                Every villa is engineered with Fe 550D rebar and M25/M30 grade concrete, backed by dedicated supervision and pre-handover certified snag clearance.
               </p>
             </div>
           </div>

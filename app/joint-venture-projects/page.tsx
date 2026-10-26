@@ -19,9 +19,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Joint Venture Construction in Chennai | Partner With TBC",
+  title: "Joint Venture Construction in Chennai | Partner With The Build Company",
   description:
-    "Have residential land with development potential in Chennai? TBC evaluates joint venture partnerships for prime plots. Transparent feasibility, professional execution, and structured commercial terms.",
+    "Have residential land with development potential in Chennai? The Build Company evaluates joint venture partnerships for prime plots. Transparent feasibility, professional execution, and structured commercial terms.",
   keywords: [
     "joint venture construction chennai",
     "construction joint venture chennai",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     canonical: "https://thebuildcompany.in/joint-venture-projects",
   },
   openGraph: {
-    title: "Joint Venture Construction Projects in Chennai | TBC",
+    title: "Joint Venture Construction Projects in Chennai | The Build Company",
     description:
-      "Partner with TBC for joint venture residential development on suitable Chennai plots. Transparent feasibility and technical engineering oversight.",
+      "Partner with The Build Company for joint venture residential development on suitable Chennai plots. Transparent feasibility and technical engineering oversight.",
     url: "https://thebuildcompany.in/joint-venture-projects",
     type: "website",
   },
@@ -90,7 +90,7 @@ export default function JointVenturePage() {
     {
       step: "05",
       title: "Turnkey Execution & Delivery",
-      desc: "TBC manages end-to-end execution — architectural design, CMDA/DTCP approvals, procurement, construction, and delivery.",
+      desc: "The Build Company manages end-to-end execution — architectural design, CMDA/DTCP approvals, procurement, construction, and delivery.",
     },
   ];
 
@@ -110,7 +110,7 @@ export default function JointVenturePage() {
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-              TBC collaborates with landowners and property owners on suitable
+              The Build Company collaborates with landowners and property owners on suitable
               Joint Venture development opportunities. If you own residential
               land in Chennai with strong development potential, our engineering
               and architectural team can evaluate project feasibility and discuss
@@ -133,7 +133,7 @@ export default function JointVenturePage() {
             </div>
 
             <p className="mt-4 text-xs text-neutral-500 italic">
-              * All Joint Venture proposals are strictly subject to project feasibility, due diligence, and mutually agreed commercial terms. TBC does not promise guaranteed financial returns or speculate on land.
+              * All Joint Venture proposals are strictly subject to project feasibility, due diligence, and mutually agreed commercial terms. The Build Company does not promise guaranteed financial returns or speculate on land.
             </p>
           </div>
         </Container>
@@ -144,7 +144,7 @@ export default function JointVenturePage() {
         <Container size="wide">
           <SectionHeading
             eyebrow="FEASIBILITY BENCHMARKS"
-            title="How TBC Evaluates Joint Venture Opportunities"
+            title="How The Build Company Evaluates Joint Venture Opportunities"
             subtitle="We prioritize quality, legal integrity, and structural feasibility to protect every stakeholder's capital."
           />
 

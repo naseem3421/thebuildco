@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Construction Quality Standards in Chennai | Engineering Rigor | TBC",
+  title: "Construction Quality Standards in Chennai | Engineering Rigor | The Build Company",
   description:
-    "Explore TBC's comprehensive 150+ point civil engineering QA/QC standards for residential construction in Chennai. Soil testing, Fe 550D rebar audits, concrete cube breaks, and 72-hour ponding tests.",
+    "Explore The Build Company's comprehensive 150+ point civil engineering QA/QC standards for residential construction in Chennai. Soil testing, Fe 550D rebar audits, concrete cube breaks, and 72-hour ponding tests.",
   keywords: [
     "construction quality standards chennai",
     "civil engineering quality audit chennai",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     canonical: "https://thebuildcompany.in/quality-standards",
   },
   openGraph: {
-    title: "Construction Quality Standards in Chennai | TBC QA/QC Engineering",
+    title: "Construction Quality Standards in Chennai | The Build Company QA/QC Engineering",
     description:
-      "Verifiable civil engineering quality audits executed on your Chennai plot. Lab cube tests, rebar inspection, and written 5-year structural warranty.",
+      "Verifiable civil engineering quality audits executed on your Chennai plot. Lab cube tests, rebar inspection, and certified snag-free handover protocol.",
     url: "https://thebuildcompany.in/quality-standards",
     type: "article",
   },
@@ -75,7 +75,7 @@ export default function QualityStandardsPage() {
       title: "Steel Rebar & Cement Verification",
       icon: Scale,
       items: [
-        "Direct procurement of certified Fe 550D TMT steel (Tata Tiscon / Jindal Panther / Kamachi)",
+        "Certified Fe 550D TMT steel (Tata Tiscon / Jindal Panther / Kamachi)",
         "Verification of manufacturer Test Mill Certificates for elongation & tensile yield strength",
         "Fresh Grade 53 OPC/PPC cement (UltraTech / Coromandel / Dalmia) with batch date tracking",
         "Mandatory dry storage on wooden pallets elevated above ground to prevent hydration",
@@ -133,7 +133,7 @@ export default function QualityStandardsPage() {
         "Floor tile lippage and slope verification with cross-line 360° laser levels",
         "Right-angle plumbness checks for all door frames and window fenestrations",
         "Comprehensive 150-point room-by-room digital snag list zeroed before possession",
-        "Final handover with digital as-built MEP blueprints and 5-Year Structural Warranty Certificate",
+        "Final handover with digital as-built MEP blueprints and certified snag clearance protocol",
       ],
     },
   ];
@@ -144,7 +144,7 @@ export default function QualityStandardsPage() {
       <ServiceJsonLd
         name="Construction Quality Standards in Chennai"
         serviceType="Civil Engineering Quality Control"
-        description="Detailed 150+ point civil engineering QA/QC methodology by TBC for turnkey residential construction in Chennai."
+        description="Detailed 150+ point civil engineering QA/QC methodology by The Build Company for turnkey residential construction in Chennai."
       />
 
       {/* Hero */}
@@ -160,7 +160,7 @@ export default function QualityStandardsPage() {
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed max-w-3xl mx-auto">
-              Real structural durability is not achieved through cosmetic paint or empty verbal promises. At TBC, every home on client-owned land is engineered with measurable lab testing, rigorous stage inspections, and single-source accountability.
+              Real structural durability is not achieved through cosmetic paint or empty verbal promises. At The Build Company, every home on client-owned land is engineered with measurable lab testing, rigorous stage inspections, and single-source accountability.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -238,33 +238,33 @@ export default function QualityStandardsPage() {
         </Container>
       </section>
 
-      {/* Section 03: Warranty Guarantee Strip */}
+      {/* Section 03: Quality Handover Protocol Strip */}
       <section className="py-16 sm:py-24 bg-white border-b border-neutral-200">
         <Container size="wide">
           <div className="rounded-3xl p-8 sm:p-12 bg-[#0B1E1A] text-white">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#EA580C] block mb-2">
-                  STRUCTURAL GUARANTEE
+                  VERIFIED QA/QC HANDOVER PROTOCOL
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white">
-                  5-Year Written Construction Warranty
+                  Pre-Handover Snag Audit & Certified Clearance
                 </h2>
                 <p className="mt-3 text-sm text-neutral-300 leading-relaxed max-w-2xl">
-                  Every home constructed by TBC carries a formal legal warranty covering foundation load integrity, column/beam structural deflection, and roof terrace waterproofing against leakage.
+                  Every home constructed by The Build Company undergoes rigorous civil engineering verification before handover: 72-hour waterproofing ponding test, laser level floor verification, MEP pressure tests, and certified snag clearance.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4 text-xs text-neutral-200">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#EA580C]" />
-                    <span>RCC Structural Elements (5 Years)</span>
+                    <span>Lab Cube Test Reports for Every Pour</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#EA580C]" />
-                    <span>Terrace & Toilet Waterproofing (5 Years)</span>
+                    <span>72-Hour Waterproofing Ponding Sign-off</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#EA580C]" />
-                    <span>MEP & Plumbing Care (1 Year Free)</span>
+                    <span>Digital As-Built Blueprints Handover</span>
                   </div>
                 </div>
               </div>

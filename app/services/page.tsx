@@ -8,9 +8,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ArrowRight, CheckCircle2, ShieldCheck, Ruler, Home, Building, Layers, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Residential Construction Services in Chennai | TBC",
+  title: "Residential Construction Services in Chennai | The Build Company",
   description:
-    "Explore turnkey residential construction services in Chennai by TBC. Bespoke individual houses, luxury villas, duplex residences, and joint venture developments on client-owned land.",
+    "Explore turnkey residential construction services in Chennai by The Build Company. Bespoke individual houses, luxury villas, duplex residences, and joint venture developments on client-owned land.",
   keywords: [
     "residential construction services chennai",
     "turnkey house construction chennai",
@@ -96,7 +96,7 @@ export default function ServicesPage() {
               Residential Construction Services in Chennai
             </h1>
             <p className="mt-5 text-base sm:text-lg text-neutral-600 leading-relaxed">
-              TBC specializes in premium turnkey residential construction for Chennai landowners. From architectural design to final handover, one team is accountable for your entire build.
+              The Build Company specializes in premium turnkey residential construction for Chennai landowners. From architectural design to final handover, one team is accountable for your entire build.
             </p>
           </div>
         </Container>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                 <div className="relative h-64 w-full">
                   <Image
                     src={service.image}
-                    alt={`${service.title} in Chennai by TBC`}
+                    alt={`${service.title} in Chennai by The Build Company`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                 Have Land With Development Potential in Chennai?
               </h3>
               <p className="text-sm text-neutral-300 leading-relaxed">
-                TBC also evaluates Joint Venture partnerships with Chennai landowners. If you own property with high development potential, our team can assess project feasibility and commercial options.
+                The Build Company also evaluates Joint Venture partnerships with Chennai landowners. If you own property with high development potential, our team can assess project feasibility and commercial options.
               </p>
             </div>
 

@@ -16,8 +16,8 @@ export function Logo({
   size = "md",
 }: LogoProps) {
   // Dimensions based on size and variant
-  // Standard logo aspect ratio: 810 x 178 (~4.55:1)
-  // Icon aspect ratio: 186 x 174 (~1.07:1)
+  // Standard logo aspect ratio: 967 x 203 (~4.76:1)
+  // Icon aspect ratio: 242 x 242 (1:1)
   const isIcon = variant === "icon" || variant === "icon-dark";
 
   let src = "/logo.png";
@@ -31,14 +31,14 @@ export function Logo({
 
   const dimensions = {
     sm: isIcon
-      ? { width: 32, height: 30 }
-      : { width: 145, height: 32 },
+      ? { width: 32, height: 32 }
+      : { width: 152, height: 32 },
     md: isIcon
-      ? { width: 44, height: 41 }
-      : { width: 191, height: 42 },
+      ? { width: 44, height: 44 }
+      : { width: 200, height: 42 },
     lg: isIcon
-      ? { width: 56, height: 52 }
-      : { width: 236, height: 52 },
+      ? { width: 56, height: 56 }
+      : { width: 248, height: 52 },
   }[size];
 
   return (

@@ -8,9 +8,9 @@ import { LeadForm } from "@/components/forms/LeadForm";
 import { CheckCircle2, ShieldCheck, HardHat, Compass, FileCheck, Phone, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Individual House Construction Company in Chennai | TBC",
+  title: "Individual House Construction Company in Chennai | The Build Company",
   description:
-    "Construct your bespoke individual house in Chennai with TBC. Turnkey architectural design, structural engineering, and stage-wise payments for plots across Chennai.",
+    "Construct your bespoke individual house in Chennai with The Build Company. Turnkey architectural design, structural engineering, and stage-wise payments for plots across Chennai.",
   keywords: [
     "individual house construction chennai",
     "house construction company chennai",
@@ -36,7 +36,7 @@ export default function IndividualHouseConstructionPage() {
                 Individual House Construction in Chennai
               </h1>
               <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                Building an independent family home on your plot requires complete structural accountability. TBC manages your individual house project from architectural drawings and soil test through civil construction, electrical, plumbing, finishing, and key handover.
+                Building an independent family home on your plot requires complete structural accountability. The Build Company manages your individual house project from architectural drawings and soil test through civil construction, electrical, plumbing, finishing, and key handover.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
@@ -46,7 +46,7 @@ export default function IndividualHouseConstructionPage() {
                   Book My Project Consultation
                 </a>
                 <Link
-                  href="/calculator-pro-3"
+                  href="/calculator-pro-2"
                   className="px-6 py-3.5 rounded-full border border-neutral-300 text-neutral-800 font-semibold text-sm hover:bg-neutral-100 transition-colors"
                 >
                   Calculate My Construction Budget
@@ -56,7 +56,7 @@ export default function IndividualHouseConstructionPage() {
             <div className="lg:col-span-5 relative h-96 w-full rounded-3xl overflow-hidden shadow-luxury-md">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
-                alt="Individual house construction in Chennai by TBC"
+                alt="Individual house construction in Chennai by The Build Company"
                 fill
                 className="object-cover"
                 priority
@@ -70,7 +70,7 @@ export default function IndividualHouseConstructionPage() {
         <Container size="wide">
           <SectionHeading
             eyebrow="ENGINEERED EXCELLENCE"
-            title="What Makes TBC Individual House Construction Different"
+            title="What Makes The Build Company Individual House Construction Different"
             subtitle="One responsible civil engineering partner rather than a fragmented group of sub-contractors."
           />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">

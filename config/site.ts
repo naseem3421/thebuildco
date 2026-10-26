@@ -1,5 +1,5 @@
 /**
- * Central Business Configuration for TBC — The Build Company
+ * Central Business Configuration for The Build Company
  * All business details, contact info, pricing, packages, process, projects, and conversion parameters are centralized here.
  */
 
@@ -15,6 +15,7 @@ export interface PackageTier {
 
 export interface SpecificationCategory {
   category: string;
+  basic: string;
   standard: string;
   premium: string;
 }
@@ -108,21 +109,21 @@ export interface FloorMultiplier {
 }
 
 export const siteConfig = {
-  name: "TBC — The Build Company",
-  shortName: "TBC",
+  name: "The Build Company",
+  shortName: "The Build Company",
   tagline: "Build Better. Build With Confidence.",
   heroTitle: "Build Your Dream Home in Chennai",
   heroSubtitle:
     "Already own the land? We build your home with transparent sqft pricing, professional supervision and a clear construction process.",
   description:
     "Chennai's trusted bespoke construction partner. We construct premium individual houses, luxury villas, duplex homes, and commercial spaces directly on your own land.",
-  modelNotice: "We build exclusively on customer-owned land across Chennai & Tamil Nadu. TBC does not sell land.",
+  modelNotice: "We build exclusively on customer-owned land across Chennai & Tamil Nadu. The Build Company does not sell land.",
 
   location: {
     city: "Chennai",
     state: "Tamil Nadu",
     country: "India",
-    address: "Anna Nagar / OMR, Chennai, Tamil Nadu, India",
+    address: "9/18, Muthuvel Street, Kodambakkam, Chennai - 600 024.",
   },
 
   contact: {
@@ -131,35 +132,37 @@ export const siteConfig = {
     phoneHref: "tel:+919840012345",
     whatsappNumber: "919840012345",
     whatsappHref:
-      "https://wa.me/919840012345?text=Hi%20TBC%2C%20I%20already%20own%20a%20plot%20in%20Chennai%20and%20I%27m%20looking%20for%20construction%20services.%20I%20would%20like%20to%20know%20the%20approximate%20construction%20cost%20and%20process.",
+      "https://wa.me/919840012345?text=Hi%20The%20Build%20Company%2C%20I%20already%20own%20a%20plot%20in%20Chennai%20and%20I%27m%20looking%20for%20construction%20services.%20I%20would%20like%20to%20know%20the%20approximate%20construction%20cost%20and%20process.",
     email: "enquiry@thebuildcompany.in",
     workingHours: "Mon - Sat: 9:00 AM - 7:00 PM",
   },
 
   whatsappMessages: {
     default:
-      "Hi TBC, I already own a plot in Chennai and I'm looking for construction services. I would like to know the approximate construction cost and process.",
+      "Hi The Build Company, I already own a plot in Chennai and I'm looking for construction services. I would like to know the approximate construction cost and process.",
     hero:
-      "Hi TBC, I would like to get a construction quote for my property.",
+      "Hi The Build Company, I would like to get a construction quote for my property.",
     siteVisit:
-      "Hi TBC, I own land in Chennai and would like to schedule a free site visit & architectural consultation.",
+      "Hi The Build Company, I own land in Chennai and would like to schedule a free site visit & architectural consultation.",
     calculator: (area: number | string, location: string, estimate?: string) =>
-      `Hi TBC, I used your construction cost calculator. My estimated project size is ${area} sqft in ${location}${
+      `Hi The Build Company, I used your construction cost calculator. My estimated project size is ${area} sqft in ${location}${
         estimate ? ` (Approx: ${estimate})` : ""
       }. I would like to discuss the construction cost.`,
     packageInquiry: (packageName: string, rate: string) =>
-      `Hi TBC, I am interested in your ${packageName} package (${rate}). Please share detailed specifications.`,
+      `Hi The Build Company, I am interested in your ${packageName} package (${rate}). Please share detailed specifications.`,
+    experienceCentre:
+      "Hi The Build Company, I would like to schedule a visit to the Experience Centre in your office to physically inspect your package samples, tiles, sanitaryware, wires, windows, and fixtures.",
   },
 
   pricing: {
-    startingPrice: "₹2,199",
-    startingPriceUnit: "/sqft",
-    formattedStartingPrice: "₹2,199/sqft",
+    startingPrice: "₹2,399",
+    startingPriceUnit: "/sqft (excl. GST)",
+    formattedStartingPrice: "₹2,399/sqft (excl. GST)",
   },
 
-  experience: "15+ Years",
-  projectsCompleted: "50+ Projects",
-  warranty: "5-Year Construction Warranty",
+  experience: "25+ Years Legacy",
+  projectsCompleted: "110+ Projects Completed",
+  supervision: "Dedicated Site Supervision • Milestone Escrow",
   paymentStructure: "Stage-wise Payments (Milestone based)",
 
   calculatorConfig: {
@@ -209,10 +212,26 @@ export const siteConfig = {
 
   packages: [
     {
+      id: "basic",
+      name: "Basic",
+      pricePerSqft: 2399,
+      formattedPrice: "₹2,399/sqft (excl. GST)",
+      tagline: "High standard essentials for solid, reliable construction.",
+      features: [
+        "Standard Structural Design (Fe 550 Steel & Grade 53/43 Cement)",
+        "Premium Red Bricks / Solid Concrete Blocks",
+        "Vitrified Tiles (2x2 ft premium flooring)",
+        "Standard Teak Wood Main Door & Flush Internal Doors",
+        "UPVC Windows with Bug Mesh",
+        "Stage-wise Milestone Quality Audits",
+        "Dedicated Site Supervisor on Your Plot",
+      ],
+    },
+    {
       id: "standard",
       name: "Standard",
-      pricePerSqft: 2199,
-      formattedPrice: "₹2,199/sqft",
+      pricePerSqft: 2699,
+      formattedPrice: "₹2,699/sqft (excl. GST)",
       tagline: "Our most popular package balancing premium finishes & durability.",
       popular: true,
       features: [
@@ -222,14 +241,14 @@ export const siteConfig = {
         "Branded Sanitary & CP Fittings (Kohler / Jaquar)",
         "Concealed Copper Wiring with Modular Switches (Havells/Legrand)",
         "Dedicated Site Supervisor & 3D Elevation Renderings",
-        "5-Year Comprehensive Warranty",
+        "Pre-Handover Inspection & Snag Clearance Protocol",
       ],
     },
     {
       id: "premium",
       name: "Premium",
-      pricePerSqft: 2599,
-      formattedPrice: "₹2,599/sqft",
+      pricePerSqft: 3099,
+      formattedPrice: "₹3,099/sqft (excl. GST)",
       tagline: "Luxury architectural craftsmanship with turnkey luxury specifications.",
       features: [
         "Architectural Layout & Bespoke Structural Engineering",
@@ -237,8 +256,8 @@ export const siteConfig = {
         "Full Teakwood Joinery & Heavy Acoustic Aluminium/UPVC Glazing",
         "Luxury Sanitary & Concealed Diverter Systems (Grohe / Kohler)",
         "Smart Home Automation Prep & False Ceiling with Ambient Lighting",
-        "Weekly Milestone Video Reports & Executive Site Architect",
-        "5-Year Full Warranty + Lifetime Structural Assurance",
+        "Weekly Milestone Video Reports & Executive Oversight",
+        "Comprehensive Civil Handover Sign-Off",
       ],
     },
   ] as PackageTier[],
@@ -246,63 +265,75 @@ export const siteConfig = {
   packageComparisonMatrix: [
     {
       category: "Structure & RCC",
+      basic: "Fe 550 Steel (Tata/Jindal), Coromandel / Dalmia Grade 53 Cement, M20 Grade Concrete",
       standard: "Fe 550D Seismic Resilient Steel, Grade 53 Ultratech/Coromandel, M25 Design Mix Concrete with Waterproofing",
       premium: "Fe 550D Corrosion Resistant Steel, Ultratech Super Grade 53, M25/M30 Design Mix with Crystalline Admixtures",
     },
     {
       category: "Flooring",
+      basic: "2x2 ft Double Charged Vitrified Tiles (₹55/sqft budget)",
       standard: "4x2 ft Glazed Vitrified Tiles (₹90/sqft budget) / Wooden Laminate in Master Bedroom",
       premium: "Italian Marble / Large Porcelain Slabs (₹220/sqft budget) + Solid Engineered Hardwood",
     },
     {
       category: "Main & Internal Doors",
+      basic: "Standard Teak Wood Main Frame & Shutter; Flush Internal Doors with Enamel Paint",
       standard: "First-Quality Teak Main Door with Brass Hardware; Molded Veneer Internal Doors",
       premium: "Handcrafted 8-Foot Teak Main Door with Biometric Smart Lock; Full Flush Teak Veneer Doors",
     },
     {
       category: "Windows & Glazing",
+      basic: "Standard 2-Track UPVC Sliding Windows with Bug Mesh (Fenesta/Kommerling profile)",
       standard: "Heavy 3-Track UPVC / Thermal Break Aluminum Windows with Toughened Glass",
       premium: "Acoustic Double-Glazed Argon-Filled European Slimline Aluminum Glass Systems",
     },
     {
       category: "Electrical & Smart Prep",
+      basic: "Finolex / Anchor Concealed Copper Wiring; Anchor Roma Modular Switches",
       standard: "Havells / Polycab FRLS Fire-Resistant Wiring; Legrand Arteor / Schneider Modular Switches",
       premium: "Complete Smart Automation Conduit Prep, Legrand / Lutron Switches, EV Charging Provision in Garage",
     },
     {
       category: "Plumbing & Drainage",
+      basic: "Ashirvad / Supreme CPVC & PVC Concealed Pipes, Standard Overhead Tank (1,000L)",
       standard: "Ashirvad FlowGuard CPVC Pipes, Dual Water Supply (Ground/Corporation), 2,000L Overhead Tank",
       premium: "Pressurized Water System, Soundproof Soil Waste Drainage Pipes, Automated Water Level Sensors",
     },
     {
       category: "Kitchen",
+      basic: "Polished Black Granite Countertop (20mm), SS Sink (Nirali), 2ft Dado Tiles",
       standard: "Premium Quartz / Granite Countertop, Double Bowl SS Sink with Pull-out Faucet, 4ft Dado Tiles",
       premium: "Designer Quartz Countertop, Island Counter Provision, Franke/Grohe Granite Composite Sink",
     },
     {
       category: "Bathrooms & Sanitary",
+      basic: "Parryware / Hindware EWC & Wash Basins, Standard Wall Mixer",
       standard: "Jaquar / Kohler Wall-Hung EWC with Concealed Cistern, Single Lever Diverter",
       premium: "Grohe / Kohler Digital Thermostatic Diverters, Frameless Toughened Glass Shower Partitions",
     },
     {
       category: "Painting & Finishes",
+      basic: "2 Coats Asian Paints Tractor Emulsion (Interior), Ace Exterior Finish",
       standard: "2 Coats Asian Paints Royale Luxury Emulsion (Interior), Apex WeatherProof Exterior",
       premium: "Asian Paints Royale Aspira (Interior) with Wall Textures, Apex Ultima Protek with 10-Yr Guarantee",
     },
     {
       category: "Architectural & Elevation",
+      basic: "2D Functional Floor Plans, Standard 3D Elevation Rendering",
       standard: "Bespoke 3D Elevation with Louver / CNC Detailing, Structural Drawings, Vastu Alignment",
       premium: "Full Architectural Package: 3D Walkthrough Video, Landscape Layout, Lighting & False Ceiling Plans",
     },
     {
       category: "Project Supervision",
+      basic: "Weekly Site Civil Engineer Audits, Stage Milestone Verification",
       standard: "Full-Time Dedicated Site Supervisor, Weekly Video Reports on WhatsApp, Lab Cube Tests",
-      premium: "Dedicated Senior Project Architect, Daily Digital Logbook, Third-Party Structural Quality Audit",
+      premium: "Dedicated Senior Site Supervisor, Daily Digital Logbook, Engineering Quality Audit",
     },
     {
-      category: "Warranty & Support",
-      standard: "5-Year Comprehensive Structural & Waterproofing Warranty + 1-Year Free Maintenance",
-      premium: "5-Year Full Turnkey Warranty + 10-Year Structural Assurance + Lifetime Civil Advisory",
+      category: "Handover & Quality Audit",
+      basic: "Comprehensive Handover Inspection, Snag Clearance Audit & Completion Sign-Off",
+      standard: "150-Point QA Audit, 72-Hour Water Ponding Test, Snag Clearance & Post-Handover Support",
+      premium: "Complete Civil Quality Audit, As-Built MEP Blueprint Dossier & Priority Handover Support",
     },
   ] as SpecificationCategory[],
 
@@ -313,7 +344,7 @@ export const siteConfig = {
       shortDesc: "Custom-designed single and multi-level family residences built to your lifestyle needs.",
       iconName: "Home",
       imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-      sqftRange: "1,500 – 4,000 sqft",
+      sqftRange: "1,800 – 5,000 sqft",
     },
     {
       id: "villas",
@@ -339,39 +370,31 @@ export const siteConfig = {
       imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
       sqftRange: "3,000 – 15,000 sqft",
     },
-    {
-      id: "renovation",
-      title: "Renovation",
-      shortDesc: "Structural remodeling, floor additions, and turnkey luxury modernization for existing Chennai homes.",
-      iconName: "Hammer",
-      imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
-      sqftRange: "1,000 – 5,000 sqft",
-    },
   ] as ServiceItem[],
 
   trustMetrics: [
     {
-      value: "15+",
-      label: "Years Experience",
-      subtext: "Proven engineering excellence",
+      value: "25+",
+      label: "Years Legacy",
+      subtext: "RDS Builders heritage since 1999",
       highlight: false,
     },
     {
-      value: "50+",
+      value: "110+",
       label: "Projects Completed",
-      subtext: "Across prime Chennai zones",
+      subtext: "Delivered across Chennai plots",
       highlight: false,
     },
     {
-      value: "₹2,199+",
-      label: "Starting / sqft",
-      subtext: "Transparent upfront pricing",
+      value: "₹2,399",
+      label: "Starting / sqft (excl. GST)",
+      subtext: "Itemized milestone pricing",
       highlight: true,
     },
     {
-      value: "5-Year",
-      label: "Warranty",
-      subtext: "Structural peace of mind",
+      value: "Dedicated",
+      label: "Site Supervisor",
+      subtext: "Assigned oversight on your plot",
       highlight: false,
     },
   ] as TrustMetricItem[],
@@ -405,7 +428,7 @@ export const siteConfig = {
       step: "05",
       title: "Agreement",
       description: "Sign a clear, legally bound contract with well-defined stage-wise milestones and completion timeline.",
-      details: ["Clear milestone schedule", "Legally binding handover timeline", "Material warranty guarantees"],
+      details: ["Clear milestone schedule", "Legally binding handover timeline", "Quality assurance specifications"],
     },
     {
       step: "06",
@@ -416,14 +439,14 @@ export const siteConfig = {
     {
       step: "07",
       title: "Quality Checks",
-      description: "150+ point structural and civil inspections executed at every milestone before payments are claimed.",
+      description: "150+ point civil engineering inspections executed at every milestone before milestone payments are released.",
       details: ["Concrete cube compressive strength tests", "Slump & curing audits", "Plumbing pressure & electrical insulation audits"],
     },
     {
       step: "08",
       title: "Handover",
-      description: "Welcome to your new home with final deep cleaning, keys handover, and 5-year structural warranty certificate.",
-      details: ["Deep cleaning & final snag audit", "Key handover ceremony", "5-Year Structural Warranty Certificate"],
+      description: "Welcome to your new home with final deep cleaning, keys handover, and certified pre-handover snag clearance protocol.",
+      details: ["Deep cleaning & final snag audit", "Key handover ceremony", "Certified Snag-Free Handover Protocol"],
     },
   ] as ProcessStep[],
 
@@ -435,7 +458,7 @@ export const siteConfig = {
       location: "Medavakkam, Chennai",
       type: "Individual House",
       area: "2,850 sqft",
-      packageUsed: "Standard Package (₹2,199/sqft)",
+      packageUsed: "Standard Package (₹2,699/sqft)",
       duration: "9.5 Months",
       tag: "Completed",
       imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
@@ -460,7 +483,7 @@ export const siteConfig = {
       location: "Sholinganallur, Chennai",
       type: "Villas",
       area: "4,200 sqft",
-      packageUsed: "Premium Package (₹2,599/sqft)",
+      packageUsed: "Premium Package (₹3,099/sqft)",
       duration: "11 Months",
       tag: "Completed",
       imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
@@ -485,7 +508,7 @@ export const siteConfig = {
       location: "Tambaram, Chennai",
       type: "Duplex",
       area: "3,100 sqft",
-      packageUsed: "Standard Package (₹2,199/sqft)",
+      packageUsed: "Standard Package (₹2,699/sqft)",
       duration: "10 Months",
       tag: "Completed",
       imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
@@ -509,7 +532,7 @@ export const siteConfig = {
       location: "OMR, Chennai",
       type: "Individual Houses",
       area: "3,650 sqft",
-      packageUsed: "Standard Package (₹2,199/sqft)",
+      packageUsed: "Standard Package (₹2,699/sqft)",
       duration: "10.5 Months",
       tag: "Completed",
       imageUrl: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
@@ -523,53 +546,64 @@ export const siteConfig = {
         "Solar Panel Roof Conduits & Heat Reflective Tile Insulation",
         "Full Teak Veneer Doors & Concealed Copper Wiring",
         "Quartz Stone Kitchen Countertops with Franke Stainless Sink",
-        "5-Year Full Structural and Waterproofing Assurance",
+        "Pre-Handover Snag Audit & Certified Clearance Protocol",
       ],
     },
   ] as ProjectItem[],
 
+
   aboutStory: {
-    hero: "Engineering Chennai's finest homes on customer-owned plots with unwavering integrity and architectural precision.",
+    hero: "Building Trust. Creating Lasting Value — Built on a 25+ Year Construction Legacy in Chennai.",
     paragraphs: [
-      "Founded with the conviction that home construction should be transparent, stress-free, and architecturally inspiring, TBC (The Build Company) has grown into one of Chennai's most trusted turnkey construction firms.",
-      "We operate under a simple, unambiguous model: you own the land; we engineer and construct your home. We do not sell plots or broker real estate. This single-minded focus allows our civil engineers, architects, and site supervisors to devote 100% of their expertise to structural excellence, material purity, and timely handover.",
+      "The Build Company is a new-generation construction company built on a family legacy of over 25 years in the construction and real estate industry. Inspired by the vision of our father, Mr. R. Deenadayalan, Founder of RDS Builders, our journey began in 1999, with experience spanning 100+ residential projects.",
+      "Mr. D. Uday Kumar, B.Tech in Civil Engineering and M.Tech in Construction Engineering Management, has been serving as a Director at RDS Builders since 2014. Alongside Mrs. R. Ramya, B.E., he leads The Build Company with a shared vision of delivering quality-driven construction through engineering expertise, professional project management, and modern construction practices.",
+      "We specialise in premium residential and villa projects, delivering thoughtfully planned homes with a focus on quality, functionality, and lasting value. Our services also include residential building contracting, joint venture developments, warehouse and commercial construction, and turnkey interior solutions.",
     ],
+    experienceCentre: {
+      title: "Our Construction Experience Centre",
+      tagline: "Experience Your Home Before It’s Built.",
+      description:
+        "Our unique Experience Centre brings construction materials, tiles, bathroom fittings, electrical fittings, door finishes, and interior samples under one roof, helping customers explore options and make confident decisions before construction begins.",
+    },
+    commitment:
+      "From planning and material selection to construction and finishing, we focus on quality, transparency, timely delivery, and customer satisfaction—making every construction journey simpler, more convenient, and rewarding.",
+    tagline: "The Build Company — Your One-Stop Solution for Construction.",
     values: [
       {
-        title: "Transparent Fixed Costing",
-        description: "Zero surprise escalations. Every single material brand, tile thickness, and electrical gauge is specified in an enforceable contract.",
+        title: "25+ Year Family Legacy",
+        description: "Built on the foundation of RDS Builders (est. 1999) with over 100+ residential homes delivered across Chennai.",
       },
       {
-        title: "Milestone-Linked Escrow",
-        description: "You only release payments when physical work is completed, verified on-site by you, and audited by our engineers.",
+        title: "Civil & Construction Masters",
+        description: "Led by B.Tech and M.Tech Civil & Construction Engineering Management professionals with rigorous technical oversight.",
       },
       {
-        title: "Civil Engineering Rigor",
-        description: "We don't cut corners on structural concrete mix ratios, curing periods, or rebar spacing. Every floor slab undergoes lab testing.",
+        title: "In-Office Experience Centre",
+        description: "Touch, test, and compare tiles, sanitaryware, joinery, and structural samples under one roof before you break ground.",
       },
       {
-        title: "Turnkey Accountability",
-        description: "From soil testing and architectural floor plans to final paint coat and key handover, one team is accountable.",
+        title: "Transparent Turnkey Delivery",
+        description: "Milestone-linked billing, locked contracts, and zero hidden costs from initial soil test to final key handover.",
       },
     ],
     team: [
       {
-        name: "Er. K. Natarajan",
-        role: "Chief Civil Engineer & Founder",
-        experience: "22+ Years in Structural Engineering",
-        bio: "Former chief civil consultant for major residential projects across Chennai with expertise in seismic design and soil foundation engineering.",
+        name: "Mr. D. Uday Kumar, B.Tech, M.Tech",
+        role: "Managing Director",
+        experience: "Director at RDS Builders since 2014",
+        bio: "B.Tech in Civil Engineering and M.Tech in Construction Engineering Management. Leads The Build Company with deep technical acumen, modern construction systems, and client-centric project management.",
       },
       {
-        name: "Ar. Sneha Ranganathan",
-        role: "Principal Architectural Designer",
-        experience: "14+ Years in Residential Architecture",
-        bio: "Specialist in contemporary tropical homes, natural daylight optimization, and bespoke Vastu-compliant luxury residences.",
+        name: "Mrs. R. Ramya, B.E.",
+        role: "Director",
+        experience: "Engineering Leadership",
+        bio: "B.E. graduate co-leading The Build Company with a dedicated focus on architectural excellence, customer experience, interior design integration, and quality assurance.",
       },
       {
-        name: "Er. Vigneshwaran S.",
-        role: "Head of Site Supervision & QC",
-        experience: "12+ Years in On-Ground Execution",
-        bio: "Oversees the 150+ point structural quality audit checklist and manages daily on-site civil supervisor teams across Chennai.",
+        name: "In Honour of Mr. R. Deenadayalan",
+        role: "Founder, RDS Builders (1999)",
+        experience: "25+ Years Legacy • 100+ Projects",
+        bio: "The foundational mentor whose 25-year legacy of integrity, craftsmanship, and enduring client trust inspires every project built by The Build Company.",
       },
     ],
   },
@@ -601,8 +635,8 @@ export const siteConfig = {
       iconName: "MessageCircle",
     },
     {
-      title: "Warranty & Support",
-      description: "5-Year structural warranty with proactive post-handover civil support and annual check-ups.",
+      title: "QA Audits & Snag Clearance",
+      description: "Milestone-by-milestone civil inspections, 72-hour waterproofing ponding tests, and certified snag clearance before handover.",
       iconName: "Award",
     },
   ] as WhyTBCItem[],
@@ -611,7 +645,7 @@ export const siteConfig = {
     {
       id: "t1",
       quote:
-        "Building on our plot in Medavakkam seemed daunting until we met TBC. The stage-wise billing gave us absolute financial control, and the house was delivered exactly as planned in 10 months.",
+        "Building on our plot in Medavakkam seemed daunting until we met The Build Company. The stage-wise billing gave us absolute financial control, and the house was delivered exactly as planned in 10 months.",
       author: "K. R. Sundaram",
       role: "Landowner & Tech Lead",
       location: "Medavakkam, Chennai",
@@ -622,7 +656,7 @@ export const siteConfig = {
     {
       id: "t2",
       quote:
-        "The level of transparency in material selection was top-tier. TBC provided lab test reports for concrete cubes and steel grades for every single slab. Unmatched professionalism in Chennai.",
+        "The level of transparency in material selection was top-tier. The Build Company provided lab test reports for concrete cubes and steel grades for every single slab. Unmatched professionalism in Chennai.",
       author: "Priya & Anand V.",
       role: "Homeowners",
       location: "ECR, Chennai",
@@ -633,7 +667,7 @@ export const siteConfig = {
     {
       id: "t3",
       quote:
-        "As an NRI managing construction remotely, TBC's weekly video walkthroughs and dedicated site engineer gave me total peace of mind. No cost overruns, no delays.",
+        "As an NRI managing construction remotely, The Build Company's weekly video walkthroughs and dedicated site supervisor gave me total peace of mind. No cost overruns, no delays.",
       author: "Venkatesh S.",
       role: "NRI Landowner",
       location: "OMR, Chennai",
@@ -644,7 +678,7 @@ export const siteConfig = {
     {
       id: "t4",
       quote:
-        "TBC's architects spent countless hours perfecting our floor plan to ensure complete Vastu alignment without sacrificing modern aesthetic open spaces. Highly recommended!",
+        "The Build Company's design team spent countless hours perfecting our floor plan to ensure complete Vastu alignment without sacrificing modern aesthetic open spaces. Highly recommended!",
       author: "Dr. Meenakshi & Ramesh K.",
       role: "Medical Professionals",
       location: "Anna Nagar, Chennai",
@@ -657,36 +691,36 @@ export const siteConfig = {
   riskReversals: [
     {
       title: "Free Initial Consultation",
-      description: "Sit with our chief architect to discuss floor plans and feasibility without spending a rupee.",
+      description: "Sit with our in-house architectural & engineering team to discuss floor plans and feasibility without spending a rupee.",
     },
     {
       title: "No-Obligation Estimate",
       description: "Get a complete itemized material and cost breakdown customized for your plot.",
     },
     {
-      title: "Transparent Pricing",
-      description: "Locked sqft construction contract with no hidden costs or mid-project rate hikes.",
+      title: "Price Surge Protection",
+      description: "Contractually locked pricing with up to 10% material price surge protection during the contract period.",
     },
     {
       title: "Stage-Wise Milestone Payments",
       description: "Pay only when the actual work on your plot is completed and verified by you.",
     },
     {
-      title: "Dedicated Professional Supervision",
-      description: "Full-time civil engineers on site ensuring zero material compromise or workmanship flaws.",
+      title: "Dedicated Site Supervision",
+      description: "Dedicated supervisor for each site ensuring zero material compromise or workmanship flaws.",
     },
   ],
 
   faqs: [
     {
       category: "Pricing & Costing",
-      question: "What is included in the ₹2,199/sqft starting price?",
-      answer: "The ₹2,199/sqft Standard package includes turnkey construction: architectural planning, seismic-resilient Fe 550D RCC frame, red bricks, large format glazed vitrified tile flooring, first quality teak main door, UPVC windows, Kohler/Jaquar sanitaryware, Havells/Legrand wiring, interior & exterior painting, and 5-year comprehensive warranty.",
+      question: "What is included in the ₹2,399/sqft starting price?",
+      answer: "Our ₹2,399/sqft (excl. GST) Basic package provides turnkey essentials: architectural floor plans, Fe 550 steel, Grade 53 cement, 2x2 vitrified tiles, standard teak wood main door, UPVC windows, branded sanitaryware, and stage-wise civil QA audits. For upgraded finishes like 4x2 glazed vitrified tiles, Kohler/Jaquar fittings, and FRLS fire-resistant wiring, clients select our ₹2,699/sqft Standard package.",
     },
     {
       category: "Pricing & Costing",
       question: "Are there any hidden costs or escalation clauses during construction?",
-      answer: "No. Once our detailed BOQ and contract are finalized and signed, the sqft rate is locked. Any material price fluctuations during the project lifecycle are absorbed by TBC unless you request an architectural scope change.",
+      answer: "No. Once our detailed BOQ and contract are finalized and signed, the sqft rate is locked. Material price fluctuations up to 10% during the contract period are absorbed by The Build Company, ensuring your budget remains protected.",
     },
     {
       category: "Payments & Financials",
@@ -701,7 +735,7 @@ export const siteConfig = {
     {
       category: "Approvals & Permissions",
       question: "Do you assist with building plan approvals from CMDA / Corporation?",
-      answer: "Yes. Our in-house architectural team handles the complete drawing preparation, structural stability certificates, and liaison support required for CMDA / Greater Chennai Corporation building plan approvals.",
+      answer: "Yes. Our in-house architectural team handles the complete drawing preparation, structural stability certificates, and liaison support required for CMDA / Greater Chennai Corporation approvals. Government scrutiny and development fees are paid directly by the client.",
     },
     {
       category: "Engineering & Materials",
@@ -709,14 +743,14 @@ export const siteConfig = {
       answer: "We use exclusively certified Fe 550D TMT steel (Tata Tiscon / Jindal Panther) and Grade 53 Portland Pozzolana or Ordinary Portland Cement (Ultratech / Coromandel / Dalmia). We provide lab compressive strength cube test reports for every slab pour.",
     },
     {
-      category: "Warranty & Aftercare",
-      question: "What does the 5-Year Construction Warranty cover?",
-      answer: "Our 5-year warranty covers all structural RCC elements (foundations, columns, beams, slabs) and integral roof/bathroom waterproofing against leakage or cracks, backed by prompt service support and annual preventative inspections.",
+      category: "Quality Assurance & Handover",
+      question: "What quality assurance and post-handover protocol do you follow?",
+      answer: "We conduct 150+ civil QA/QC inspections at every milestone, 72-hour waterproofing ponding tests, and have a dedicated supervisor for each site. Before final handover, a thorough snag audit is completed and certified to ensure a flawless, defect-free delivery.",
     },
     {
       category: "Site Visits & Land",
       question: "Do you construct only on plots already owned by the client?",
-      answer: "Yes, exactly. TBC is exclusively a bespoke construction firm that constructs premium homes and commercial buildings on land already owned by our clients. We do not sell plots or broker real estate.",
+      answer: "Yes, exactly. The Build Company is exclusively a bespoke construction firm that constructs premium homes and commercial buildings on land already owned by our clients. We do not sell plots or broker real estate.",
     },
     {
       category: "Site Visits & Land",
@@ -789,14 +823,14 @@ export const siteConfig = {
     { label: "Process", href: "/process" },
     {
       label: "Cost Calculator",
-      href: "/calculator-pro-3",
+      href: "/calculator-pro-2",
       isBadge: true,
       badgeText: "PRO",
       children: [
         {
-          label: "Calculator Pro 3",
-          description: "Interactive floor-wise estimator with real-time BOQ",
-          href: "/calculator-pro-3",
+          label: "Calculator Pro 2",
+          description: "Step-by-step guided budget builder",
+          href: "/calculator-pro-2",
           badge: "Latest",
         },
         {
@@ -805,19 +839,15 @@ export const siteConfig = {
           href: "/construction-cost-chennai",
         },
         {
-          label: "Calculator Pro 2",
-          description: "Step-by-step guided budget builder",
-          href: "/calculator-pro-2",
-        },
-        {
-          label: "Cost Calculator PRO",
-          description: "10-phase milestone distribution & material analysis",
-          href: "/calculator-pro",
-        },
-        {
           label: "Packages Comparison",
           description: "Basic, Standard and Premium specifications",
           href: "/packages",
+        },
+        {
+          label: "Experience Centre",
+          description: "Inspect physical material & package samples",
+          href: "/#experience-centre",
+          badge: "Visit",
         },
       ],
     },
@@ -826,9 +856,14 @@ export const siteConfig = {
       href: "/about",
       children: [
         {
-          label: "About TBC",
+          label: "About The Build Company",
           description: "Our philosophy, leadership & Chennai standards",
           href: "/about",
+        },
+        {
+          label: "Experience Centre",
+          description: "Visit our physical sample lab in Chennai",
+          href: "/#experience-centre",
         },
         {
           label: "Quality Standards",
@@ -859,7 +894,9 @@ export const siteConfig = {
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
     { label: "Process", href: "/process" },
-    { label: "Cost Calculator PRO", href: "/calculator-pro-3" },
+    { label: "Cost Calculator", href: "/calculator-pro-2" },
+    { label: "Packages Comparison", href: "/packages" },
+    { label: "Experience Centre", href: "/#experience-centre" },
     { label: "Construction Cost Guide", href: "/construction-cost-chennai" },
     { label: "Quality Standards", href: "/quality-standards" },
     { label: "Joint Venture", href: "/joint-venture" },
@@ -870,7 +907,7 @@ export const siteConfig = {
   ] as NavItem[],
 
   ctaDefaults: {
-    primary: "Book Consultation",
+    primary: "Get Free Estimate",
     secondary: "Chat on WhatsApp",
     third: "Book Free Site Visit",
     phone: "Call Now",
@@ -879,8 +916,8 @@ export const siteConfig = {
 
   legal: {
     disclaimer:
-      "TBC (The Build Company) is a specialized turnkey residential & commercial building contractor in Chennai, Tamil Nadu. We construct exclusively on plots owned by our clients. TBC does not engage in real estate brokerage or land sales.",
-    copyright: `© ${new Date().getFullYear()} TBC — The Build Company. All rights reserved.`,
+      "The Build Company is a specialized turnkey residential & commercial building contractor in Chennai, Tamil Nadu. We construct exclusively on plots owned by our clients. The Build Company does not engage in real estate brokerage or land sales.",
+    copyright: `© ${new Date().getFullYear()} The Build Company. All rights reserved.`,
   },
 } as const;
 

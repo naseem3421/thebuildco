@@ -8,7 +8,7 @@ export function QualificationSection() {
     {
       icon: LandPlot,
       title: "You Already Own the Land",
-      desc: "TBC constructs on client-owned residential plots.",
+      desc: "The Build Company constructs on client-owned residential plots.",
     },
     {
       icon: Home,
@@ -70,7 +70,7 @@ export function QualificationSection() {
             href="/about"
             className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#EA580C] hover:text-[#C2410C] transition-colors group"
           >
-            <span>See If TBC Is Right For Your Project</span>
+            <span>See If The Build Company Is Right For Your Project</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

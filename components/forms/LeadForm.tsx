@@ -87,8 +87,11 @@ export function LeadForm({
         ? cleanPhone.slice(1)
         : cleanPhone;
 
-    if (!cleanPhone || !/^[6-9]\d{9}$/.test(normalizedPhone)) {
-      newErrors.phone = "Enter a valid 10-digit Indian mobile number.";
+    const isIndian = /^[6-9]\d{9}$/.test(normalizedPhone);
+    const isInternational = /^\d{7,15}$/.test(cleanPhone);
+
+    if (!cleanPhone || (!isIndian && !isInternational)) {
+      newErrors.phone = "Enter a valid phone number (10-digit Indian or international with country code).";
     }
 
     if (!formData.location.trim()) {
@@ -383,7 +386,6 @@ export function LeadForm({
             <option value="Villa">Luxury Villa</option>
             <option value="Duplex Home">Duplex Home</option>
             <option value="Commercial Building">Commercial Building</option>
-            <option value="Structural Renovation">Structural Renovation</option>
           </select>
         </div>
       )}

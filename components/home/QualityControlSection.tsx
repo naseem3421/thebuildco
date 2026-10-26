@@ -14,7 +14,7 @@ export function QualityControlSection() {
     {
       icon: Layers,
       title: "Material Verification",
-      desc: "Certified Fe 550D TMT steel with test mill certs and fresh Grade-53 cement from primary manufacturers.",
+      desc: "Certified Fe 550D TMT steel with test mill certs and fresh Grade-53 cement with batch date tracking.",
     },
     {
       icon: ClipboardList,
@@ -24,21 +24,21 @@ export function QualityControlSection() {
     {
       icon: ShieldCheck,
       title: "Final Quality Audit",
-      desc: "72-hour waterproofing ponding, MEP pressure tests, laser alignment, and 5-year structural warranty.",
+      desc: "72-hour waterproofing ponding, MEP pressure tests, laser alignment, and certified snag clearance.",
     },
   ];
 
   return (
-    <section id="quality" className="py-14 sm:py-20 bg-[#FAF8F5] border-b border-neutral-200">
+    <section id="quality" className="py-10 sm:py-14 bg-[#FAF8F5] border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
           eyebrow="ENGINEERING RIGOR"
           title="Engineering-Led Construction."
-          subtitle="Measurable civil engineering checks executed on-site by dedicated engineers rather than vague promises."
+          subtitle="Measurable civil engineering checks executed on-site by dedicated site supervisors rather than vague promises."
           align="center"
         />
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
           {qcCards.map((item, idx) => {
             const Icon = item.icon;
             return (

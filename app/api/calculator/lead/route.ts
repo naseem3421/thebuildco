@@ -27,8 +27,8 @@ export interface CalculatorLeadPayload {
   honeypot?: string;
 }
 
-// Indian mobile number validation
-function validateIndianPhone(phone: string): boolean {
+// Phone validation: 10-digit Indian mobile or 7-15 digit international phone number
+function validatePhone(phone: string): boolean {
   const cleaned = phone.replace(/[\s\-()+]/g, "");
   const normalized =
     cleaned.startsWith("91") && cleaned.length === 12
@@ -37,7 +37,10 @@ function validateIndianPhone(phone: string): boolean {
       ? cleaned.slice(1)
       : cleaned;
 
-  return /^[6-9]\d{9}$/.test(normalized);
+  const isIndian = /^[6-9]\d{9}$/.test(normalized);
+  const isInternational = /^\d{7,15}$/.test(cleaned);
+
+  return isIndian || isInternational;
 }
 
 export async function POST(request: NextRequest) {
@@ -52,7 +55,7 @@ export async function POST(request: NextRequest) {
 
     // 1. Honeypot check
     if (body.honeypot && body.honeypot.trim().length > 0) {
-      return NextResponse.json({ success: true, leadId: "TBC-FILTERED" }, { status: 200 });
+      return NextResponse.json({ success: true, leadId: "BUILD-FILTERED" }, { status: 200 });
     }
 
     // 2. Validation
@@ -66,14 +69,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!phone || !validateIndianPhone(phone)) {
+    if (!phone || !validatePhone(phone)) {
       return NextResponse.json(
-        { success: false, message: "Please enter a valid 10-digit Indian mobile number." },
+        { success: false, message: "Please enter a valid phone number (10-digit Indian or international with country code)." },
         { status: 400 }
       );
     }
 
-    const leadId = `TBC-PRO3-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
+    const leadId = `BUILD-CALC-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
     const timestamp = new Date().toISOString();
 
     const leadRecord = {

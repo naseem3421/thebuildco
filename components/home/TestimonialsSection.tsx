@@ -10,16 +10,16 @@ export function TestimonialsSection() {
   const strongestTestimonials = siteConfig.testimonials.slice(0, 3);
 
   return (
-    <section className="py-14 sm:py-20 bg-white border-b border-neutral-200">
+    <section className="py-10 sm:py-14 bg-white border-b border-neutral-200">
       <Container size="wide">
         <SectionHeading
           eyebrow="GENUINE EXPERIENCES"
-          title="What Chennai Landowners Say About Building With TBC"
-          subtitle="Real experiences from families who trusted TBC to engineer and construct their homes on client-owned plots."
+          title="What Chennai Landowners Say About Building With The Build Company"
+          subtitle="Real experiences from families who trusted The Build Company to engineer and construct their homes on client-owned plots."
           align="center"
         />
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-7 grid grid-cols-1 md:grid-cols-3 gap-5">
           {strongestTestimonials.map((item) => (
             <div
               key={item.id}

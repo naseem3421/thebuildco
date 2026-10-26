@@ -7,27 +7,27 @@ export interface AEOQuestionItem {
 export const homepageAeoQuestions: AEOQuestionItem[] = [
   {
     q: "How much does it cost to build a house in Chennai?",
-    a: "In Chennai, turnkey residential construction starts from ₹2,199/sqft for Standard specifications and ₹2,599/sqft for Premium specifications. For a standard 2,000 to 3,500 sqft residence, total project cost ranges from ₹44 Lakhs for standard turnkey construction up to ₹90 Lakhs and above for premium luxury villas with bespoke interior finishes.",
+    a: "In Chennai, turnkey residential construction starts from ₹2,399/sqft (excl. GST) for Basic, ₹2,699/sqft for Standard, and ₹3,099/sqft for Premium specifications. For a standard 2,000 to 3,500 sqft residence, total project cost ranges from ~₹48 Lakhs for basic turnkey construction up to ₹1.10 Crores and above for luxury architectural villas with bespoke finishes.",
     category: "Cost & Pricing",
   },
   {
     q: "What is the construction cost per square foot in Chennai?",
-    a: "Turnkey residential construction costs per sqft in Chennai with TBC are structured across two transparent packages: Standard at ₹2,199/sqft and Premium at ₹2,599/sqft. Exact costs depend on architectural complexity, foundation soil conditions, and finish specifications.",
+    a: "Turnkey residential construction costs per sqft in Chennai with The Build Company are structured across transparent packages: Basic at ₹2,399/sqft, Standard at ₹2,699/sqft, and Premium at ₹3,099/sqft (excl. GST). Exact costs depend on architectural complexity, foundation soil conditions, and finish specifications.",
     category: "Cost & Pricing",
   },
   {
     q: "How much does it cost to build a 2,000 sqft house in Chennai?",
-    a: "Constructing a 2,000 sqft house in Chennai typically requires an investment of ₹44 Lakhs to ₹52 Lakhs depending on the chosen finish tier. Our Standard turnkey package averages approximately ₹43.9 Lakhs, while a Premium turnkey finish with branded teak doors, 4x2 vitrified flooring, and premium fittings averages ₹51.9 Lakhs.",
+    a: "Constructing a 2,000 sqft house in Chennai typically requires an investment of approximately ₹48 Lakhs to ₹62 Lakhs depending on the chosen specification tier. Our Basic package starts around ₹48 Lakhs, Standard averages ~₹54 Lakhs, and Premium with high-end vitrified tiles and teak finishes averages ~₹62 Lakhs (excl. GST).",
     category: "Cost & Pricing",
   },
   {
     q: "How much does it cost to build a 3,000 sqft house in Chennai?",
-    a: "A 3,000 sqft duplex or independent house in Chennai typically costs between ₹65 Lakhs and ₹95 Lakhs for standard-to-premium specifications. If opting for luxury architectural finishes, Italian marble flooring, and smart home automation, the project investment ranges from ₹85 Lakhs to ₹1.10 Crores.",
+    a: "A 3,000 sqft duplex or independent house in Chennai typically costs between ₹72 Lakhs and ₹95 Lakhs for standard-to-premium specifications. If opting for bespoke luxury finishes and smart home automation, project investment exceeds ₹1.05 Crores.",
     category: "Cost & Pricing",
   },
   {
     q: "Are there any hidden costs or escalation clauses during construction?",
-    a: "No. Once our detailed BOQ and contract are finalized and signed, the sqft rate is locked. Any material price fluctuations during the project lifecycle are absorbed by TBC unless you request an architectural scope change.",
+    a: "No. Once our detailed BOQ and contract are finalized and signed, the sqft rate is locked. Material price fluctuations up to 10% during the contract period are absorbed by The Build Company, protecting your budget from market surges.",
     category: "Cost & Pricing",
   },
   {
@@ -37,12 +37,12 @@ export const homepageAeoQuestions: AEOQuestionItem[] = [
   },
   {
     q: "What is included in turnkey construction?",
-    a: "Turnkey residential construction covers end-to-end delivery: architectural design, structural engineering, soil testing, liaison for approvals, material procurement, civil framing, brickwork, waterproofing, electrical, plumbing, painting, flooring, and final handover with warranties under a single accountable contract.",
+    a: "Turnkey residential construction covers end-to-end delivery: architectural design, structural engineering, soil testing, liaison for approvals, material procurement, civil framing, brickwork, waterproofing, electrical, plumbing, painting, flooring, and final key handover under a single accountable contract.",
     category: "Scope & Process",
   },
   {
     q: "How do stage-wise construction payments work?",
-    a: "Payments are split into 7 to 8 transparent milestone tranches linked directly to verified physical progress — such as plinth beam completion, ground floor slab casting, first floor slab casting, brickwork, plastering, and finishing — rather than arbitrary calendar advances.",
+    a: "Payments are split into transparent milestone tranches linked directly to verified physical progress — such as plinth beam completion, ground floor slab casting, first floor slab casting, brickwork, plastering, and finishing — rather than arbitrary calendar advances.",
     category: "Payments",
   },
   {
@@ -51,9 +51,9 @@ export const homepageAeoQuestions: AEOQuestionItem[] = [
     category: "Engineering & Quality",
   },
   {
-    q: "What warranty does TBC provide?",
-    a: "TBC provides a written 5-Year Structural Warranty covering the RCC foundation, columns, beams, and roof slabs, along with comprehensive 1-year seepage and MEP maintenance support post key handover.",
-    category: "Warranty & Support",
+    q: "What quality assurance and handover protocol does The Build Company provide?",
+    a: "The Build Company conducts 150+ milestone civil QA/QC inspections, 72-hour waterproofing ponding tests, and provides a dedicated supervisor for each site. Handover is preceded by a certified snag audit to ensure 100% defect-free possession.",
+    category: "Quality Assurance",
   },
   {
     q: "Should I hire an architect and contractor separately?",
@@ -67,27 +67,27 @@ export const homepageAeoQuestions: AEOQuestionItem[] = [
   },
   {
     q: "How do I choose a construction company in Chennai?",
-    a: "Evaluate construction partners on five criteria: experience building on client-owned land, willingness to provide itemized BOQ specifications with named brands, transparent stage-wise payment schedules, verifiable past client testimonials, and written structural warranties.",
+    a: "Evaluate construction partners on five criteria: experience building on client-owned land, willingness to provide itemized BOQ specifications with named brands, transparent stage-wise payment schedules, verifiable past client testimonials, and certified pre-handover snag audits.",
     category: "Planning & Approvals",
   },
   {
-    q: "Does TBC build only on client-owned land?",
-    a: "Yes. TBC — The Build Company operates strictly as a turnkey design and civil construction company for landowners. We build custom individual residences, villas, and duplex homes exclusively on land already owned by the client. We do not sell plots or broker land.",
+    q: "Does The Build Company build only on client-owned land?",
+    a: "Yes. The Build Company operates strictly as a turnkey design and civil construction company for landowners. We build custom individual residences, villas, and duplex homes exclusively on land already owned by the client. We do not sell plots or broker land.",
     category: "Scope & Process",
   },
   {
-    q: "Does TBC handle architectural and structural planning?",
-    a: "Yes. TBC has in-house architectural and chartered structural engineering teams. We prepare custom 2D floor layouts, photorealistic 3D elevations, structural analysis blueprints, Vastu consultations, and electrical/plumbing drawings for every project.",
+    q: "Does The Build Company handle architectural and structural planning?",
+    a: "Yes. The Build Company has in-house architectural and chartered structural engineering teams. We prepare custom 2D floor layouts, photorealistic 3D elevations, structural analysis blueprints, Vastu consultations, and electrical/plumbing drawings for every project.",
     category: "Scope & Process",
   },
   {
-    q: "Does TBC handle approvals?",
-    a: "Yes. TBC assists clients with statutory building plan sanctions through CMDA, Greater Chennai Corporation (GCC), or local town panchayats, ensuring setbacks, FSI calculations, and structural safety parameters meet local municipal norms.",
+    q: "Does The Build Company handle approvals?",
+    a: "Yes. The Build Company assists clients with drawing preparation and liaison support for building plan sanctions through CMDA, Greater Chennai Corporation (GCC), or local town panchayats. Government scrutiny and development fees are paid directly by the client.",
     category: "Planning & Approvals",
   },
   {
-    q: "Does TBC undertake Joint Venture projects?",
-    a: "Yes. TBC selectively partners with Chennai property owners and landowners on Joint Venture (JV) residential developments. Suitability is evaluated based on plot frontage, road width, neighborhood market demand, and commercial feasibility.",
+    q: "Does The Build Company undertake Joint Venture projects?",
+    a: "Yes. The Build Company selectively partners with Chennai property owners and landowners on Joint Venture (JV) residential developments. Suitability is evaluated based on plot frontage, road width, neighborhood market demand, and commercial feasibility.",
     category: "Joint Ventures",
   },
   {

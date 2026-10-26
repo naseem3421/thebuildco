@@ -95,7 +95,7 @@ function isDuplicate(eventKey: string): boolean {
 function logDebug(platform: string, eventName: string, params?: unknown) {
   if (process.env.NODE_ENV === "development") {
     console.log(
-      `%c[TBC ${platform}]%c ${eventName}`,
+      `%c[The Build Company ${platform}]%c ${eventName}`,
       "color: #183B35; font-weight: bold; background: #E9E4D9; padding: 2px 6px; border-radius: 4px;",
       "color: #B86F50; font-weight: 600;",
       params || ""

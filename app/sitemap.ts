@@ -9,9 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 1. Core Primary Pages
   const coreRoutes = [
     { url: `${baseUrl}`, priority: 1.0, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/calculator-pro`, priority: 0.95, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/calculator-pro-2`, priority: 0.95, changeFrequency: "weekly" as const },
-    { url: `${baseUrl}/calculator-pro-3`, priority: 0.95, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/services`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/services/individual-house-construction`, priority: 0.85, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/services/villa-construction`, priority: 0.85, changeFrequency: "weekly" as const },

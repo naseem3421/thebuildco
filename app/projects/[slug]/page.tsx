@@ -105,7 +105,7 @@ export default async function ProjectDetailPage({
             <Button
               variant="whatsapp"
               size="md"
-              href={getWhatsAppUrl(`Hi TBC, I really like your ${project.title} project in ${project.location}. I would like to build a similar home on my plot.`)}
+              href={getWhatsAppUrl(`Hi The Build Company, I really like your ${project.title} project in ${project.location}. I would like to build a similar home on my plot.`)}
               leftIcon={<MessageCircle className="w-4 h-4" />}
             >
               Ask About This Design
@@ -183,8 +183,8 @@ export default async function ProjectDetailPage({
             <div className="p-6 rounded-2xl bg-[#E9E4D9]/50 border border-[#D9D2C5] flex items-center gap-4">
               <ShieldCheck className="w-8 h-8 text-[#B86F50] shrink-0" />
               <div className="text-xs text-[#52655E]">
-                <strong className="text-[#183B35] block text-sm">5-Year Structural Warranty Certificate</strong>
-                Constructed under TBC&apos;s 150-point civil inspection protocol with verified lab test reports.
+                <strong className="text-[#183B35] block text-sm">Pre-Handover Snag Audit & Certified Clearance</strong>
+                Constructed under The Build Company&apos;s 150-point civil inspection protocol with verified lab test reports.
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default async function ProjectDetailPage({
               Build a similar home on your plot
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-[#52655E] mb-6">
-              Our chief civil architect will review your plot layout and prepare a custom blueprint estimate.
+              Our in-house design and engineering team will review your plot layout and prepare a custom blueprint estimate.
             </p>
 
             <LeadForm

@@ -178,7 +178,7 @@ export function EstimateResult({
       .filter(Boolean)
       .join(", ");
 
-    const text = `*🏡 TBC Chennai Turnkey Construction Estimate (PRO 3)*
+    const text = `*🏡 The Build Company Chennai Turnkey Construction Estimate*
 -----------------------------------
 • *Plot Area:* ${plotArea.toLocaleString()} sq.ft (${plotCents} Cents / ${plotGrounds} Gnd)
 • *Locality:* ${currentSoilProfile.locality} (${currentSoilProfile.soilType})
@@ -201,13 +201,13 @@ I used your online calculator and would like to schedule a free site survey to l
   const handleShareFamily = async () => {
     if (typeof window === "undefined") return;
     const encoded = encodeCalculatorState(rawInputs);
-    const shareUrl = `${window.location.origin}/calculator-pro-3?estimate=${encoded}`;
-    const shareText = `TBC Chennai House Construction Estimate: ${formatInLakhs(estimateLow)} – ${formatInLakhs(estimateHigh)} for ${totalBuiltUpArea.toLocaleString()} sqft`;
+    const shareUrl = `${window.location.origin}/calculator-pro-2?estimate=${encoded}`;
+    const shareText = `The Build Company Chennai House Construction Estimate: ${formatInLakhs(estimateLow)} – ${formatInLakhs(estimateHigh)} for ${totalBuiltUpArea.toLocaleString()} sqft`;
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Chennai House Construction Estimate | TBC",
+          title: "Chennai House Construction Estimate | The Build Company",
           text: shareText,
           url: shareUrl,
         });
@@ -449,7 +449,7 @@ I used your online calculator and would like to schedule a free site survey to l
             { step: "03", title: "RCC Slabs", time: "Month 4–6", desc: "Columns & Slab Cast" },
             { step: "04", title: "Brickwork", time: "Month 7–9", desc: "Walls & Plastering" },
             { step: "05", title: "Finishing", time: "Month 10–13", desc: "Tiles, Paint & Fittings" },
-            { step: "06", title: "Handover", time: "Month 14", desc: "Keys & 5-Yr Warranty" },
+            { step: "06", title: "Handover", time: "Month 14", desc: "Snag Clearance & Keys" },
           ].map((item, idx) => (
             <div key={idx} className="p-3 rounded-2xl bg-white border border-[#D9D2C5] space-y-1">
               <span className="text-[10px] font-extrabold text-[#EA580C] bg-[#FFF7F3] px-1.5 py-0.5 rounded border border-[#FFD9C6]">

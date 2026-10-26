@@ -7,9 +7,9 @@ import { LeadForm } from "@/components/forms/LeadForm";
 import { ContactInfoClient } from "@/components/contact/ContactInfoClient";
 
 export const metadata: Metadata = {
-  title: "Contact TBC — Book a Free Site Consultation",
+  title: "Contact The Build Company — Book a Free Site Consultation",
   description:
-    "Contact TBC (The Build Company) in Chennai. Schedule a free site visit and architectural consultation for your plot across Chennai, OMR, ECR, and Tamil Nadu.",
+    "Contact The Build Company in Chennai. Schedule a free site visit and architectural consultation for your plot across Chennai, OMR, ECR, and Tamil Nadu.",
 };
 
 export default function ContactPage() {

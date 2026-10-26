@@ -57,7 +57,7 @@ export const PRO_PACKAGES: ProPackageTier[] = [
     id: "standard",
     name: "Standard",
     badge: "Most Balanced",
-    ratePerSqft: 2299,
+    ratePerSqft: 2699,
     tagline: "High-grade materials with branded finishes for long-lasting reliability.",
     durationRange: "10 – 16 months",
     accentColor: "#16A34A", // Emerald green
@@ -101,7 +101,7 @@ export const PRO_PACKAGES: ProPackageTier[] = [
     name: "Premium",
     badge: "Most Popular",
     popular: true,
-    ratePerSqft: 2649,
+    ratePerSqft: 3099,
     tagline: "Best-value package with premium brands, 3D elevation & structural design.",
     durationRange: "10 – 18 months",
     accentColor: "#EA580C", // Vibrant Terracotta / Orange
@@ -146,7 +146,7 @@ export const PRO_PACKAGES: ProPackageTier[] = [
     id: "luxury",
     name: "Luxury",
     badge: "Top Tier",
-    ratePerSqft: 2999,
+    ratePerSqft: 3599,
     tagline: "Bespoke architectural execution with Italian marble, smart home & luxury fittings.",
     durationRange: "12 – 20 months",
     accentColor: "#7C3AED", // Royal purple
@@ -440,14 +440,14 @@ export const PRO_PHASES: ProPhaseItem[] = [
       "Comprehensive 150-point engineering inspection checklist",
       "Debris disposal and site boundary cleaning",
       "Deep acid cleaning of floors and window glass",
-      "Keys handover with 5-Year Structural Warranty certificate",
+      "Keys handover with certified snag clearance protocol",
     ],
   },
 ];
 
 export const PRO_COMPARISON_MATRIX: ProMatrixRow[] = [
   // PRICING
-  { category: "PRICING", feature: "Rate / sqft", basic: "₹1,999", standard: "₹2,299", premium: "₹2,649", luxury: "₹2,999" },
+  { category: "PRICING", feature: "Rate / sqft", basic: "₹2,399", standard: "₹2,699", premium: "₹3,099", luxury: "₹3,599" },
   { category: "PRICING", feature: "Duration", basic: "~14 months", standard: "~16 months", premium: "~16 months", luxury: "~18 months" },
 
   // STRUCTURE
@@ -488,36 +488,36 @@ export const PRO_FAQS = [
   {
     question: "How much does it cost to build a house in Chennai in 2026?",
     answer:
-      "House construction in Chennai in 2026 typically costs between ₹2,199/sqft (Standard package) and ₹2,599/sqft (Premium finish). For an average 2,400 sqft G+1 independent house, the turnkey civil construction budget ranges from ₹52.8 Lakhs to ₹62.4 Lakhs, depending on soil type, foundation depth, and material specifications.",
+      "House construction in Chennai in 2026 typically starts from ₹2,399/sqft (Basic package excl. GST), ₹2,699/sqft (Standard package), and ₹3,099/sqft (Premium finish). For an average 2,400 sqft G+1 independent house, the turnkey civil construction budget ranges from ~₹57.5 Lakhs to ₹74 Lakhs, depending on soil type, foundation depth, and material specifications.",
   },
   {
     question: "What is the construction cost per sq.ft in Chennai in 2026?",
     answer:
-      "The baseline unit rate in Chennai starts at ₹2,199/sqft for standard RCC framed structures with branded materials. The most popular Premium package is ₹2,599/sqft (with branded Ramco/Dalmia cement, iSteel, teak doors, and Legrand switches), with bespoke luxury options available.",
+      "The baseline unit rate in Chennai starts at ₹2,399/sqft (excl. GST) for standard RCC framed structures with branded materials. The most popular Standard package is ₹2,699/sqft and Premium is ₹3,099/sqft (with Ramco/Dalmia cement, iSteel, teak doors, and Legrand switches).",
   },
   {
     question: "What is the cost of a G+1 house in Chennai?",
     answer:
-      "For a typical plot size of 1,200 sqft with a 1,000 sqft built-up area per floor (total 2,000 sqft built-up area across G+1), the construction cost ranges from ₹44 Lakhs (Standard) to ₹52 Lakhs (Premium), with the ground floor carrying approximately 20% foundation and plinth share.",
+      "For a typical plot size of 1,200 sqft with a 1,000 sqft built-up area per floor (total 2,000 sqft built-up area across G+1), the construction cost starts from ~₹48 Lakhs (Basic) to ₹62 Lakhs (Premium), with the ground floor carrying approximately 20% foundation and plinth share.",
   },
   {
     question: "Does the calculator include plan approval and government charges?",
     answer:
-      "No. Government statutory fees (CMDA / GCC building permit approval fees, regularisation charges), electricity board (TANGEDCO) connection fees, and water/sewerage (CMWSSB) road-cut charges are statutory direct-to-government payments and are not included in the construction base estimate.",
+      "No. Government statutory fees (CMDA / GCC building permit approval fees, regularisation charges), electricity board (TANGEDCO) connection fees, and water/sewerage (CMWSSB) road-cut charges are statutory direct-to-government payments by the client and are not included in the construction base estimate.",
   },
   {
     question: "How long does house construction take in Chennai?",
     answer:
-      "An individual ground-floor home takes roughly 10–12 months. A G+1 duplex typically requires 12–14 months. Each additional floor adds approximately 3–4 months to allow for structural concrete curing (21-day slab curing cycle), brickwork setting, and multi-stage plastering.",
+      "An individual ground-floor home takes roughly 8–10 months. A G+1 duplex typically requires 10–12 months. Each additional floor adds approximately 2–3 months to allow for structural concrete curing (21-day slab curing cycle), brickwork setting, and multi-stage plastering.",
   },
   {
     question: "What is the difference between Standard and Premium packages?",
     answer:
-      "The Standard package (₹2,199/sqft) provides high-grade materials with vitrified flooring, UPVC windows, and branded finishes. The Premium package (₹2,599/sqft) upgrades to iSteel Fe550D reinforcement, Ramco/Dalmia 53-grade cement, 10 ft ceiling height, 4x2 GVT vitrified tiles, first-grade teak wood main doors, 3-track UPVC windows with mosquito mesh, and Legrand modular switches.",
+      "The Standard package (₹2,699/sqft) provides high-grade materials with vitrified flooring, UPVC windows, and branded finishes. The Premium package (₹3,099/sqft) upgrades to iSteel Fe550D reinforcement, Ramco/Dalmia 53-grade cement, 10 ft ceiling height, 4x2 GVT vitrified tiles, first-grade teak wood main doors, 3-track UPVC windows with mosquito mesh, and Legrand modular switches.",
   },
   {
-    question: "Can TBC construct my house after using this calculator?",
+    question: "Can The Build Company construct my house after using this calculator?",
     answer:
-      "Yes! TBC (The Build Company) builds bespoke turnkey houses directly on your plot across all Chennai zones (OMR, ECR, Medavakkam, Velachery, Tambaram, Porur, Anna Nagar, etc.). You can book a free on-site engineering survey to convert this estimate into a contract-locked BOQ with zero mid-project price escalations.",
+      "Yes! The Build Company builds bespoke turnkey houses directly on your plot across all areas in and around Chennai (OMR, ECR, Medavakkam, Velachery, Tambaram, Porur, Anna Nagar, Kodambakkam, etc.). You can book a free on-site engineering survey to convert this estimate into a contract-locked BOQ with up to 10% material surge protection.",
   },
 ];

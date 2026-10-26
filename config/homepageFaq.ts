@@ -6,15 +6,15 @@ export interface FAQItem {
 export const homepage8Questions: FAQItem[] = [
   {
     q: "How much does it cost to build a house in Chennai?",
-    a: "Turnkey residential construction starts from ₹2,199/sqft for Standard specifications and ₹2,599/sqft for Premium specifications. For a 2,500 sqft residence, total project cost typically ranges from ₹54.9 Lakhs to ₹64.9 Lakhs on client-owned land.",
+    a: "Turnkey residential construction starts from ₹2,399/sqft (excl. GST) for Basic, ₹2,699/sqft for Standard, and ₹3,099/sqft for Premium specifications. For a 2,500 sqft residence, total project cost typically starts from ~₹60 Lakhs depending on your selected finish tier and plot soil conditions.",
   },
   {
     q: "What is included in turnkey construction?",
     a: "Turnkey construction covers end-to-end delivery: architectural design, structural engineering, liaison for approvals, material procurement, civil framing, brickwork, waterproofing, electrical, plumbing, painting, flooring, and final key handover under one accountable contract.",
   },
   {
-    q: "Does TBC build only on client-owned land?",
-    a: "Yes. TBC operates exclusively as a turnkey design and civil construction firm building custom homes on land already owned by the client. We do not sell plots or broker real estate.",
+    q: "Does The Build Company build only on client-owned land?",
+    a: "Yes. The Build Company operates exclusively as a turnkey design and civil construction firm building custom homes on land already owned by the client. We do not sell plots or broker real estate.",
   },
   {
     q: "How long does construction take?",
@@ -22,18 +22,18 @@ export const homepage8Questions: FAQItem[] = [
   },
   {
     q: "How do stage-wise payments work?",
-    a: "Payments are linked directly to 8 verified construction milestones (Foundation, Plinth Beam, Ground Slab, First Floor Slab, Brickwork, Plastering, Finishing, Handover). You only release funds after on-site civil engineer inspection and approval.",
+    a: "Payments are linked directly to 8 verified construction milestones (Foundation, Plinth Beam, Ground Slab, First Floor Slab, Brickwork, Plastering, Finishing, Handover). You only release funds after on-site inspection and milestone verification.",
   },
   {
-    q: "Does TBC handle architectural and structural planning?",
-    a: "Yes. Our in-house team prepares 2D floor plans, 3D elevations, structural stability blueprints, Vastu alignment, and drawings needed for CMDA / Greater Chennai Corporation approvals.",
+    q: "Does The Build Company handle architectural and structural planning?",
+    a: "Yes. Our in-house team prepares 2D floor plans, 3D elevations, structural stability blueprints, Vastu alignment, and operational drawings for CMDA / Greater Chennai Corporation approvals. Government scrutiny and development fees are paid directly by the client.",
   },
   {
-    q: "What warranty does TBC provide?",
-    a: "TBC provides a written 5-Year Structural Warranty covering the RCC foundation, columns, beams, slabs, and integral waterproofing against leakage or cracks, along with 1-year complimentary maintenance.",
+    q: "What quality assurance and post-handover protocol do you follow?",
+    a: "We conduct 150+ civil QA/QC inspections at every milestone, 72-hour waterproofing ponding tests, and provide a dedicated supervisor for each site. Before final handover, a thorough snag audit is completed and certified to ensure a flawless, defect-free delivery.",
   },
   {
-    q: "Which areas in Chennai does TBC serve?",
-    a: "We construct actively across Chennai including OMR, ECR, Medavakkam, Sholinganallur, Velachery, Tambaram, Pallikaranai, Porur, Anna Nagar, and surrounding residential corridors.",
+    q: "Which areas in Chennai does The Build Company serve?",
+    a: "We construct actively in all areas in and around Chennai, including OMR, ECR, Medavakkam, Sholinganallur, Velachery, Tambaram, Pallikaranai, Porur, Anna Nagar, Kodambakkam, and surrounding residential corridors.",
   },
 ];

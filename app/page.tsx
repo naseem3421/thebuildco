@@ -1,19 +1,21 @@
 import React from "react";
 import {
   HeroSection,
-  QualificationSection,
+  TrustBarSection,
+  TrustProtocolSection,
   ProblemSection,
   OneAccountableTeamSection,
-  ServicesSection,
   CostCalculatorSection,
-  MoneyControlSection,
   QualityControlSection,
   ProjectsSection,
+  UpcomingProjectsSection,
   WhyTBCSection,
   TestimonialsSection,
   AEOQuestionSection,
   JointVentureHomeSection,
   FinalCTASection,
+  BrandPartnersSection,
+  ExperienceCentreSection,
 } from "@/components";
 import { homepage8Questions } from "@/config/homepageFaq";
 import { FAQJsonLd, ServiceJsonLd } from "@/components/seo/JsonLd";
@@ -37,31 +39,34 @@ export default function HomePage() {
       {/* SECTION 01 — HERO */}
       <HeroSection />
 
-      {/* SECTION 02 — QUICK PROJECT QUALIFICATION */}
-      <QualificationSection />
+      {/* EXECUTIVE TRUST CREDENTIALS BAR */}
+      <TrustBarSection />
 
-      {/* SECTION 03 — THE PROBLEM / TBC SOLUTION */}
+      {/* SECTION 02 — THE BUILD COMPANY TRUST PROTOCOL (CONTRACTUAL SAFEGUARDS) */}
+      <TrustProtocolSection />
+
+      {/* SECTION 03 — THE PROBLEM & SOLUTION */}
       <ProblemSection />
 
-      {/* SECTION 04 — TBC PROCESS SUMMARY */}
+      {/* SECTION 03 — PROCESS SUMMARY */}
       <OneAccountableTeamSection />
 
-      {/* SECTION 05 — RESIDENTIAL CONSTRUCTION SERVICES */}
-      <ServicesSection />
+      {/* SECTION 04 — RECENTLY COMPLETED PROJECTS */}
+      <ProjectsSection />
+
+      {/* SECTION 05 — UPCOMING PROJECTS */}
+      <UpcomingProjectsSection />
 
       {/* SECTION 06 — CONSTRUCTION COST CALCULATOR */}
       <CostCalculatorSection />
 
-      {/* SECTION 07 — INVESTMENT TRANSPARENCY */}
-      <MoneyControlSection />
+      {/* SECTION 06.5 — PHYSICAL EXPERIENCE CENTRE & MATERIAL SAMPLES */}
+      <ExperienceCentreSection />
 
-      {/* SECTION 08 — ENGINEERING & QUALITY */}
+      {/* SECTION 07 — ENGINEERING & QUALITY */}
       <QualityControlSection />
 
-      {/* SECTION 09 — SELECTED PROJECTS */}
-      <ProjectsSection />
-
-      {/* SECTION 10 — WHY TBC */}
+      {/* SECTION 08 — WHY THE BUILD COMPANY */}
       <WhyTBCSection />
 
       {/* SECTION 11 — TESTIMONIALS */}
@@ -75,6 +80,9 @@ export default function HomePage() {
 
       {/* SECTION 14 — FINAL CTA & CONSULTATION */}
       <FinalCTASection />
+
+      {/* SECTION 15 — OUR BRAND PARTNERS (ABOVE FOOTER) */}
+      <BrandPartnersSection />
     </div>
   );
 }

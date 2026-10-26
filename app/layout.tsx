@@ -34,8 +34,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://thebuildcompany.in"),
   title: {
-    default: "TBC | Turnkey House Construction Company in Chennai",
-    template: `%s | ${siteConfig.shortName} — The Build Company`,
+    default: "The Build Company | Turnkey House Construction Company in Chennai",
+    template: `%s | ${siteConfig.name}`,
   },
   description:
     "Turnkey residential construction company in Chennai for landowners planning bespoke homes, luxury villas, and duplex residences. Architectural design, structural engineering, quality control, and handover through one accountable team.",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     canonical: "https://thebuildcompany.in",
   },
   openGraph: {
-    title: "TBC | Turnkey House Construction Company in Chennai",
+    title: "The Build Company | Turnkey House Construction Company in Chennai",
     description:
       "Build your Chennai home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
     url: "https://thebuildcompany.in",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TBC | Turnkey House Construction Company in Chennai",
+    title: "The Build Company | Turnkey House Construction Company in Chennai",
     description:
       "Build your Chennai home with one accountable team from design to handover. Turnkey residential construction exclusively on client-owned land in Chennai.",
   },

@@ -106,10 +106,10 @@ export function CostCalculatorSection() {
   };
 
   return (
-    <section id="calculator" className="py-14 sm:py-20 bg-[#FAF8F5] border-y border-neutral-200 scroll-mt-20">
+    <section id="calculator" className="py-10 sm:py-14 bg-[#FAF8F5] border-y border-neutral-200 scroll-mt-20">
       <Container size="wide">
-        <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-3">
+        <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-2.5">
             Indicative Packages From {siteConfig.pricing.formattedStartingPrice}
           </div>
 
@@ -193,7 +193,7 @@ export function CostCalculatorSection() {
                 <label className="text-xs font-semibold text-[#183B35] uppercase tracking-wider block mb-2.5">
                   Finish & Specification Package
                 </label>
-                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
                   {siteConfig.packages.map((pkg) => {
                     const isSelected = selectedPackage === pkg.id;
                     return (
@@ -318,8 +318,8 @@ export function CostCalculatorSection() {
                       <span className="font-semibold text-[#F4F0E8]">{currentPkg.name} ({currentPkg.formattedPrice})</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#8C9C96]">Warranty Inbuilt:</span>
-                      <span className="font-semibold text-[#1E7E34]">5-Year Structural</span>
+                      <span className="text-[#8C9C96]">Quality Assurance:</span>
+                      <span className="font-semibold text-[#86EFAC]">Snag-Free Certified Handover</span>
                     </div>
                   </div>
 

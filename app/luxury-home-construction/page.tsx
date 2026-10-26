@@ -8,9 +8,9 @@ import { LeadForm } from "@/components/forms/LeadForm";
 import { Sparkles, ShieldCheck, Gem, Layers, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Luxury Home Construction in Chennai | Premium Residences by TBC",
+  title: "Luxury Home Construction in Chennai | Premium Residences by The Build Company",
   description:
-    "Construct bespoke luxury residences in Chennai with TBC. High-spec architectural homes with imported marble, home automation, and precision craftsmanship.",
+    "Construct bespoke luxury residences in Chennai with The Build Company. High-spec architectural homes with imported marble, home automation, and precision craftsmanship.",
   keywords: [
     "luxury house construction chennai",
     "luxury home builders chennai",
@@ -37,7 +37,7 @@ export default function LuxuryHomeConstructionPage() {
                 Luxury Home Construction in Chennai
               </h1>
               <p className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed">
-                For landowners seeking signature living with zero compromises. TBC delivers precision-engineered luxury residences with bespoke structural detailing, imported natural stones, smart home automation, and master-crafted finishings across Chennai’s most prestigious avenues.
+                For landowners seeking signature living with zero compromises. The Build Company delivers precision-engineered luxury residences with bespoke structural detailing, imported natural stones, smart home automation, and master-crafted finishings across Chennai’s most prestigious avenues.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
@@ -47,7 +47,7 @@ export default function LuxuryHomeConstructionPage() {
                   Book My Project Consultation
                 </a>
                 <Link
-                  href="/calculator-pro-3"
+                  href="/calculator-pro-2"
                   className="px-6 py-3.5 rounded-full border border-neutral-300 text-neutral-800 font-semibold text-sm hover:bg-neutral-100 transition-colors"
                 >
                   Calculate My Construction Budget
@@ -57,7 +57,7 @@ export default function LuxuryHomeConstructionPage() {
             <div className="lg:col-span-5 relative h-96 w-full rounded-3xl overflow-hidden shadow-luxury-md">
               <Image
                 src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80"
-                alt="Luxury home construction in Chennai by TBC"
+                alt="Luxury home construction in Chennai by The Build Company"
                 fill
                 className="object-cover"
                 priority

@@ -24,7 +24,7 @@ export function TrustMetric({
       } shadow-luxury-sm ${className}`}
     >
       <div
-        className={`font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight ${
+        className={`font-sans text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight ${
           dark ? "text-[#E9E4D9]" : "text-[#B86F50]"
         }`}
       >

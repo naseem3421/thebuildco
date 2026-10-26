@@ -95,7 +95,7 @@ export function PackagesSection() {
                   <WhatsAppButton
                     fullWidth
                     label="Get Itemized BOQ on WhatsApp"
-                    customMessage={`Hello TBC, I would like the complete itemized BOQ for the ${pkg.name} package (${pkg.formattedPrice}).`}
+                    customMessage={`Hello The Build Company, I would like the complete itemized BOQ for the ${pkg.name} package (${pkg.formattedPrice}).`}
                   />
                 </div>
               </div>

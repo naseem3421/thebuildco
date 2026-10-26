@@ -28,12 +28,12 @@ export function FinalCTASection() {
   };
 
   return (
-    <section id="consultation" className="py-16 sm:py-24 bg-white scroll-mt-20">
+    <section id="consultation" className="py-10 sm:py-14 bg-white scroll-mt-20">
       <Container size="wide">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-4">
+          <div className="text-center mb-8 sm:mb-10 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF7ED] border border-[#FFEDD5] text-xs font-bold text-[#EA580C] uppercase tracking-wider mb-3">
               START YOUR PROJECT
             </div>
 
@@ -112,8 +112,8 @@ export function FinalCTASection() {
 
               <div className="mt-8 pt-6 border-t border-[#244E46] space-y-2 text-xs text-[#8C9C96]">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#1E7E34] shrink-0" />
-                  <span>5-Year Written Structural Warranty Guaranteed</span>
+                  <ShieldCheck className="w-4 h-4 text-[#86EFAC] shrink-0" />
+                  <span>Pre-Handover Snag Audit & Certified Clearance</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-[#B86F50] shrink-0" />
@@ -148,7 +148,7 @@ export function FinalCTASection() {
               {/* Secondary Actions & Links */}
               <div className="mt-6 pt-5 border-t border-[#D9D2C5] flex flex-wrap items-center justify-between gap-3 text-xs">
                 <Link
-                  href="/calculator-pro-3"
+                  href="/calculator-pro-2"
                   className="font-semibold text-neutral-800 hover:text-[#EA580C] inline-flex items-center gap-1.5 transition-colors"
                 >
                   <Calculator className="w-4 h-4 text-[#EA580C]" />

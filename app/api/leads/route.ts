@@ -52,8 +52,8 @@ function sanitizeText(str?: string, maxLen = 200): string {
     .slice(0, maxLen);
 }
 
-// Indian mobile number validation (10 digits starting with 6, 7, 8, 9, optional +91 or 0 prefix)
-function validateIndianPhone(phone: string): boolean {
+// Phone validation: 10-digit Indian mobile or 7-15 digit international phone number
+function validatePhone(phone: string): boolean {
   const cleaned = phone.replace(/[\s\-()+]/g, "");
   const normalized = cleaned.startsWith("91") && cleaned.length === 12
     ? cleaned.slice(2)
@@ -61,7 +61,10 @@ function validateIndianPhone(phone: string): boolean {
     ? cleaned.slice(1)
     : cleaned;
 
-  return /^[6-9]\d{9}$/.test(normalized);
+  const isIndian = /^[6-9]\d{9}$/.test(normalized);
+  const isInternational = /^\d{7,15}$/.test(cleaned);
+
+  return isIndian || isInternational;
 }
 
 /**
@@ -152,7 +155,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: true,
-          leadId: "TBC-SPAM-FILTERED",
+          leadId: "BUILD-SPAM-FILTERED",
           message: "Enquiry received.",
         },
         { status: 200 }
@@ -170,8 +173,8 @@ export async function POST(request: NextRequest) {
       errors.name = "Please enter a valid full name.";
     }
 
-    if (!body.phone || !validateIndianPhone(body.phone)) {
-      errors.phone = "Please enter a valid 10-digit Indian mobile number.";
+    if (!body.phone || !validatePhone(body.phone)) {
+      errors.phone = "Please enter a valid phone number (10-digit Indian or international with country code).";
     }
 
     if (!sanitizedLocation || sanitizedLocation.length < 2) {
@@ -197,7 +200,7 @@ export async function POST(request: NextRequest) {
     }
 
     // 4. Generate Lead Record with full Attribution
-    const leadId = `TBC-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
+    const leadId = `BUILD-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
     const timestamp = body.timestamp || new Date().toISOString();
 
     const sanitizedLead = {
@@ -252,7 +255,7 @@ export async function POST(request: NextRequest) {
       }
     } else if (process.env.NODE_ENV === "development") {
       // Safe development logging
-      console.log("[TBC New Lead Stored]", {
+      console.log("[The Build Company New Lead Stored]", {
         leadId,
         source: sanitizedLead.source,
         location: sanitizedLead.location,

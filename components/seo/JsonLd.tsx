@@ -15,16 +15,16 @@ export function OrganizationJsonLd() {
     email: siteConfig.contact.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Anna Nagar / OMR",
+      streetAddress: "9/18, Muthuvel Street, Kodambakkam",
       addressLocality: "Chennai",
       addressRegion: "Tamil Nadu",
-      postalCode: "600040",
+      postalCode: "600024",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 13.0827,
-      longitude: 80.2707,
+      latitude: 13.0524,
+      longitude: 80.2255,
     },
     openingHoursSpecification: [
       {
@@ -41,7 +41,7 @@ export function OrganizationJsonLd() {
         closes: "19:00",
       },
     ],
-    priceRange: "₹2,199/sqft - ₹2,599/sqft",
+    priceRange: "₹2,399/sqft - ₹3,099/sqft",
     areaServed: siteConfig.serviceAreas.map((area) => ({
       "@type": "City",
       name: `${area}, Chennai`,

@@ -67,7 +67,7 @@ export default async function LocalityDetailPage({
     notFound();
   }
 
-  const whatsappMessage = `Hi TBC, I own a plot in ${locality.name}, Chennai and I would like to get a construction quote for my land.`;
+  const whatsappMessage = `Hi The Build Company, I own a plot in ${locality.name}, Chennai and I would like to get a construction quote for my land.`;
 
   const breadcrumbs = [
     { name: "Home", url: "/" },
@@ -202,7 +202,7 @@ export default async function LocalityDetailPage({
                 <span className="font-semibold text-[#183B35] block mb-1">
                   Pricing Plans Available in {locality.name}:
                 </span>
-                <p>Standard (₹2,199/sqft) • Premium (₹2,599/sqft)</p>
+                <p>Basic (₹2,399/sqft) • Standard (₹2,699/sqft) • Premium (₹3,099/sqft)</p>
               </div>
 
               <Button

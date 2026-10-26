@@ -61,7 +61,7 @@ export function ServicesSection() {
                 <div className="relative h-44 w-full overflow-hidden bg-neutral-100">
                   <Image
                     src={item.image}
-                    alt={`${item.title} by TBC in Chennai`}
+                    alt={`${item.title} by The Build Company in Chennai`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -55,11 +55,11 @@ import { trackCalculatorStart, trackCalculatorComplete, trackWhatsAppClick } fro
 
 // Plot Presets for Step 1
 const PLOT_PRESETS = [
-  { label: "20 × 30", sqft: 600, cents: "1.38", grounds: "0.25 Ground" },
-  { label: "30 × 40", sqft: 1200, cents: "2.75", grounds: "0.5 Ground", popular: true },
-  { label: "40 × 60", sqft: 2400, cents: "5.51", grounds: "1 Ground" },
-  { label: "1 Ground", sqft: 2400, cents: "5.51", grounds: "1 Ground" },
-  { label: "2 Grounds", sqft: 4800, cents: "11.02", grounds: "2 Grounds" },
+  { label: "20 × 30", sqft: 600, grounds: "0.25 Ground" },
+  { label: "30 × 40", sqft: 1200, grounds: "0.5 Ground", popular: true },
+  { label: "40 × 60", sqft: 2400, grounds: "1 Ground" },
+  { label: "1 Ground", sqft: 2400, grounds: "1 Ground" },
+  { label: "2 Grounds", sqft: 4800, grounds: "2 Grounds" },
 ];
 
 export function CostCalculatorPro2() {
@@ -226,9 +226,24 @@ export function CostCalculatorPro2() {
       { name: "Structure & Foundation", share: "45%", cost: structureCost, icon: Building, color: "#EAB308", desc: "Excavation, footing, columns, slab casting & brick masonry" },
       { name: "Finishes & Flooring", share: "24%", cost: finishesCost, icon: Palette, color: "#F97316", desc: "Vitrified tiles, teak doors, UPVC windows & Asian Paints" },
       { name: "Plumbing, Electrical & MEP", share: "22%", cost: mepCost, icon: Zap, color: "#3B82F6", desc: "Finolex wiring, Legrand switches, Parryware fittings & waterproofing" },
-      { name: "Inspection & Handover", share: "9%", cost: handoverCost, icon: ShieldCheck, color: "#10B981", desc: "150-point QA inspection, debris clearance & 5-year warranty" },
+      { name: "Inspection & Handover", share: "9%", cost: handoverCost, icon: ShieldCheck, color: "#10B981", desc: "150-point QA inspection, debris clearance & certified snag-free handover" },
     ];
   }, [baseCost]);
+
+  // Check URL query parameters for initial plot area
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const areaParam = params.get("area");
+      if (areaParam) {
+        const parsed = parseInt(areaParam);
+        if (!isNaN(parsed) && parsed > 0) {
+          setPlotArea(parsed);
+          setIsCustomPlot(![600, 1200, 2400, 4800].includes(parsed));
+        }
+      }
+    }
+  }, []);
 
   // Analytics tracking
   useEffect(() => {
@@ -295,7 +310,7 @@ export function CostCalculatorPro2() {
       .filter(Boolean)
       .join(", ");
 
-    const text = `*🏡 TBC Chennai House Construction Estimate (Calculator Pro 2)*
+    const text = `*🏡 The Build Company Chennai House Construction Estimate (Calculator Pro 2)*
 -----------------------------------
 • *Configuration:* ${floors === 1 ? "Ground Only" : `G+${floors - 1}`} (${floors} Floors)
 • *Plot Area:* ${plotArea.toLocaleString("en-IN")} sq.ft (${plotCents} Cents)
@@ -463,7 +478,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                         </span>
                       </div>
                       <span className="text-[10px] font-bold text-[#EA580C] mt-2 pt-1 border-t border-[#D9D2C5]/50">
-                        {pst.cents} Cents · {pst.grounds}
+                        {pst.grounds}
                       </span>
                     </button>
                   );
@@ -785,7 +800,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                   </button>
                 </div>
                 <p className="text-sm text-[#52655E]">
-                  All packages include 100% turnkey civil construction, soil engineering, and structural warranty.
+                  All packages include 100% turnkey civil construction, soil engineering, and certified pre-handover inspection.
                 </p>
               </div>
 
@@ -1097,7 +1112,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                     </button>
                   </div>
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-white pt-1">
-                    Your TBC Construction Estimate
+                    Your Construction Estimate
                   </h2>
                   <p className="text-xs sm:text-sm text-[#8C9C96]">
                     Calculated for {plotArea.toLocaleString("en-IN")} sq.ft plot · {floors === 1 ? "Ground Only" : `G+${floors - 1}`} · {selectedPackage.name} Package.
@@ -1345,7 +1360,7 @@ I would like to schedule a free site consultation to lock this estimate for my C
                     </li>
                     <li className="flex items-start gap-1.5">
                       <Check className="w-3.5 h-3.5 text-[#15803D] shrink-0 mt-0.5" />
-                      <span>5-Year comprehensive structural warranty certificate</span>
+                      <span>Pre-handover 150-point snag audit & certified handover</span>
                     </li>
                   </ul>
                 </div>
